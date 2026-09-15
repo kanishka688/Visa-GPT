@@ -15,7 +15,7 @@ The V1 scope covers:
 
 The system is designed to answer factual immigration questions using retrieved evidence from official U.S. government sources while conservatively abstaining when sufficient evidence is not available.
 
-> KK-GPT provides informational guidance only and is not legal advice.
+> VISA-GPT provides informational guidance only and is not legal advice.
 
 ---
 
@@ -58,13 +58,13 @@ Query Policy
 
 ## Design Principles
 
-KK-GPT V1 separates several problems that are often incorrectly combined in RAG systems.
+VISA-GPT V1 separates several problems that are often incorrectly combined in RAG systems.
 
 ### Retrieval relevance is not answerability
 
 A highly similar document does not necessarily mean that a question should be answered.
 
-KK-GPT therefore separates:
+VISA-GPT therefore separates:
 
 ```text
 Query classification
@@ -152,7 +152,7 @@ The final V1 corpus contains:
 
 ## 3. Embeddings
 
-KK-GPT uses:
+VISA-GPT uses:
 
 ```text
 sentence-transformers/all-MiniLM-L6-v2
