@@ -1,6 +1,6 @@
-# KK-GPT
+# VISA-GPT
 
-KK-GPT is an official-source Retrieval-Augmented Generation (RAG) system for U.S. immigration information.
+VISA-GPT is an official-source Retrieval-Augmented Generation (RAG) system for U.S. immigration information.
 
 The V1 scope covers:
 
