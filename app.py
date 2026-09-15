@@ -1,447 +1,216 @@
-from pathlib import Path
-import json
+import os
 
-import numpy as np
 import requests
 import streamlit as st
-from sentence_transformers import (
-    SentenceTransformer,
-    CrossEncoder,
+
+
+# ==================================================
+# CONFIG
+# ==================================================
+
+API_BASE_URL = os.getenv(
+    "KKGPT_API_BASE_URL",
+    "http://127.0.0.1:8000",
 )
 
-from src.retrieval.query_policy import (
-    classify_query,
-)
-
-from src.retrieval.search_with_reranker import (
-    understand_query,
-    retrieve_candidates,
-    rerank_candidates,
-)
-
-from src.generation.generate_answer import (
-    generate_grounded_answer,
-    ABSTAIN_MESSAGE,
-)
+ASK_URL = f"{API_BASE_URL}/ask"
+HEALTH_URL = f"{API_BASE_URL}/health"
 
 
 # ==================================================
-# PATHS
+# PAGE
 # ==================================================
-
-PROJECT_ROOT = Path(
-    __file__
-).resolve().parent
-
-CHUNKS_PATH = (
-    PROJECT_ROOT
-    / "data/processed/corpus_chunks.json"
-)
-
-EMBEDDINGS_PATH = (
-    PROJECT_ROOT
-    / "data/processed/corpus_embeddings.npy"
-)
-
-
-# ==================================================
-# MODELS
-# ==================================================
-
-EMBEDDING_MODEL = (
-    "sentence-transformers/all-MiniLM-L6-v2"
-)
-
-RERANKER_MODEL = (
-    "cross-encoder/ms-marco-MiniLM-L-6-v2"
-)
-
-
-# ==================================================
-# LOADERS
-# ==================================================
-
-
-@st.cache_resource
-def load_embedding_model():
-
-    return SentenceTransformer(
-        EMBEDDING_MODEL
-    )
-
-
-@st.cache_resource
-def load_reranker():
-
-    return CrossEncoder(
-        RERANKER_MODEL
-    )
-
-
-@st.cache_data
-def load_chunks():
-
-    return json.loads(
-        CHUNKS_PATH.read_text(
-            encoding="utf-8"
-        )
-    )
-
-
-@st.cache_data
-def load_embeddings():
-
-    return np.load(
-        EMBEDDINGS_PATH
-    )
-
-
-# ==================================================
-# NON-RAG RESPONSES
-# ==================================================
-
-
-def get_policy_response(
-    category,
-):
-    """
-    Temporary V1 behavior for queries that should
-    not enter official-source RAG.
-
-    Recommendation/community/product workflows
-    belong to later KK-Gpt versions.
-    """
-
-    responses = {
-
-        "CASE_PREDICTION": (
-            "I can explain the official rules and "
-            "requirements that may apply, but I "
-            "cannot predict whether USCIS, DOL, "
-            "or the Department of State will "
-            "approve or deny a specific case."
-        ),
-
-        "FUTURE_PREDICTION": (
-            "I can explain current official rules "
-            "and published information, but I "
-            "cannot reliably predict future lottery "
-            "results, Visa Bulletin movement, "
-            "policy changes, or agency decisions."
-        ),
-
-        "RECOMMENDATION": (
-            "This RAG V1 focuses on official "
-            "immigration information. It does not "
-            "currently rank or recommend specific "
-            "schools, employers, attorneys, "
-            "consultancies, or strategies."
-        ),
-
-        "PERSONAL_DECISION": (
-            "I can explain the official immigration "
-            "rules and consequences relevant to "
-            "your options, but this RAG V1 does not "
-            "make personal career or life decisions."
-        ),
-
-        "LOCAL_SERVICE": (
-            "This RAG V1 focuses on official "
-            "immigration information and does not "
-            "currently search for local lawyers "
-            "or service providers."
-        ),
-
-        "UNKNOWN": (
-            "I could not confidently determine "
-            "whether this question belongs in the "
-            "official immigration RAG workflow."
-        ),
-    }
-
-    return responses.get(
-        category,
-        responses["UNKNOWN"],
-    )
-
-
-# ==================================================
-# PAGE CONFIG
-# ==================================================
-
 
 st.set_page_config(
-    page_title="KK-GPT RAG V1",
-    page_icon="🇺🇸",
+    page_title="KK-GPT",
+    page_icon="⚖️",
     layout="centered",
 )
 
 
-st.title(
-    "KK-GPT"
-)
+# ==================================================
+# HEADER
+# ==================================================
+
+st.title("KK-GPT")
 
 st.caption(
-    "RAG V1 — Official U.S. immigration information "
-    "from F-1 through I-140"
+    "Official-source U.S. immigration information "
+    "for F-1, CPT, OPT, STEM OPT, H-1B, H-4, "
+    "PERM and I-140."
+)
+
+st.info(
+    "KK-GPT provides informational guidance from "
+    "official sources and is not legal advice."
 )
 
 
 # ==================================================
-# INPUT
+# API HEALTH
 # ==================================================
 
 
-question = st.text_input(
+def check_api_health():
+
+    try:
+
+        response = requests.get(
+            HEALTH_URL,
+            timeout=5,
+        )
+
+        response.raise_for_status()
+
+        return response.json()
+
+    except requests.RequestException:
+
+        return None
+
+
+health = check_api_health()
+
+if health is None:
+
+    st.error(
+        "KK-GPT backend is unavailable. "
+        "Start the FastAPI service first."
+    )
+
+    st.stop()
+
+
+if health.get("status") != "ok":
+
+    st.warning(
+        "KK-GPT backend is starting up."
+    )
+
+    st.stop()
+
+
+# ==================================================
+# QUESTION
+# ==================================================
+
+question = st.text_area(
     "Ask an immigration question",
     placeholder=(
-        "Example: Does 12 months of full-time "
-        "CPT affect OPT eligibility?"
+        "Example: What is CPT?"
     ),
+    height=100,
 )
 
 
-ask_button = st.button(
-    "Ask KK-GPT"
+ask_clicked = st.button(
+    "Ask KK-GPT",
+    type="primary",
+    use_container_width=True,
 )
 
 
 # ==================================================
-# MAIN PIPELINE
+# REQUEST
 # ==================================================
 
+if ask_clicked:
 
-if ask_button and question.strip():
+    cleaned_question = (
+        question.strip()
+    )
 
-    question = question.strip()
+    if not cleaned_question:
 
-    # ==============================================
-    # STEP 1 — QUERY POLICY
-    # ==============================================
-
-    try:
-
-        policy = classify_query(
-            question
-        )
-
-    except requests.RequestException:
-
-        st.error(
-            "Could not connect to the local "
-            "Ollama model."
+        st.warning(
+            "Enter a question first."
         )
 
         st.stop()
 
-    category = policy[
-        "category"
-    ]
-
-    route_to_rag = policy[
-        "route_to_rag"
-    ]
-
-    # ==============================================
-    # STEP 2 — NON-RAG QUERY
-    # ==============================================
-
-    if not route_to_rag:
-
-        st.subheader(
-            "Answer"
-        )
-
-        st.write(
-            get_policy_response(
-                category
-            )
-        )
-
-        with st.expander(
-            "Developer details"
-        ):
-
-            st.write(
-                f"Query category: {category}"
-            )
-
-            st.write(
-                "Route to official RAG: False"
-            )
-
-        st.stop()
-
-    # ==============================================
-    # STEP 3 — LOAD CORPUS + MODELS
-    # ==============================================
-
-    chunks = load_chunks()
-
-    embeddings = load_embeddings()
-
-    embedding_model = (
-        load_embedding_model()
-    )
-
-    reranker = (
-        load_reranker()
-    )
-
-    # ==============================================
-    # SAFETY CHECK
-    # ==============================================
-
-    if len(chunks) != len(
-        embeddings
+    with st.spinner(
+        "Checking official sources..."
     ):
 
-        st.error(
-            "Corpus chunks and embeddings do not "
-            "match. Run embed_corpus.py first."
-        )
+        try:
 
-        st.stop()
-
-    # ==============================================
-    # STEP 4 — QUERY UNDERSTANDING
-    # ==============================================
-
-    query_info = understand_query(
-        question
-    )
-
-    retrieval_query = query_info[
-        "retrieval_query"
-    ]
-
-    topic_filter = query_info[
-        "topic_filter"
-    ]
-
-    # ==============================================
-    # STEP 5 — RETRIEVAL
-    # ==============================================
-
-    candidates = retrieve_candidates(
-        retrieval_query,
-        chunks,
-        embeddings,
-        embedding_model,
-        topic_filter,
-    )
-
-    if not candidates:
-
-        st.subheader(
-            "Answer"
-        )
-
-        st.write(
-            ABSTAIN_MESSAGE
-        )
-
-        st.stop()
-
-    # ==============================================
-    # STEP 6 — RERANKING
-    # ==============================================
-
-    ranked_results = rerank_candidates(
-        question,
-        retrieval_query,
-        candidates,
-        reranker,
-    )
-
-    if not ranked_results:
-
-        st.subheader(
-            "Answer"
-        )
-
-        st.write(
-            ABSTAIN_MESSAGE
-        )
-
-        st.stop()
-
-    # ==============================================
-    # STEP 7 — EVIDENCE GATE + GENERATION
-    # ==============================================
-
-    try:
-
-        generation = (
-            generate_grounded_answer(
-                question,
-                ranked_results,
+            response = requests.post(
+                ASK_URL,
+                json={
+                    "question": (
+                        cleaned_question
+                    )
+                },
+                timeout=120,
             )
-        )
 
-    except requests.RequestException:
+            response.raise_for_status()
 
-        st.error(
-            "Could not connect to the local "
-            "Ollama model during evidence "
-            "checking or generation."
-        )
+            result = response.json()
 
-        st.stop()
+        except requests.RequestException as exc:
 
-    answer = generation[
-        "answer"
-    ]
+            st.error(
+                "KK-GPT could not process "
+                "the request."
+            )
 
-    abstained = generation[
-        "abstained"
-    ]
+            st.stop()
 
-    sources = generation[
-        "sources"
-    ]
 
-    evidence_check = generation[
-        "evidence_check"
-    ]
-
-    citation_check = generation[
-        "citation_check"
-    ]
-
-    # ==============================================
+    # ==================================================
     # ANSWER
-    # ==============================================
+    # ==================================================
 
     st.subheader(
         "Answer"
     )
 
+    st.markdown(
+        result.get(
+            "answer",
+            "No answer returned.",
+        )
+    )
+
+
+    # ==================================================
+    # ROUTING
+    # ==================================================
+
+    category = result.get(
+        "category",
+        "UNKNOWN",
+    )
+
+    routed_to_rag = result.get(
+        "routed_to_rag",
+        False,
+    )
+
+    abstained = result.get(
+        "abstained",
+        True,
+    )
+
     if abstained:
 
-        st.warning(
-            answer
-        )
-
-    else:
-
-        st.markdown(
-            answer
-        )
-
         st.caption(
-            "Informational only. "
-            "Not legal advice."
+            "KK-GPT abstained rather than "
+            "answer without sufficient evidence."
         )
 
-    # ==============================================
-    # SOURCES
-    # ==============================================
 
-    if (
-        not abstained
-        and sources
-    ):
+    # ==================================================
+    # SOURCES
+    # ==================================================
+
+    sources = result.get(
+        "sources",
+        [],
+    )
+
+    if sources:
 
         st.subheader(
             "Official Sources"
@@ -449,33 +218,24 @@ if ask_button and question.strip():
 
         for source in sources:
 
-            citation_id = source[
+            citation_id = source.get(
                 "citation_id"
-            ]
-
-            agency = (
-                source.get(
-                    "agency"
-                )
-                or "Official Source"
             )
 
-            document = (
-                source.get(
-                    "document"
-                )
-                or "Official Document"
-            )
+            agency = source.get(
+                "agency"
+            ) or "Official source"
 
-            authority = (
-                source.get(
-                    "authority_type"
-                )
-                or "UNKNOWN"
-            )
+            document = source.get(
+                "document"
+            ) or "Document"
 
             url = source.get(
                 "url"
+            )
+
+            authority_type = source.get(
+                "authority_type"
             )
 
             st.markdown(
@@ -483,157 +243,48 @@ if ask_button and question.strip():
                 f"{agency} — {document}**"
             )
 
-            st.caption(
-                f"Authority: {authority}"
-            )
+            if authority_type:
+
+                st.caption(
+                    f"Authority: "
+                    f"{authority_type}"
+                )
 
             if url:
 
-                st.markdown(
-                    f"[Open official source]"
-                    f"({url})"
+                st.link_button(
+                    f"Open source [{citation_id}]",
+                    url,
                 )
 
-    # ==============================================
-    # DEVELOPER DEBUG
-    # ==============================================
+
+    # ==================================================
+    # DEBUG / METRICS
+    # ==================================================
 
     with st.expander(
-        "Developer pipeline details"
+        "Request details"
     ):
 
         st.write(
-            f"Query category: "
-            f"{category}"
+            {
+                "request_id": result.get(
+                    "request_id"
+                ),
+
+                "category": category,
+
+                "routed_to_rag": (
+                    routed_to_rag
+                ),
+
+                "abstained": (
+                    abstained
+                ),
+
+                "timings_ms": result.get(
+                    "timings_ms",
+                    {},
+                ),
+            }
         )
-
-        st.write(
-            "Route to official RAG: True"
-        )
-
-        st.write(
-            f"Original query: "
-            f"{question}"
-        )
-
-        st.write(
-            f"Retrieval query: "
-            f"{retrieval_query}"
-        )
-
-        st.write(
-            f"Topic filter: "
-            f"{topic_filter}"
-        )
-
-        st.write(
-            f"Retrieved candidates: "
-            f"{len(candidates)}"
-        )
-
-        st.write(
-            f"Reranked results: "
-            f"{len(ranked_results)}"
-        )
-
-        st.markdown(
-            "### Evidence Gate"
-        )
-
-        st.write(
-            f"Supported: "
-            f"{evidence_check['supported']}"
-        )
-
-        st.write(
-            f"Reason: "
-            f"{evidence_check['reason']}"
-        )
-
-        st.markdown(
-            "### Citation Validation"
-        )
-
-        if citation_check is None:
-
-            st.write(
-                "Not run because the system "
-                "abstained before citation "
-                "validation."
-            )
-
-        else:
-
-            st.write(
-                f"Valid: "
-                f"{citation_check['valid']}"
-            )
-
-            st.write(
-                f"Reason: "
-                f"{citation_check['reason']}"
-            )
-
-            st.write(
-                f"Citations used: "
-                f"{citation_check['cited_ids']}"
-            )
-
-        st.markdown(
-            "### Ranked Evidence"
-        )
-
-        for rank, result in enumerate(
-            ranked_results,
-            start=1,
-        ):
-
-            chunk = result[
-                "chunk"
-            ]
-
-            st.markdown(
-                f"#### Result {rank}"
-            )
-
-            st.write(
-                f"Document: "
-                f"{chunk.get('document')}"
-            )
-
-            st.write(
-                f"Agency: "
-                f"{chunk.get('agency')}"
-            )
-
-            st.write(
-                f"Topic: "
-                f"{chunk.get('topic')}"
-            )
-
-            st.write(
-                f"Authority: "
-                f"{result.get('authority_type')}"
-            )
-
-            st.write(
-                f"Retrieval score: "
-                f"{result['retrieval_score']:.4f}"
-            )
-
-            st.write(
-                f"Reranker score: "
-                f"{result['reranker_score']:.4f}"
-            )
-
-            st.write(
-                f"Final score: "
-                f"{result['final_score']:.4f}"
-            )
-
-            st.code(
-                chunk.get(
-                    "text",
-                    "",
-                )
-            )

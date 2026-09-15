@@ -1,0 +1,18 @@
+services:
+  kk-gpt-api:
+    build: .
+    container_name: kk-gpt-api
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      KKGPT_LLM_MODEL: qwen3:4b-instruct
+      KKGPT_OLLAMA_URL: http://host.docker.internal:11434/api/chat
+      KKGPT_RETRIEVAL_TOP_K: 5
+      KKGPT_MAX_EVIDENCE_SOURCES: 5
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+    restart: unless-stopped

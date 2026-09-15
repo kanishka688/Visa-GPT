@@ -8,10 +8,10 @@ import requests
 # CONFIG
 # ==================================================
 
-LLM_MODEL = "qwen3:4b-instruct"
-
-OLLAMA_URL = (
-    "http://localhost:11434/api/chat"
+from src.core.settings import (
+    LLM_MODEL,
+    OLLAMA_URL,
+    MAX_EVIDENCE_SOURCES,
 )
 
 MAX_EVIDENCE_SOURCES = 5
