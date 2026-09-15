@@ -1,0 +1,2727 @@
+{
+  "dataset": {
+    "total_questions": 30,
+    "answerable_questions": 22,
+    "unanswerable_questions": 8
+  },
+  "retrieval": {
+    "recall_at_1": 0.9545454545454546,
+    "recall_at_3": 0.9545454545454546,
+    "recall_at_5": 0.9545454545454546,
+    "mrr": 0.9545454545454546
+  },
+  "reranked": {
+    "recall_at_1": 0.8181818181818182,
+    "recall_at_3": 0.9545454545454546,
+    "recall_at_5": 0.9545454545454546,
+    "mrr": 0.8863636363636364
+  },
+  "details": [
+    {
+      "question": "What is CPT?",
+      "expected_topic": "CPT",
+      "expected_source_ids": [],
+      "retrieval_query": "What is CPT?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.3046233057975769,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.29411736130714417,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_stem_opt_policy",
+          "document": "STEM Optional Practical Training Policy Update",
+          "topic": "STEM OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.25955891609191895,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "sevp_academic_year_guidance",
+          "document": "SEVP Policy Guidance for Adjudicators: Academic Year",
+          "topic": "F-1 CPT academic year eligibility practical training",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.2464698702096939,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.225605770945549,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.3046233057975769,
+          "reranker_score": 0.13311271369457245,
+          "final_score": 0.13311271369457245,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.29411736130714417,
+          "reranker_score": -3.3483004570007324,
+          "final_score": -3.3483004570007324,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_stem_opt_policy",
+          "document": "STEM Optional Practical Training Policy Update",
+          "topic": "STEM OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.25955891609191895,
+          "reranker_score": -7.315917491912842,
+          "final_score": -7.315917491912842,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_stem_opt_policy",
+          "document": "STEM Optional Practical Training Policy Update",
+          "topic": "STEM OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.2007797658443451,
+          "reranker_score": -7.799566268920898,
+          "final_score": -7.799566268920898,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "sevp_academic_year_guidance",
+          "document": "SEVP Policy Guidance for Adjudicators: Academic Year",
+          "topic": "F-1 CPT academic year eligibility practical training",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.20285534858703613,
+          "reranker_score": -9.654962539672852,
+          "final_score": -9.654962539672852,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "What is Day 1 CPT?",
+      "expected_topic": "CPT",
+      "expected_source_ids": [],
+      "retrieval_query": "curricular practical training graduate student immediate participation internship required one academic year eligibility",
+      "topic_filter": "CPT",
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.6107839345932007,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.5891937017440796,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.5445465445518494,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_academic_year_guidance",
+          "document": "SEVP Policy Guidance for Adjudicators: Academic Year",
+          "topic": "F-1 CPT academic year eligibility practical training",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.44895127415657043,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.4458255171775818,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.6107839345932007,
+          "reranker_score": 3.8596951961517334,
+          "final_score": 3.8596951961517334,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.4406639039516449,
+          "reranker_score": 1.402834415435791,
+          "final_score": 1.402834415435791,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.5445465445518494,
+          "reranker_score": 1.097562313079834,
+          "final_score": 1.097562313079834,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.4458255171775818,
+          "reranker_score": -0.040480442345142365,
+          "final_score": -0.040480442345142365,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_academic_year_guidance",
+          "document": "SEVP Policy Guidance for Adjudicators: Academic Year",
+          "topic": "F-1 CPT academic year eligibility practical training",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.44895127415657043,
+          "reranker_score": -1.0804016590118408,
+          "final_score": -1.0804016590118408,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "Can a graduate student begin CPT immediately?",
+      "expected_topic": "CPT",
+      "expected_source_ids": [],
+      "retrieval_query": "Can a graduate student begin CPT immediately?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.5416415929794312,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.457912802696228,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.45176902413368225,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_stem_opt_policy",
+          "document": "STEM Optional Practical Training Policy Update",
+          "topic": "STEM OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.42514511942863464,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.41954419016838074,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.40274593234062195,
+          "reranker_score": 5.6761345863342285,
+          "final_score": 5.6761345863342285,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.5416415929794312,
+          "reranker_score": -0.08225323259830475,
+          "final_score": -0.08225323259830475,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.457912802696228,
+          "reranker_score": -2.948817014694214,
+          "final_score": -2.948817014694214,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.38448840379714966,
+          "reranker_score": -3.5627195835113525,
+          "final_score": -3.5627195835113525,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_stem_opt_policy",
+          "document": "STEM Optional Practical Training Policy Update",
+          "topic": "STEM OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.40382328629493713,
+          "reranker_score": -5.650595664978027,
+          "final_score": -5.650595664978027,
+          "authority_type": "POLICY_MANUAL"
+        }
+      ]
+    },
+    {
+      "question": "Does 12 months of full-time CPT affect OPT eligibility?",
+      "expected_topic": "CPT",
+      "expected_source_ids": [],
+      "retrieval_query": "Does 12 months of full-time CPT affect OPT eligibility?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.7171448469161987,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.6432009935379028,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.5927255153656006,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.5789317488670349,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.5729714035987854,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.7171448469161987,
+          "reranker_score": 6.46501350402832,
+          "final_score": 6.46501350402832,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.5789317488670349,
+          "reranker_score": 2.755382537841797,
+          "final_score": 2.755382537841797,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.6432009935379028,
+          "reranker_score": 1.473917007446289,
+          "final_score": 1.473917007446289,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.5927255153656006,
+          "reranker_score": -0.26251769065856934,
+          "final_score": -0.26251769065856934,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.5729714035987854,
+          "reranker_score": -0.2889239490032196,
+          "final_score": -0.2889239490032196,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "Who authorizes CPT?",
+      "expected_topic": "CPT",
+      "expected_source_ids": [],
+      "retrieval_query": "Who authorizes CPT?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.3437642455101013,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_academic_year_guidance",
+          "document": "SEVP Policy Guidance for Adjudicators: Academic Year",
+          "topic": "F-1 CPT academic year eligibility practical training",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.32396310567855835,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.2978689670562744,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_i140",
+          "document": "Form I-140 Immigrant Petition for Alien Workers",
+          "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.296690434217453,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_perm",
+          "document": "Permanent Labor Certification",
+          "topic": "PERM recruitment labor certification employer sponsorship",
+          "agency": "DOL",
+          "retrieval_score": 0.28354108333587646,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.3437642455101013,
+          "reranker_score": -3.4216434955596924,
+          "final_score": -3.4216434955596924,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.255267471075058,
+          "reranker_score": -9.180292129516602,
+          "final_score": -9.180292129516602,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.23936396837234497,
+          "reranker_score": -9.650151252746582,
+          "final_score": -9.650151252746582,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.2978689670562744,
+          "reranker_score": -9.9822998046875,
+          "final_score": -9.9822998046875,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.2830721139907837,
+          "reranker_score": -9.99613094329834,
+          "final_score": -9.99613094329834,
+          "authority_type": "POLICY_MANUAL"
+        }
+      ]
+    },
+    {
+      "question": "What is OPT?",
+      "expected_topic": "OPT",
+      "expected_source_ids": [],
+      "retrieval_query": "What is OPT?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.5380727052688599,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.47750234603881836,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.3836289942264557,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.35638484358787537,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.33876651525497437,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.47750234603881836,
+          "reranker_score": 6.088235378265381,
+          "final_score": 6.088235378265381,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.5380727052688599,
+          "reranker_score": 2.834935188293457,
+          "final_score": 2.834935188293457,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.35638484358787537,
+          "reranker_score": 1.675621747970581,
+          "final_score": 1.675621747970581,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.3836289942264557,
+          "reranker_score": -1.5044572353363037,
+          "final_score": -1.5044572353363037,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.33876651525497437,
+          "reranker_score": -1.7804514169692993,
+          "final_score": -1.7804514169692993,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "What is pre-completion OPT?",
+      "expected_topic": "OPT",
+      "expected_source_ids": [],
+      "retrieval_query": "What is pre-completion OPT?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.7301992177963257,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.5816511511802673,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.4981997609138489,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.4475656747817993,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.431988000869751,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.7301992177963257,
+          "reranker_score": 7.813461780548096,
+          "final_score": 7.813461780548096,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.5816511511802673,
+          "reranker_score": 6.782149791717529,
+          "final_score": 6.782149791717529,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.431988000869751,
+          "reranker_score": 4.8000288009643555,
+          "final_score": 4.8000288009643555,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.4475656747817993,
+          "reranker_score": 4.30139684677124,
+          "final_score": 4.30139684677124,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.4981997609138489,
+          "reranker_score": 4.202427864074707,
+          "final_score": 4.202427864074707,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "What is post-completion OPT?",
+      "expected_topic": "OPT",
+      "expected_source_ids": [],
+      "retrieval_query": "What is post-completion OPT?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.6764627695083618,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.49524062871932983,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.48671281337738037,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.4131684899330139,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_stem_opt_policy",
+          "document": "STEM Optional Practical Training Policy Update",
+          "topic": "STEM OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.3951915502548218,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "POLICY_MANUAL"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.6764627695083618,
+          "reranker_score": 7.551086902618408,
+          "final_score": 7.551086902618408,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.49524062871932983,
+          "reranker_score": 6.391397953033447,
+          "final_score": 6.391397953033447,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.48671281337738037,
+          "reranker_score": 5.5483622550964355,
+          "final_score": 5.5483622550964355,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.4131684899330139,
+          "reranker_score": 4.48541784286499,
+          "final_score": 4.48541784286499,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.39385586977005005,
+          "reranker_score": 4.131026268005371,
+          "final_score": 4.131026268005371,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "What is STEM OPT?",
+      "expected_topic": "STEM OPT",
+      "expected_source_ids": [],
+      "retrieval_query": "What is STEM OPT?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.49615713953971863,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.4935549199581146,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.4623349606990814,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.4268426299095154,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.4228384494781494,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.4935549199581146,
+          "reranker_score": 3.2025647163391113,
+          "final_score": 3.2025647163391113,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.4623349606990814,
+          "reranker_score": 3.1409897804260254,
+          "final_score": 3.1409897804260254,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_stem_opt_policy",
+          "document": "STEM Optional Practical Training Policy Update",
+          "topic": "STEM OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.40719136595726013,
+          "reranker_score": 2.1049344539642334,
+          "final_score": 2.1049344539642334,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_stem_opt_policy",
+          "document": "STEM Optional Practical Training Policy Update",
+          "topic": "STEM OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.36296653747558594,
+          "reranker_score": 2.0266036987304688,
+          "final_score": 2.0266036987304688,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.40225619077682495,
+          "reranker_score": 1.2664402723312378,
+          "final_score": 1.2664402723312378,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "Does a STEM OPT employer need to participate in E-Verify?",
+      "expected_topic": "STEM OPT",
+      "expected_source_ids": [],
+      "retrieval_query": "Does a STEM OPT employer need to participate in E-Verify?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.6153683066368103,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.6008172035217285,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.5456886291503906,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.5367031693458557,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.5280235409736633,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.5456886291503906,
+          "reranker_score": 5.667342662811279,
+          "final_score": 5.667342662811279,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.6153683066368103,
+          "reranker_score": 3.6519577503204346,
+          "final_score": 3.6519577503204346,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.5367031693458557,
+          "reranker_score": 3.426593780517578,
+          "final_score": 3.426593780517578,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.6008172035217285,
+          "reranker_score": 2.6658780574798584,
+          "final_score": 2.6658780574798584,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.5137882232666016,
+          "reranker_score": -1.1331069469451904,
+          "final_score": -1.1331069469451904,
+          "authority_type": "FORM_INSTRUCTIONS"
+        }
+      ]
+    },
+    {
+      "question": "What is an H-1B Labor Condition Application?",
+      "expected_topic": "H-1B LCA",
+      "expected_source_ids": [],
+      "retrieval_query": "What is an H-1B Labor Condition Application?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "dol_h1b_lca",
+          "document": "Labor Condition Application for H-1B",
+          "topic": "H-1B LCA prevailing wage employer requirements",
+          "agency": "DOL",
+          "retrieval_score": 0.5999265909194946,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_filing_checklist",
+          "document": "Optional Checklist for Form I-129 H-1B Filings",
+          "topic": "H-1B cap lottery cap-gap filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.5337491035461426,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_prevailing_wages",
+          "document": "Prevailing Wage Determination",
+          "topic": "Prevailing Wage PWD PERM H-1B",
+          "agency": "DOL",
+          "retrieval_score": 0.5272080302238464,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_prevailing_wages",
+          "document": "Prevailing Wage Determination",
+          "topic": "Prevailing Wage PWD PERM H-1B",
+          "agency": "DOL",
+          "retrieval_score": 0.524064838886261,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.5064953565597534,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "dol_h1b_lca",
+          "document": "Labor Condition Application for H-1B",
+          "topic": "H-1B LCA prevailing wage employer requirements",
+          "agency": "DOL",
+          "retrieval_score": 0.5999265909194946,
+          "reranker_score": 7.0970282554626465,
+          "final_score": 7.0970282554626465,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_h1b_lca",
+          "document": "Labor Condition Application for H-1B",
+          "topic": "H-1B LCA prevailing wage employer requirements",
+          "agency": "DOL",
+          "retrieval_score": 0.45532700419425964,
+          "reranker_score": 5.192814350128174,
+          "final_score": 5.192814350128174,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_h1b_lca",
+          "document": "Labor Condition Application for H-1B",
+          "topic": "H-1B LCA prevailing wage employer requirements",
+          "agency": "DOL",
+          "retrieval_score": 0.44124412536621094,
+          "reranker_score": 3.509068012237549,
+          "final_score": 3.509068012237549,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_prevailing_wages",
+          "document": "Prevailing Wage Determination",
+          "topic": "Prevailing Wage PWD PERM H-1B",
+          "agency": "DOL",
+          "retrieval_score": 0.524064838886261,
+          "reranker_score": 3.33870792388916,
+          "final_score": 3.33870792388916,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.5064953565597534,
+          "reranker_score": 0.3554554581642151,
+          "final_score": 0.3554554581642151,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "What happens if I lose my job while on H-1B?",
+      "expected_topic": "H-1B layoff",
+      "expected_source_ids": [],
+      "retrieval_query": "What happens if I lose my job while on H-1B?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.5086063146591187,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.4647676348686218,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_h1b_lca",
+          "document": "Labor Condition Application for H-1B",
+          "topic": "H-1B LCA prevailing wage employer requirements",
+          "agency": "DOL",
+          "retrieval_score": 0.458651065826416,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.44798991084098816,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.44569873809814453,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.4647676348686218,
+          "reranker_score": -1.1510725021362305,
+          "final_score": -1.1510725021362305,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.44569873809814453,
+          "reranker_score": -1.176517367362976,
+          "final_score": -1.176517367362976,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.5086063146591187,
+          "reranker_score": -1.2313205003738403,
+          "final_score": -1.2313205003738403,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.44798991084098816,
+          "reranker_score": -2.583066463470459,
+          "final_score": -2.583066463470459,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_filing_checklist",
+          "document": "Optional Checklist for Form I-129 H-1B Filings",
+          "topic": "H-1B cap lottery cap-gap filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.3937351703643799,
+          "reranker_score": -3.4810900688171387,
+          "final_score": -3.4810900688171387,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "Is there a grace period after H-1B employment ends?",
+      "expected_topic": "H-1B grace period",
+      "expected_source_ids": [],
+      "retrieval_query": "Is there a grace period after H-1B employment ends?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.6435111165046692,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_filing_checklist",
+          "document": "Optional Checklist for Form I-129 H-1B Filings",
+          "topic": "H-1B cap lottery cap-gap filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.5655957460403442,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.5553807020187378,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.5438048243522644,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.4977598190307617,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.6435111165046692,
+          "reranker_score": 5.4467034339904785,
+          "final_score": 5.4467034339904785,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.4977598190307617,
+          "reranker_score": 3.8487071990966797,
+          "final_score": 3.8487071990966797,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.4338507354259491,
+          "reranker_score": 2.833225727081299,
+          "final_score": 2.833225727081299,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.4627179503440857,
+          "reranker_score": -0.6997430324554443,
+          "final_score": -0.6997430324554443,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_termination_options",
+          "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+          "topic": "H-1B layoff termination grace period",
+          "agency": "USCIS",
+          "retrieval_score": 0.5438048243522644,
+          "reranker_score": -2.129012107849121,
+          "final_score": -2.129012107849121,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "What is cap-gap?",
+      "expected_topic": "cap-gap",
+      "expected_source_ids": [],
+      "retrieval_query": "What is cap-gap?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "uscis_h1b_filing_checklist",
+          "document": "Optional Checklist for Form I-129 H-1B Filings",
+          "topic": "H-1B cap lottery cap-gap filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.2547270655632019,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_filing_checklist",
+          "document": "Optional Checklist for Form I-129 H-1B Filings",
+          "topic": "H-1B cap lottery cap-gap filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.22547751665115356,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.20197370648384094,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_filing_checklist",
+          "document": "Optional Checklist for Form I-129 H-1B Filings",
+          "topic": "H-1B cap lottery cap-gap filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.13352450728416443,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.12770675122737885,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "POLICY_MANUAL"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.20197370648384094,
+          "reranker_score": 1.9048128128051758,
+          "final_score": 1.9048128128051758,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_filing_checklist",
+          "document": "Optional Checklist for Form I-129 H-1B Filings",
+          "topic": "H-1B cap lottery cap-gap filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.22547751665115356,
+          "reranker_score": 0.5144739151000977,
+          "final_score": 0.5144739151000977,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_filing_checklist",
+          "document": "Optional Checklist for Form I-129 H-1B Filings",
+          "topic": "H-1B cap lottery cap-gap filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.2547270655632019,
+          "reranker_score": -0.2688122093677521,
+          "final_score": -0.2688122093677521,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_filing_checklist",
+          "document": "Optional Checklist for Form I-129 H-1B Filings",
+          "topic": "H-1B cap lottery cap-gap filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.13352450728416443,
+          "reranker_score": -8.504990577697754,
+          "final_score": -8.504990577697754,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_h1b_filing_checklist",
+          "document": "Optional Checklist for Form I-129 H-1B Filings",
+          "topic": "H-1B cap lottery cap-gap filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.08068250119686127,
+          "reranker_score": -8.956491470336914,
+          "final_score": -8.956491470336914,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "Can an H-4 spouse work in the United States?",
+      "expected_topic": "H-4 EAD",
+      "expected_source_ids": [],
+      "retrieval_query": "Can an H-4 spouse work in the United States?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.637136697769165,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.5985236167907715,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.5878040790557861,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.5445401668548584,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.5435325503349304,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "POLICY_MANUAL"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.5985236167907715,
+          "reranker_score": 1.843826174736023,
+          "final_score": 1.843826174736023,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.5878040790557861,
+          "reranker_score": 1.3901691436767578,
+          "final_score": 1.3901691436767578,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.637136697769165,
+          "reranker_score": 1.184882640838623,
+          "final_score": 1.184882640838623,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.5247413516044617,
+          "reranker_score": 0.16463463008403778,
+          "final_score": 0.16463463008403778,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.5279664397239685,
+          "reranker_score": 0.14829088747501373,
+          "final_score": 0.14829088747501373,
+          "authority_type": "POLICY_MANUAL"
+        }
+      ]
+    },
+    {
+      "question": "What is a prevailing wage determination?",
+      "expected_topic": "Prevailing Wage",
+      "expected_source_ids": [],
+      "retrieval_query": "What is a prevailing wage determination?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "dol_prevailing_wages",
+          "document": "Prevailing Wage Determination",
+          "topic": "Prevailing Wage PWD PERM H-1B",
+          "agency": "DOL",
+          "retrieval_score": 0.6484576463699341,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_prevailing_wages",
+          "document": "Prevailing Wage Determination",
+          "topic": "Prevailing Wage PWD PERM H-1B",
+          "agency": "DOL",
+          "retrieval_score": 0.5442254543304443,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_h1b_lca",
+          "document": "Labor Condition Application for H-1B",
+          "topic": "H-1B LCA prevailing wage employer requirements",
+          "agency": "DOL",
+          "retrieval_score": 0.5411837100982666,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_perm",
+          "document": "Permanent Labor Certification",
+          "topic": "PERM recruitment labor certification employer sponsorship",
+          "agency": "DOL",
+          "retrieval_score": 0.46568453311920166,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_prevailing_wages",
+          "document": "Prevailing Wage Determination",
+          "topic": "Prevailing Wage PWD PERM H-1B",
+          "agency": "DOL",
+          "retrieval_score": 0.46489641070365906,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "dol_prevailing_wages",
+          "document": "Prevailing Wage Determination",
+          "topic": "Prevailing Wage PWD PERM H-1B",
+          "agency": "DOL",
+          "retrieval_score": 0.6484576463699341,
+          "reranker_score": 5.905942916870117,
+          "final_score": 5.905942916870117,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_prevailing_wages",
+          "document": "Prevailing Wage Determination",
+          "topic": "Prevailing Wage PWD PERM H-1B",
+          "agency": "DOL",
+          "retrieval_score": 0.5442254543304443,
+          "reranker_score": 4.675027847290039,
+          "final_score": 4.675027847290039,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_h1b_lca",
+          "document": "Labor Condition Application for H-1B",
+          "topic": "H-1B LCA prevailing wage employer requirements",
+          "agency": "DOL",
+          "retrieval_score": 0.5411837100982666,
+          "reranker_score": 4.345722198486328,
+          "final_score": 4.345722198486328,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_perm",
+          "document": "Permanent Labor Certification",
+          "topic": "PERM recruitment labor certification employer sponsorship",
+          "agency": "DOL",
+          "retrieval_score": 0.46568453311920166,
+          "reranker_score": 2.5528078079223633,
+          "final_score": 2.5528078079223633,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_prevailing_wages",
+          "document": "Prevailing Wage Determination",
+          "topic": "Prevailing Wage PWD PERM H-1B",
+          "agency": "DOL",
+          "retrieval_score": 0.46489641070365906,
+          "reranker_score": -2.159900665283203,
+          "final_score": -2.159900665283203,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "What is PERM labor certification?",
+      "expected_topic": "PERM",
+      "expected_source_ids": [],
+      "retrieval_query": "What is PERM labor certification?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "dol_perm",
+          "document": "Permanent Labor Certification",
+          "topic": "PERM recruitment labor certification employer sponsorship",
+          "agency": "DOL",
+          "retrieval_score": 0.5897499918937683,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_perm",
+          "document": "Permanent Labor Certification",
+          "topic": "PERM recruitment labor certification employer sponsorship",
+          "agency": "DOL",
+          "retrieval_score": 0.5895060300827026,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_perm",
+          "document": "Permanent Labor Certification",
+          "topic": "PERM recruitment labor certification employer sponsorship",
+          "agency": "DOL",
+          "retrieval_score": 0.5736969709396362,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5070620775222778,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "dol_prevailing_wages",
+          "document": "Prevailing Wage Determination",
+          "topic": "Prevailing Wage PWD PERM H-1B",
+          "agency": "DOL",
+          "retrieval_score": 0.44785380363464355,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "dol_perm",
+          "document": "Permanent Labor Certification",
+          "topic": "PERM recruitment labor certification employer sponsorship",
+          "agency": "DOL",
+          "retrieval_score": 0.5895060300827026,
+          "reranker_score": 9.17987060546875,
+          "final_score": 9.17987060546875,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_perm",
+          "document": "Permanent Labor Certification",
+          "topic": "PERM recruitment labor certification employer sponsorship",
+          "agency": "DOL",
+          "retrieval_score": 0.5897499918937683,
+          "reranker_score": 5.034501075744629,
+          "final_score": 5.034501075744629,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_perm",
+          "document": "Permanent Labor Certification",
+          "topic": "PERM recruitment labor certification employer sponsorship",
+          "agency": "DOL",
+          "retrieval_score": 0.5736969709396362,
+          "reranker_score": 2.6563796997070312,
+          "final_score": 2.6563796997070312,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_prevailing_wages",
+          "document": "Prevailing Wage Determination",
+          "topic": "Prevailing Wage PWD PERM H-1B",
+          "agency": "DOL",
+          "retrieval_score": 0.44785380363464355,
+          "reranker_score": 1.9859275817871094,
+          "final_score": 1.9859275817871094,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.407604455947876,
+          "reranker_score": -1.4809595346450806,
+          "final_score": -1.4809595346450806,
+          "authority_type": "FORM_INSTRUCTIONS"
+        }
+      ]
+    },
+    {
+      "question": "What is Form ETA-9089?",
+      "expected_topic": "PERM ETA-9089",
+      "expected_source_ids": [],
+      "retrieval_query": "What is Form ETA-9089?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 0,
+        "recall_at_3": 0,
+        "recall_at_5": 0,
+        "reciprocal_rank": 0.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 0,
+        "recall_at_3": 0,
+        "recall_at_5": 0,
+        "reciprocal_rank": 0.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.4080396294593811,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.40110042691230774,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.3987998366355896,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.3936437964439392,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.38810044527053833,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.3684455156326294,
+          "reranker_score": -3.1983890533447266,
+          "final_score": -3.1983890533447266,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.38007691502571106,
+          "reranker_score": -4.084917068481445,
+          "final_score": -4.084917068481445,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.37816667556762695,
+          "reranker_score": -5.019084453582764,
+          "final_score": -5.019084453582764,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.3684804439544678,
+          "reranker_score": -5.507225513458252,
+          "final_score": -5.507225513458252,
+          "authority_type": "POLICY_MANUAL"
+        },
+        {
+          "source_id": "uscis_h4_employment_authorization",
+          "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+          "topic": "H-4 H-4 EAD employment authorization",
+          "agency": "USCIS",
+          "retrieval_score": 0.40110042691230774,
+          "reranker_score": -6.221118927001953,
+          "final_score": -6.221118927001953,
+          "authority_type": "POLICY_MANUAL"
+        }
+      ]
+    },
+    {
+      "question": "What is Form I-140?",
+      "expected_topic": "I-140",
+      "expected_source_ids": [],
+      "retrieval_query": "What is Form I-140?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5554385781288147,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5533177852630615,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i140",
+          "document": "Form I-140 Immigrant Petition for Alien Workers",
+          "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.537954568862915,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5329415202140808,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i140",
+          "document": "Form I-140 Immigrant Petition for Alien Workers",
+          "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5313137769699097,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5533177852630615,
+          "reranker_score": 7.511902332305908,
+          "final_score": 7.511902332305908,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5290666222572327,
+          "reranker_score": 6.860082626342773,
+          "final_score": 6.860082626342773,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i140",
+          "document": "Form I-140 Immigrant Petition for Alien Workers",
+          "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5313137769699097,
+          "reranker_score": 6.619280815124512,
+          "final_score": 6.619280815124512,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.4773743748664856,
+          "reranker_score": 6.2339653968811035,
+          "final_score": 6.2339653968811035,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i140",
+          "document": "Form I-140 Immigrant Petition for Alien Workers",
+          "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.537954568862915,
+          "reranker_score": 5.827974796295166,
+          "final_score": 5.827974796295166,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "What is a priority date?",
+      "expected_topic": "Priority Date",
+      "expected_source_ids": [],
+      "retrieval_query": "What is a priority date?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "uscis_priority_dates",
+          "document": "Visa Availability and Priority Dates",
+          "topic": "Priority Date visa availability employment green card",
+          "agency": "USCIS",
+          "retrieval_score": 0.4896899461746216,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_priority_dates",
+          "document": "Visa Availability and Priority Dates",
+          "topic": "Priority Date visa availability employment green card",
+          "agency": "USCIS",
+          "retrieval_score": 0.4855164885520935,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_priority_dates",
+          "document": "Visa Availability and Priority Dates",
+          "topic": "Priority Date visa availability employment green card",
+          "agency": "USCIS",
+          "retrieval_score": 0.4665323495864868,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_priority_dates",
+          "document": "Visa Availability and Priority Dates",
+          "topic": "Priority Date visa availability employment green card",
+          "agency": "USCIS",
+          "retrieval_score": 0.4560392498970032,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_priority_dates",
+          "document": "Visa Availability and Priority Dates",
+          "topic": "Priority Date visa availability employment green card",
+          "agency": "USCIS",
+          "retrieval_score": 0.402709424495697,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "uscis_priority_dates",
+          "document": "Visa Availability and Priority Dates",
+          "topic": "Priority Date visa availability employment green card",
+          "agency": "USCIS",
+          "retrieval_score": 0.4896899461746216,
+          "reranker_score": 7.408557415008545,
+          "final_score": 7.408557415008545,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_priority_dates",
+          "document": "Visa Availability and Priority Dates",
+          "topic": "Priority Date visa availability employment green card",
+          "agency": "USCIS",
+          "retrieval_score": 0.4665323495864868,
+          "reranker_score": 1.2125756740570068,
+          "final_score": 1.2125756740570068,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_priority_dates",
+          "document": "Visa Availability and Priority Dates",
+          "topic": "Priority Date visa availability employment green card",
+          "agency": "USCIS",
+          "retrieval_score": 0.38785725831985474,
+          "reranker_score": 1.1223115921020508,
+          "final_score": 1.1223115921020508,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_priority_dates",
+          "document": "Visa Availability and Priority Dates",
+          "topic": "Priority Date visa availability employment green card",
+          "agency": "USCIS",
+          "retrieval_score": 0.38536253571510315,
+          "reranker_score": 1.0260506868362427,
+          "final_score": 1.0260506868362427,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_priority_dates",
+          "document": "Visa Availability and Priority Dates",
+          "topic": "Priority Date visa availability employment green card",
+          "agency": "USCIS",
+          "retrieval_score": 0.4855164885520935,
+          "reranker_score": 0.754196047782898,
+          "final_score": 0.754196047782898,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ]
+    },
+    {
+      "question": "Does Form I-140 include EB-2 and EB-3 petitions?",
+      "expected_topic": "I-140",
+      "expected_source_ids": [],
+      "retrieval_query": "Does Form I-140 include EB-2 and EB-3 petitions?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.581733226776123,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i140",
+          "document": "Form I-140 Immigrant Petition for Alien Workers",
+          "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.581119954586029,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i140",
+          "document": "Form I-140 Immigrant Petition for Alien Workers",
+          "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5549355149269104,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.54807448387146,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i140",
+          "document": "Form I-140 Immigrant Petition for Alien Workers",
+          "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5475031137466431,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "uscis_i140",
+          "document": "Form I-140 Immigrant Petition for Alien Workers",
+          "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5475031137466431,
+          "reranker_score": 5.0965681076049805,
+          "final_score": 5.0965681076049805,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i140",
+          "document": "Form I-140 Immigrant Petition for Alien Workers",
+          "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.5082281827926636,
+          "reranker_score": 4.156563758850098,
+          "final_score": 4.156563758850098,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.581733226776123,
+          "reranker_score": 3.972055196762085,
+          "final_score": 3.972055196762085,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.54807448387146,
+          "reranker_score": 3.468360662460327,
+          "final_score": 3.468360662460327,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i140_instructions",
+          "document": "Instructions for Form I-140",
+          "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+          "agency": "USCIS",
+          "retrieval_score": 0.49622511863708496,
+          "reranker_score": 3.391294479370117,
+          "final_score": 3.391294479370117,
+          "authority_type": "FORM_INSTRUCTIONS"
+        }
+      ]
+    },
+    {
+      "question": "Can I start CPT employment before receiving authorization from my DSO?",
+      "expected_topic": "CPT",
+      "expected_source_ids": [],
+      "retrieval_query": "Can I start CPT employment before receiving authorization from my DSO?",
+      "topic_filter": null,
+      "retrieval_metrics": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reranked_metrics": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5
+      },
+      "retrieval_top_5": [
+        {
+          "source_id": "sevp_practical_training_overview",
+          "document": "F-1 Practical Training Overview",
+          "topic": "CPT OPT STEM OPT",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.49787580966949463,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.4646666646003723,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.45549193024635315,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "dol_h1b_lca",
+          "document": "Labor Condition Application for H-1B",
+          "topic": "H-1B LCA prevailing wage employer requirements",
+          "agency": "DOL",
+          "retrieval_score": 0.43735170364379883,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.4355061948299408,
+          "reranker_score": null,
+          "final_score": null,
+          "authority_type": "FORM_INSTRUCTIONS"
+        }
+      ],
+      "reranked_top_5": [
+        {
+          "source_id": "uscis_opt_f1_students",
+          "document": "Optional Practical Training for F-1 Students",
+          "topic": "OPT",
+          "agency": "USCIS",
+          "retrieval_score": 0.45549193024635315,
+          "reranker_score": 2.091693162918091,
+          "final_score": 2.091693162918091,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.4232378602027893,
+          "reranker_score": 2.0894365310668945,
+          "final_score": 2.0894365310668945,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "sevp_cpt_immediate_graduate_guidance",
+          "document": "SEVP Spotlight Practical Training for F and M Students",
+          "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+          "agency": "DHS-SEVP",
+          "retrieval_score": 0.3801732361316681,
+          "reranker_score": 1.1206412315368652,
+          "final_score": 1.1206412315368652,
+          "authority_type": "OFFICIAL_GUIDANCE"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.4646666646003723,
+          "reranker_score": 0.33230674266815186,
+          "final_score": 0.33230674266815186,
+          "authority_type": "FORM_INSTRUCTIONS"
+        },
+        {
+          "source_id": "uscis_i765_instructions",
+          "document": "Form I-765 Instructions",
+          "topic": "OPT STEM OPT EAD filing",
+          "agency": "USCIS",
+          "retrieval_score": 0.4116861820220947,
+          "reranker_score": -0.38507458567619324,
+          "final_score": -0.38507458567619324,
+          "authority_type": "FORM_INSTRUCTIONS"
+        }
+      ]
+    }
+  ]
+}

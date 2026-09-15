@@ -1,0 +1,1092 @@
+{
+  "rows": [
+    {
+      "id": "f1_001",
+      "question": "What is CPT?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.3320814371109009,
+        "top_reranker_score": -4.009788990020752,
+        "reranker_margin": 1.9726996421813965,
+        "positive_top3": 0
+      }
+    },
+    {
+      "id": "f1_002",
+      "question": "What is Day 1 CPT?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.6107839345932007,
+        "top_reranker_score": 3.032982110977173,
+        "reranker_margin": 3.070040687918663,
+        "positive_top3": 1
+      }
+    },
+    {
+      "id": "f1_003",
+      "question": "Can a graduate student begin CPT immediately?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.5416415929794312,
+        "top_reranker_score": 2.8430633544921875,
+        "reranker_margin": 4.371784806251526,
+        "positive_top3": 1
+      }
+    },
+    {
+      "id": "f1_004",
+      "question": "Does 12 months of full-time CPT affect OPT eligibility?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.7171448469161987,
+        "top_reranker_score": 4.633647441864014,
+        "reranker_margin": 3.5918877124786377,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "f1_005",
+      "question": "Who authorizes CPT?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.3437642455101013,
+        "top_reranker_score": -2.688924789428711,
+        "reranker_margin": 3.0990328788757324,
+        "positive_top3": 0
+      }
+    },
+    {
+      "id": "opt_001",
+      "question": "What is OPT?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.5380727052688599,
+        "top_reranker_score": 2.4673075675964355,
+        "reranker_margin": 2.568321317434311,
+        "positive_top3": 1
+      }
+    },
+    {
+      "id": "opt_002",
+      "question": "What is pre-completion OPT?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.7301992177963257,
+        "top_reranker_score": 5.149037837982178,
+        "reranker_margin": 0.9568610191345215,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "opt_003",
+      "question": "What is post-completion OPT?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.6764628887176514,
+        "top_reranker_score": 4.850480079650879,
+        "reranker_margin": 1.2052803039550781,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "stem_001",
+      "question": "What is STEM OPT?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.4935549199581146,
+        "top_reranker_score": 0.7491538524627686,
+        "reranker_margin": 0.08317959308624268,
+        "positive_top3": 2
+      }
+    },
+    {
+      "id": "stem_002",
+      "question": "Does a STEM OPT employer need to participate in E-Verify?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.6153682470321655,
+        "top_reranker_score": 3.296988010406494,
+        "reranker_margin": 2.414952039718628,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "h1b_001",
+      "question": "What is an H-1B Labor Condition Application?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.5999265909194946,
+        "top_reranker_score": 3.539400577545166,
+        "reranker_margin": 2.0467782020568848,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "h1b_002",
+      "question": "What happens if I lose my job while on H-1B?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.5538339614868164,
+        "top_reranker_score": -2.3750131130218506,
+        "reranker_margin": 0.5280604362487793,
+        "positive_top3": 0
+      }
+    },
+    {
+      "id": "h1b_003",
+      "question": "Is there a grace period after H-1B employment ends?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.6837245225906372,
+        "top_reranker_score": 4.57297945022583,
+        "reranker_margin": 0.927154541015625,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "h1b_004",
+      "question": "What is cap-gap?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.2547270655632019,
+        "top_reranker_score": 0.2451532781124115,
+        "reranker_margin": 3.2061332166194916,
+        "positive_top3": 1
+      }
+    },
+    {
+      "id": "h4_001",
+      "question": "Can an H-4 spouse work in the United States?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.637136697769165,
+        "top_reranker_score": 0.5096051692962646,
+        "reranker_margin": 0.2852400839328766,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "perm_001",
+      "question": "What is a prevailing wage determination?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.6484576463699341,
+        "top_reranker_score": 3.294175863265991,
+        "reranker_margin": 0.8595740795135498,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "perm_002",
+      "question": "What is PERM labor certification?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.5897499918937683,
+        "top_reranker_score": 5.188105583190918,
+        "reranker_margin": 3.0706050395965576,
+        "positive_top3": 2
+      }
+    },
+    {
+      "id": "perm_003",
+      "question": "What is Form ETA-9089?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.48197460174560547,
+        "top_reranker_score": 3.548048496246338,
+        "reranker_margin": 0.6962175369262695,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "i140_001",
+      "question": "What is Form I-140?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.5853226184844971,
+        "top_reranker_score": 4.431609153747559,
+        "reranker_margin": 0.7797508239746094,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "i140_002",
+      "question": "What is a priority date?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.4896899163722992,
+        "top_reranker_score": 3.570176601409912,
+        "reranker_margin": 5.502908945083618,
+        "positive_top3": 1
+      }
+    },
+    {
+      "id": "i140_003",
+      "question": "Does Form I-140 include EB-2 and EB-3 petitions?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.6285330057144165,
+        "top_reranker_score": 2.9096601009368896,
+        "reranker_margin": 0.022705554962158203,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "negative_001",
+      "question": "What is the best immigration lawyer near me?",
+      "expected_answerable": false,
+      "signals": {
+        "retrieval_score": 0.5109370946884155,
+        "top_reranker_score": -9.978893280029297,
+        "reranker_margin": 0.7472000122070312,
+        "positive_top3": 0
+      }
+    },
+    {
+      "id": "negative_002",
+      "question": "Will USCIS approve my H-1B petition?",
+      "expected_answerable": false,
+      "signals": {
+        "retrieval_score": 0.6732442378997803,
+        "top_reranker_score": 3.6624033451080322,
+        "reranker_margin": 0.7083189487457275,
+        "positive_top3": 3
+      }
+    },
+    {
+      "id": "negative_003",
+      "question": "What are my chances of getting selected in the next H-1B lottery?",
+      "expected_answerable": false,
+      "signals": {
+        "retrieval_score": 0.37408632040023804,
+        "top_reranker_score": -4.535924434661865,
+        "reranker_margin": 0.06506967544555664,
+        "positive_top3": 0
+      }
+    },
+    {
+      "id": "negative_004",
+      "question": "Which university should I join for guaranteed Day 1 CPT?",
+      "expected_answerable": false,
+      "signals": {
+        "retrieval_score": 0.6107839345932007,
+        "top_reranker_score": 2.2431530952453613,
+        "reranker_margin": 3.6416003704071045,
+        "positive_top3": 1
+      }
+    },
+    {
+      "id": "negative_005",
+      "question": "Can you guarantee that my I-140 will be approved?",
+      "expected_answerable": false,
+      "signals": {
+        "retrieval_score": 0.5813620090484619,
+        "top_reranker_score": -0.3199731111526489,
+        "reranker_margin": 0.13232839107513428,
+        "positive_top3": 0
+      }
+    },
+    {
+      "id": "negative_006",
+      "question": "What will the EB-2 India priority date be next year?",
+      "expected_answerable": false,
+      "signals": {
+        "retrieval_score": 0.39059627056121826,
+        "top_reranker_score": -4.640928268432617,
+        "reranker_margin": 0.9733495712280273,
+        "positive_top3": 0
+      }
+    },
+    {
+      "id": "negative_007",
+      "question": "Should I quit my current employer and move to another company?",
+      "expected_answerable": false,
+      "signals": {
+        "retrieval_score": 0.32833346724510193,
+        "top_reranker_score": -2.698535442352295,
+        "reranker_margin": 1.8765959739685059,
+        "positive_top3": 0
+      }
+    },
+    {
+      "id": "negative_008",
+      "question": "Which consulting company gives the easiest H-1B sponsorship?",
+      "expected_answerable": false,
+      "signals": {
+        "retrieval_score": 0.4244765043258667,
+        "top_reranker_score": -5.527882099151611,
+        "reranker_margin": 0.41076135635375977,
+        "positive_top3": 0
+      }
+    },
+    {
+      "id": "cpt_006",
+      "question": "Can I start CPT employment before receiving authorization from my DSO?",
+      "expected_answerable": true,
+      "signals": {
+        "retrieval_score": 0.49787577986717224,
+        "top_reranker_score": -0.6123124361038208,
+        "reranker_margin": 0.5071767568588257,
+        "positive_top3": 0
+      }
+    }
+  ],
+  "combined_gate_results": [
+    {
+      "retrieval_threshold": 0.25,
+      "reranker_threshold": -4.0,
+      "accuracy": 0.8333333333333334,
+      "precision": 0.84,
+      "recall": 0.9545454545454546,
+      "specificity": 0.5,
+      "f1": 0.8936170212765958,
+      "true_positive": 21,
+      "true_negative": 4,
+      "false_positive": 4,
+      "false_negative": 1
+    },
+    {
+      "retrieval_threshold": 0.25,
+      "reranker_threshold": -2.0,
+      "accuracy": 0.8,
+      "precision": 0.8636363636363636,
+      "recall": 0.8636363636363636,
+      "specificity": 0.625,
+      "f1": 0.8636363636363636,
+      "true_positive": 19,
+      "true_negative": 5,
+      "false_positive": 3,
+      "false_negative": 3
+    },
+    {
+      "retrieval_threshold": 0.25,
+      "reranker_threshold": 0.0,
+      "accuracy": 0.8,
+      "precision": 0.9,
+      "recall": 0.8181818181818182,
+      "specificity": 0.75,
+      "f1": 0.8571428571428572,
+      "true_positive": 18,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 4
+    },
+    {
+      "retrieval_threshold": 0.25,
+      "reranker_threshold": 1.0,
+      "accuracy": 0.7,
+      "precision": 0.8823529411764706,
+      "recall": 0.6818181818181818,
+      "specificity": 0.75,
+      "f1": 0.7692307692307693,
+      "true_positive": 15,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 7
+    },
+    {
+      "retrieval_threshold": 0.25,
+      "reranker_threshold": 2.0,
+      "accuracy": 0.7,
+      "precision": 0.8823529411764706,
+      "recall": 0.6818181818181818,
+      "specificity": 0.75,
+      "f1": 0.7692307692307693,
+      "true_positive": 15,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 7
+    },
+    {
+      "retrieval_threshold": 0.25,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.9230769230769231,
+      "recall": 0.5454545454545454,
+      "specificity": 0.875,
+      "f1": 0.6857142857142856,
+      "true_positive": 12,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 10
+    },
+    {
+      "retrieval_threshold": 0.25,
+      "reranker_threshold": 4.0,
+      "accuracy": 0.4666666666666667,
+      "precision": 1.0,
+      "recall": 0.2727272727272727,
+      "specificity": 1.0,
+      "f1": 0.42857142857142855,
+      "true_positive": 6,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 16
+    },
+    {
+      "retrieval_threshold": 0.25,
+      "reranker_threshold": 5.0,
+      "accuracy": 0.3333333333333333,
+      "precision": 1.0,
+      "recall": 0.09090909090909091,
+      "specificity": 1.0,
+      "f1": 0.16666666666666669,
+      "true_positive": 2,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 20
+    },
+    {
+      "retrieval_threshold": 0.3,
+      "reranker_threshold": -4.0,
+      "accuracy": 0.8,
+      "precision": 0.8333333333333334,
+      "recall": 0.9090909090909091,
+      "specificity": 0.5,
+      "f1": 0.8695652173913043,
+      "true_positive": 20,
+      "true_negative": 4,
+      "false_positive": 4,
+      "false_negative": 2
+    },
+    {
+      "retrieval_threshold": 0.3,
+      "reranker_threshold": -2.0,
+      "accuracy": 0.7666666666666667,
+      "precision": 0.8571428571428571,
+      "recall": 0.8181818181818182,
+      "specificity": 0.625,
+      "f1": 0.8372093023255814,
+      "true_positive": 18,
+      "true_negative": 5,
+      "false_positive": 3,
+      "false_negative": 4
+    },
+    {
+      "retrieval_threshold": 0.3,
+      "reranker_threshold": 0.0,
+      "accuracy": 0.7666666666666667,
+      "precision": 0.8947368421052632,
+      "recall": 0.7727272727272727,
+      "specificity": 0.75,
+      "f1": 0.8292682926829269,
+      "true_positive": 17,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 5
+    },
+    {
+      "retrieval_threshold": 0.3,
+      "reranker_threshold": 1.0,
+      "accuracy": 0.7,
+      "precision": 0.8823529411764706,
+      "recall": 0.6818181818181818,
+      "specificity": 0.75,
+      "f1": 0.7692307692307693,
+      "true_positive": 15,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 7
+    },
+    {
+      "retrieval_threshold": 0.3,
+      "reranker_threshold": 2.0,
+      "accuracy": 0.7,
+      "precision": 0.8823529411764706,
+      "recall": 0.6818181818181818,
+      "specificity": 0.75,
+      "f1": 0.7692307692307693,
+      "true_positive": 15,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 7
+    },
+    {
+      "retrieval_threshold": 0.3,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.9230769230769231,
+      "recall": 0.5454545454545454,
+      "specificity": 0.875,
+      "f1": 0.6857142857142856,
+      "true_positive": 12,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 10
+    },
+    {
+      "retrieval_threshold": 0.3,
+      "reranker_threshold": 4.0,
+      "accuracy": 0.4666666666666667,
+      "precision": 1.0,
+      "recall": 0.2727272727272727,
+      "specificity": 1.0,
+      "f1": 0.42857142857142855,
+      "true_positive": 6,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 16
+    },
+    {
+      "retrieval_threshold": 0.3,
+      "reranker_threshold": 5.0,
+      "accuracy": 0.3333333333333333,
+      "precision": 1.0,
+      "recall": 0.09090909090909091,
+      "specificity": 1.0,
+      "f1": 0.16666666666666669,
+      "true_positive": 2,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 20
+    },
+    {
+      "retrieval_threshold": 0.35,
+      "reranker_threshold": -4.0,
+      "accuracy": 0.8,
+      "precision": 0.8636363636363636,
+      "recall": 0.8636363636363636,
+      "specificity": 0.625,
+      "f1": 0.8636363636363636,
+      "true_positive": 19,
+      "true_negative": 5,
+      "false_positive": 3,
+      "false_negative": 3
+    },
+    {
+      "retrieval_threshold": 0.35,
+      "reranker_threshold": -2.0,
+      "accuracy": 0.7666666666666667,
+      "precision": 0.8571428571428571,
+      "recall": 0.8181818181818182,
+      "specificity": 0.625,
+      "f1": 0.8372093023255814,
+      "true_positive": 18,
+      "true_negative": 5,
+      "false_positive": 3,
+      "false_negative": 4
+    },
+    {
+      "retrieval_threshold": 0.35,
+      "reranker_threshold": 0.0,
+      "accuracy": 0.7666666666666667,
+      "precision": 0.8947368421052632,
+      "recall": 0.7727272727272727,
+      "specificity": 0.75,
+      "f1": 0.8292682926829269,
+      "true_positive": 17,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 5
+    },
+    {
+      "retrieval_threshold": 0.35,
+      "reranker_threshold": 1.0,
+      "accuracy": 0.7,
+      "precision": 0.8823529411764706,
+      "recall": 0.6818181818181818,
+      "specificity": 0.75,
+      "f1": 0.7692307692307693,
+      "true_positive": 15,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 7
+    },
+    {
+      "retrieval_threshold": 0.35,
+      "reranker_threshold": 2.0,
+      "accuracy": 0.7,
+      "precision": 0.8823529411764706,
+      "recall": 0.6818181818181818,
+      "specificity": 0.75,
+      "f1": 0.7692307692307693,
+      "true_positive": 15,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 7
+    },
+    {
+      "retrieval_threshold": 0.35,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.9230769230769231,
+      "recall": 0.5454545454545454,
+      "specificity": 0.875,
+      "f1": 0.6857142857142856,
+      "true_positive": 12,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 10
+    },
+    {
+      "retrieval_threshold": 0.35,
+      "reranker_threshold": 4.0,
+      "accuracy": 0.4666666666666667,
+      "precision": 1.0,
+      "recall": 0.2727272727272727,
+      "specificity": 1.0,
+      "f1": 0.42857142857142855,
+      "true_positive": 6,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 16
+    },
+    {
+      "retrieval_threshold": 0.35,
+      "reranker_threshold": 5.0,
+      "accuracy": 0.3333333333333333,
+      "precision": 1.0,
+      "recall": 0.09090909090909091,
+      "specificity": 1.0,
+      "f1": 0.16666666666666669,
+      "true_positive": 2,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 20
+    },
+    {
+      "retrieval_threshold": 0.4,
+      "reranker_threshold": -4.0,
+      "accuracy": 0.8,
+      "precision": 0.8636363636363636,
+      "recall": 0.8636363636363636,
+      "specificity": 0.625,
+      "f1": 0.8636363636363636,
+      "true_positive": 19,
+      "true_negative": 5,
+      "false_positive": 3,
+      "false_negative": 3
+    },
+    {
+      "retrieval_threshold": 0.4,
+      "reranker_threshold": -2.0,
+      "accuracy": 0.7666666666666667,
+      "precision": 0.8571428571428571,
+      "recall": 0.8181818181818182,
+      "specificity": 0.625,
+      "f1": 0.8372093023255814,
+      "true_positive": 18,
+      "true_negative": 5,
+      "false_positive": 3,
+      "false_negative": 4
+    },
+    {
+      "retrieval_threshold": 0.4,
+      "reranker_threshold": 0.0,
+      "accuracy": 0.7666666666666667,
+      "precision": 0.8947368421052632,
+      "recall": 0.7727272727272727,
+      "specificity": 0.75,
+      "f1": 0.8292682926829269,
+      "true_positive": 17,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 5
+    },
+    {
+      "retrieval_threshold": 0.4,
+      "reranker_threshold": 1.0,
+      "accuracy": 0.7,
+      "precision": 0.8823529411764706,
+      "recall": 0.6818181818181818,
+      "specificity": 0.75,
+      "f1": 0.7692307692307693,
+      "true_positive": 15,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 7
+    },
+    {
+      "retrieval_threshold": 0.4,
+      "reranker_threshold": 2.0,
+      "accuracy": 0.7,
+      "precision": 0.8823529411764706,
+      "recall": 0.6818181818181818,
+      "specificity": 0.75,
+      "f1": 0.7692307692307693,
+      "true_positive": 15,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 7
+    },
+    {
+      "retrieval_threshold": 0.4,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.9230769230769231,
+      "recall": 0.5454545454545454,
+      "specificity": 0.875,
+      "f1": 0.6857142857142856,
+      "true_positive": 12,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 10
+    },
+    {
+      "retrieval_threshold": 0.4,
+      "reranker_threshold": 4.0,
+      "accuracy": 0.4666666666666667,
+      "precision": 1.0,
+      "recall": 0.2727272727272727,
+      "specificity": 1.0,
+      "f1": 0.42857142857142855,
+      "true_positive": 6,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 16
+    },
+    {
+      "retrieval_threshold": 0.4,
+      "reranker_threshold": 5.0,
+      "accuracy": 0.3333333333333333,
+      "precision": 1.0,
+      "recall": 0.09090909090909091,
+      "specificity": 1.0,
+      "f1": 0.16666666666666669,
+      "true_positive": 2,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 20
+    },
+    {
+      "retrieval_threshold": 0.45,
+      "reranker_threshold": -4.0,
+      "accuracy": 0.8,
+      "precision": 0.8636363636363636,
+      "recall": 0.8636363636363636,
+      "specificity": 0.625,
+      "f1": 0.8636363636363636,
+      "true_positive": 19,
+      "true_negative": 5,
+      "false_positive": 3,
+      "false_negative": 3
+    },
+    {
+      "retrieval_threshold": 0.45,
+      "reranker_threshold": -2.0,
+      "accuracy": 0.7666666666666667,
+      "precision": 0.8571428571428571,
+      "recall": 0.8181818181818182,
+      "specificity": 0.625,
+      "f1": 0.8372093023255814,
+      "true_positive": 18,
+      "true_negative": 5,
+      "false_positive": 3,
+      "false_negative": 4
+    },
+    {
+      "retrieval_threshold": 0.45,
+      "reranker_threshold": 0.0,
+      "accuracy": 0.7666666666666667,
+      "precision": 0.8947368421052632,
+      "recall": 0.7727272727272727,
+      "specificity": 0.75,
+      "f1": 0.8292682926829269,
+      "true_positive": 17,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 5
+    },
+    {
+      "retrieval_threshold": 0.45,
+      "reranker_threshold": 1.0,
+      "accuracy": 0.7,
+      "precision": 0.8823529411764706,
+      "recall": 0.6818181818181818,
+      "specificity": 0.75,
+      "f1": 0.7692307692307693,
+      "true_positive": 15,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 7
+    },
+    {
+      "retrieval_threshold": 0.45,
+      "reranker_threshold": 2.0,
+      "accuracy": 0.7,
+      "precision": 0.8823529411764706,
+      "recall": 0.6818181818181818,
+      "specificity": 0.75,
+      "f1": 0.7692307692307693,
+      "true_positive": 15,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 7
+    },
+    {
+      "retrieval_threshold": 0.45,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.9230769230769231,
+      "recall": 0.5454545454545454,
+      "specificity": 0.875,
+      "f1": 0.6857142857142856,
+      "true_positive": 12,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 10
+    },
+    {
+      "retrieval_threshold": 0.45,
+      "reranker_threshold": 4.0,
+      "accuracy": 0.4666666666666667,
+      "precision": 1.0,
+      "recall": 0.2727272727272727,
+      "specificity": 1.0,
+      "f1": 0.42857142857142855,
+      "true_positive": 6,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 16
+    },
+    {
+      "retrieval_threshold": 0.45,
+      "reranker_threshold": 5.0,
+      "accuracy": 0.3333333333333333,
+      "precision": 1.0,
+      "recall": 0.09090909090909091,
+      "specificity": 1.0,
+      "f1": 0.16666666666666669,
+      "true_positive": 2,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 20
+    },
+    {
+      "retrieval_threshold": 0.5,
+      "reranker_threshold": -4.0,
+      "accuracy": 0.6666666666666666,
+      "precision": 0.8333333333333334,
+      "recall": 0.6818181818181818,
+      "specificity": 0.625,
+      "f1": 0.7499999999999999,
+      "true_positive": 15,
+      "true_negative": 5,
+      "false_positive": 3,
+      "false_negative": 7
+    },
+    {
+      "retrieval_threshold": 0.5,
+      "reranker_threshold": -2.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.8235294117647058,
+      "recall": 0.6363636363636364,
+      "specificity": 0.625,
+      "f1": 0.717948717948718,
+      "true_positive": 14,
+      "true_negative": 5,
+      "false_positive": 3,
+      "false_negative": 8
+    },
+    {
+      "retrieval_threshold": 0.5,
+      "reranker_threshold": 0.0,
+      "accuracy": 0.6666666666666666,
+      "precision": 0.875,
+      "recall": 0.6363636363636364,
+      "specificity": 0.75,
+      "f1": 0.7368421052631579,
+      "true_positive": 14,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 8
+    },
+    {
+      "retrieval_threshold": 0.5,
+      "reranker_threshold": 1.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.8666666666666667,
+      "recall": 0.5909090909090909,
+      "specificity": 0.75,
+      "f1": 0.7027027027027029,
+      "true_positive": 13,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 9
+    },
+    {
+      "retrieval_threshold": 0.5,
+      "reranker_threshold": 2.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.8666666666666667,
+      "recall": 0.5909090909090909,
+      "specificity": 0.75,
+      "f1": 0.7027027027027029,
+      "true_positive": 13,
+      "true_negative": 6,
+      "false_positive": 2,
+      "false_negative": 9
+    },
+    {
+      "retrieval_threshold": 0.5,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.5666666666666667,
+      "precision": 0.9090909090909091,
+      "recall": 0.45454545454545453,
+      "specificity": 0.875,
+      "f1": 0.6060606060606061,
+      "true_positive": 10,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 12
+    },
+    {
+      "retrieval_threshold": 0.5,
+      "reranker_threshold": 4.0,
+      "accuracy": 0.4666666666666667,
+      "precision": 1.0,
+      "recall": 0.2727272727272727,
+      "specificity": 1.0,
+      "f1": 0.42857142857142855,
+      "true_positive": 6,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 16
+    },
+    {
+      "retrieval_threshold": 0.5,
+      "reranker_threshold": 5.0,
+      "accuracy": 0.3333333333333333,
+      "precision": 1.0,
+      "recall": 0.09090909090909091,
+      "specificity": 1.0,
+      "f1": 0.16666666666666669,
+      "true_positive": 2,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 20
+    }
+  ],
+  "recommended_candidates": [
+    {
+      "retrieval_threshold": 0.25,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.9230769230769231,
+      "recall": 0.5454545454545454,
+      "specificity": 0.875,
+      "f1": 0.6857142857142856,
+      "true_positive": 12,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 10
+    },
+    {
+      "retrieval_threshold": 0.3,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.9230769230769231,
+      "recall": 0.5454545454545454,
+      "specificity": 0.875,
+      "f1": 0.6857142857142856,
+      "true_positive": 12,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 10
+    },
+    {
+      "retrieval_threshold": 0.35,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.9230769230769231,
+      "recall": 0.5454545454545454,
+      "specificity": 0.875,
+      "f1": 0.6857142857142856,
+      "true_positive": 12,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 10
+    },
+    {
+      "retrieval_threshold": 0.4,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.9230769230769231,
+      "recall": 0.5454545454545454,
+      "specificity": 0.875,
+      "f1": 0.6857142857142856,
+      "true_positive": 12,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 10
+    },
+    {
+      "retrieval_threshold": 0.45,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.6333333333333333,
+      "precision": 0.9230769230769231,
+      "recall": 0.5454545454545454,
+      "specificity": 0.875,
+      "f1": 0.6857142857142856,
+      "true_positive": 12,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 10
+    },
+    {
+      "retrieval_threshold": 0.5,
+      "reranker_threshold": 3.0,
+      "accuracy": 0.5666666666666667,
+      "precision": 0.9090909090909091,
+      "recall": 0.45454545454545453,
+      "specificity": 0.875,
+      "f1": 0.6060606060606061,
+      "true_positive": 10,
+      "true_negative": 7,
+      "false_positive": 1,
+      "false_negative": 12
+    },
+    {
+      "retrieval_threshold": 0.25,
+      "reranker_threshold": 4.0,
+      "accuracy": 0.4666666666666667,
+      "precision": 1.0,
+      "recall": 0.2727272727272727,
+      "specificity": 1.0,
+      "f1": 0.42857142857142855,
+      "true_positive": 6,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 16
+    },
+    {
+      "retrieval_threshold": 0.3,
+      "reranker_threshold": 4.0,
+      "accuracy": 0.4666666666666667,
+      "precision": 1.0,
+      "recall": 0.2727272727272727,
+      "specificity": 1.0,
+      "f1": 0.42857142857142855,
+      "true_positive": 6,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 16
+    },
+    {
+      "retrieval_threshold": 0.35,
+      "reranker_threshold": 4.0,
+      "accuracy": 0.4666666666666667,
+      "precision": 1.0,
+      "recall": 0.2727272727272727,
+      "specificity": 1.0,
+      "f1": 0.42857142857142855,
+      "true_positive": 6,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 16
+    },
+    {
+      "retrieval_threshold": 0.4,
+      "reranker_threshold": 4.0,
+      "accuracy": 0.4666666666666667,
+      "precision": 1.0,
+      "recall": 0.2727272727272727,
+      "specificity": 1.0,
+      "f1": 0.42857142857142855,
+      "true_positive": 6,
+      "true_negative": 8,
+      "false_positive": 0,
+      "false_negative": 16
+    }
+  ]
+}

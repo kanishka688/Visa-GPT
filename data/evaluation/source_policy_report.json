@@ -1,0 +1,47 @@
+{
+  "total": 5,
+  "passed": 5,
+  "accuracy": 1.0,
+  "results": [
+    {
+      "id": "status_001",
+      "name": "Current beats archived",
+      "expected": "A",
+      "actual": "A",
+      "reason": "A is current while B is inactive",
+      "passed": true
+    },
+    {
+      "id": "authority_001",
+      "name": "Regulation beats guidance",
+      "expected": "A",
+      "actual": "A",
+      "reason": "A has higher source authority",
+      "passed": true
+    },
+    {
+      "id": "supersession_001",
+      "name": "Explicit supersession wins",
+      "expected": "A",
+      "actual": "A",
+      "reason": "A explicitly supersedes B",
+      "passed": true
+    },
+    {
+      "id": "date_001",
+      "name": "Newer equal-authority source wins",
+      "expected": "B",
+      "actual": "B",
+      "reason": "B has the newer applicable date",
+      "passed": true
+    },
+    {
+      "id": "tie_001",
+      "name": "Equal sources produce no winner",
+      "expected": null,
+      "actual": null,
+      "reason": "No deterministic source preference",
+      "passed": true
+    }
+  ]
+}

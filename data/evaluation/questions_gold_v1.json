@@ -1,0 +1,671 @@
+[
+  {
+    "id": "f1_001",
+    "question": "What is CPT?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_practical_training_overview",
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "Gold sources directly define and govern CPT."
+  },
+  {
+    "id": "f1_002",
+    "question": "What is Day 1 CPT?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_cpt_immediate_graduate_guidance",
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "Uses official immediate-CPT guidance and the governing F-1 regulation."
+  },
+  {
+    "id": "f1_003",
+    "question": "Can a graduate student begin CPT immediately?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_cpt_immediate_graduate_guidance",
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "These sources directly address immediate CPT participation for qualifying graduate programs."
+  },
+  {
+    "id": "f1_004",
+    "question": "Does 12 months of full-time CPT affect OPT eligibility?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_practical_training_overview",
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "Directly supported by official CPT/OPT eligibility rules."
+  },
+  {
+    "id": "f1_005",
+    "question": "Who authorizes CPT?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_practical_training_overview",
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "Official sources describe DSO authorization of CPT."
+  },
+  {
+    "id": "opt_001",
+    "question": "What is OPT?",
+    "stage": "F-1",
+    "topic": "OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_opt_f1_students",
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "USCIS OPT guidance and the governing F-1 regulation directly define OPT."
+  },
+  {
+    "id": "opt_002",
+    "question": "What is pre-completion OPT?",
+    "stage": "F-1",
+    "topic": "OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_opt_f1_students",
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "USCIS and 8 CFR 214.2 directly distinguish pre-completion OPT."
+  },
+  {
+    "id": "opt_003",
+    "question": "What is post-completion OPT?",
+    "stage": "F-1",
+    "topic": "OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_opt_f1_students",
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "USCIS and 8 CFR 214.2 directly distinguish post-completion OPT."
+  },
+  {
+    "id": "stem_001",
+    "question": "What is STEM OPT?",
+    "stage": "F-1",
+    "topic": "STEM OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_stem_opt_policy",
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "STEM OPT policy and governing F-1 regulation directly support the definition."
+  },
+  {
+    "id": "stem_002",
+    "question": "Does a STEM OPT employer need to participate in E-Verify?",
+    "stage": "F-1",
+    "topic": "STEM OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_i765_instructions",
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "These sources directly support the E-Verify requirement for STEM OPT employment."
+  },
+  {
+    "id": "h1b_001",
+    "question": "What is an H-1B Labor Condition Application?",
+    "stage": "H-1B",
+    "topic": "H-1B LCA",
+    "answerable": true,
+    "expected_source_ids": [
+      "dol_h1b_lca",
+      "ecfr_20cfr_655_subpart_h"
+    ],
+    "_evaluation_notes": "DOL guidance and 20 CFR Part 655 Subpart H directly govern H-1B LCAs."
+  },
+  {
+    "id": "h1b_002",
+    "question": "What happens if I lose my job while on H-1B?",
+    "stage": "H-1B",
+    "topic": "H-1B layoff",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_h1b_termination_options"
+    ],
+    "_evaluation_notes": "USCIS termination guidance directly addresses options following H-1B job loss."
+  },
+  {
+    "id": "h1b_003",
+    "question": "Is there a grace period after H-1B employment ends?",
+    "stage": "H-1B",
+    "topic": "H-1B grace period",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_1",
+      "uscis_h1b_termination_options"
+    ],
+    "_evaluation_notes": "Candidate-source helper missed 8 CFR 214.1 because of topic-label matching. Gold source added manually."
+  },
+  {
+    "id": "h1b_004",
+    "question": "What is cap-gap?",
+    "stage": "H-1B",
+    "topic": "cap-gap",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "8 CFR 214.2 contains the governing cap-gap provisions."
+  },
+  {
+    "id": "h4_001",
+    "question": "Can an H-4 spouse work in the United States?",
+    "stage": "H-4",
+    "topic": "H-4 EAD",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_h4_employment_authorization",
+      "ecfr_8cfr_274a_12"
+    ],
+    "_evaluation_notes": "USCIS guidance and employment-authorization regulation support H-4 spouse work eligibility."
+  },
+  {
+    "id": "perm_001",
+    "question": "What is a prevailing wage determination?",
+    "stage": "PERM",
+    "topic": "Prevailing Wage",
+    "answerable": true,
+    "expected_source_ids": [
+      "dol_prevailing_wages",
+      "ecfr_20cfr_656"
+    ],
+    "_evaluation_notes": "DOL prevailing-wage guidance and 20 CFR Part 656 directly support the definition."
+  },
+  {
+    "id": "perm_002",
+    "question": "What is PERM labor certification?",
+    "stage": "PERM",
+    "topic": "PERM",
+    "answerable": true,
+    "expected_source_ids": [
+      "dol_perm",
+      "ecfr_20cfr_656"
+    ],
+    "_evaluation_notes": "DOL PERM guidance and 20 CFR Part 656 directly define the permanent labor certification process."
+  },
+  {
+    "id": "perm_003",
+    "question": "What is Form ETA-9089?",
+    "stage": "PERM",
+    "topic": "PERM ETA-9089",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_20cfr_656"
+    ],
+    "_evaluation_notes": "20 CFR Part 656 directly identifies ETA Form 9089 as the Application for Permanent Employment Certification."
+  },
+  {
+    "id": "i140_001",
+    "question": "What is Form I-140?",
+    "stage": "I-140",
+    "topic": "I-140",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_i140",
+      "uscis_i140_instructions"
+    ],
+    "_evaluation_notes": "USCIS form page and instructions directly define Form I-140."
+  },
+  {
+    "id": "i140_002",
+    "question": "What is a priority date?",
+    "stage": "I-140",
+    "topic": "Priority Date",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_priority_dates",
+      "ecfr_8cfr_204_5"
+    ],
+    "_evaluation_notes": "USCIS priority-date guidance and 8 CFR 204.5 directly support the definition."
+  },
+  {
+    "id": "i140_003",
+    "question": "Does Form I-140 include EB-2 and EB-3 petitions?",
+    "stage": "I-140",
+    "topic": "I-140",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_i140",
+      "ecfr_8cfr_204_5"
+    ],
+    "_evaluation_notes": "USCIS I-140 material and 8 CFR 204.5 directly cover EB-2 and EB-3 immigrant petitions."
+  },
+  {
+    "id": "negative_001",
+    "question": "What is the best immigration lawyer near me?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "lawyer recommendation",
+    "answerable": false
+  },
+  {
+    "id": "negative_002",
+    "question": "Will USCIS approve my H-1B petition?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "case prediction",
+    "answerable": false
+  },
+  {
+    "id": "negative_003",
+    "question": "What are my chances of getting selected in the next H-1B lottery?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "future prediction",
+    "answerable": false
+  },
+  {
+    "id": "negative_004",
+    "question": "Which university should I join for guaranteed Day 1 CPT?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "school recommendation",
+    "answerable": false
+  },
+  {
+    "id": "negative_005",
+    "question": "Can you guarantee that my I-140 will be approved?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "case prediction",
+    "answerable": false
+  },
+  {
+    "id": "negative_006",
+    "question": "What will the EB-2 India priority date be next year?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "future prediction",
+    "answerable": false
+  },
+  {
+    "id": "negative_007",
+    "question": "Should I quit my current employer and move to another company?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "personal decision",
+    "answerable": false
+  },
+  {
+    "id": "negative_008",
+    "question": "Which consulting company gives the easiest H-1B sponsorship?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "company recommendation",
+    "answerable": false
+  },
+  {
+    "id": "cpt_006",
+    "question": "Can I start CPT employment before receiving authorization from my DSO?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_practical_training_overview",
+      "ecfr_8cfr_214_2"
+    ],
+    "_evaluation_notes": "Official CPT sources require authorization before CPT employment begins."
+  },
+  {
+    "id": "f1_007",
+    "question": "Do F-1 students normally need to complete one academic year before becoming eligible for CPT?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_2",
+      "sevp_practical_training_overview"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "f1_008",
+    "question": "Does part-time CPT count toward the 12-month full-time CPT limit that affects OPT?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_2",
+      "sevp_practical_training_overview"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "f1_009",
+    "question": "Who signs off on CPT for an F-1 student?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_2",
+      "sevp_practical_training_overview"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "f1_010",
+    "question": "Can I begin working on CPT before my DSO authorizes it in SEVIS?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_2",
+      "sevp_practical_training_overview",
+      "sevp_cpt_immediate_graduate_guidance"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "opt_004",
+    "question": "Who authorizes OPT employment for an F-1 student?",
+    "stage": "F-1",
+    "topic": "OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_opt_f1_students",
+      "ecfr_8cfr_214_2"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "opt_005",
+    "question": "Does using pre-completion OPT reduce the amount of post-completion OPT available?",
+    "stage": "F-1",
+    "topic": "OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_opt_f1_students",
+      "ecfr_8cfr_214_2"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "opt_006",
+    "question": "Does OPT employment need to be related to the student's field of study?",
+    "stage": "F-1",
+    "topic": "OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_opt_f1_students",
+      "ecfr_8cfr_214_2"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "stem_003",
+    "question": "How long is the STEM OPT extension?",
+    "stage": "F-1",
+    "topic": "STEM OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_stem_opt_policy",
+      "ecfr_8cfr_214_2"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "stem_004",
+    "question": "Is E-Verify mandatory for an employer hiring a student on STEM OPT?",
+    "stage": "F-1",
+    "topic": "STEM OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_i765_instructions",
+      "ecfr_8cfr_214_2"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "stem_005",
+    "question": "What is Form I-983 used for in the STEM OPT process?",
+    "stage": "F-1",
+    "topic": "STEM OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_stem_opt_policy"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "h1b_005",
+    "question": "What is the maximum discretionary grace period after H-1B employment ends?",
+    "stage": "H-1B",
+    "topic": "H-1B grace period",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_1",
+      "uscis_h1b_termination_options"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "h1b_006",
+    "question": "What does H-1B portability mean?",
+    "stage": "H-1B",
+    "topic": "H-1B portability",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_2"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "h1b_007",
+    "question": "When can an eligible H-1B worker start working for a new employer under portability?",
+    "stage": "H-1B",
+    "topic": "H-1B portability",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_2"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "h1b_008",
+    "question": "Does an H-1B employer need a Labor Condition Application?",
+    "stage": "H-1B",
+    "topic": "H-1B LCA",
+    "answerable": true,
+    "expected_source_ids": [
+      "dol_h1b_lca",
+      "ecfr_20cfr_655_subpart_h"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "h1b_009",
+    "question": "I was laid off on H-1B. What official immigration options may exist after termination of employment?",
+    "stage": "H-1B",
+    "topic": "H-1B termination",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_h1b_termination_options",
+      "ecfr_8cfr_214_1"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "h1b_010",
+    "question": "What does the F-1 cap-gap provision automatically extend?",
+    "stage": "F-1 H-1B",
+    "topic": "cap-gap",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_2"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "h4_002",
+    "question": "Are all H-4 spouses automatically authorized to work?",
+    "stage": "H-4",
+    "topic": "H-4 EAD",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_h4_employment_authorization",
+      "ecfr_8cfr_274a_12"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "perm_004",
+    "question": "Who issues the prevailing wage determination used in the PERM process?",
+    "stage": "PERM",
+    "topic": "Prevailing Wage",
+    "answerable": true,
+    "expected_source_ids": [
+      "dol_prevailing_wages",
+      "ecfr_20cfr_656"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "perm_005",
+    "question": "What role does the prevailing wage determination play in PERM?",
+    "stage": "PERM",
+    "topic": "Prevailing Wage",
+    "answerable": true,
+    "expected_source_ids": [
+      "dol_prevailing_wages",
+      "ecfr_20cfr_656"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "perm_006",
+    "question": "What is ETA Form 9089 used for?",
+    "stage": "PERM",
+    "topic": "PERM ETA-9089",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_20cfr_656"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "i140_004",
+    "question": "Who generally files Form I-140?",
+    "stage": "I-140",
+    "topic": "I-140",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_i140",
+      "uscis_i140_instructions"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "i140_005",
+    "question": "What employment-based immigrant categories are covered by Form I-140?",
+    "stage": "I-140",
+    "topic": "I-140",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_i140",
+      "ecfr_8cfr_204_5"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "i140_006",
+    "question": "How is a priority date determined for an employment-based immigrant petition?",
+    "stage": "I-140",
+    "topic": "Priority Date",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_priority_dates",
+      "ecfr_8cfr_204_5"
+    ],
+    "expected_policy_category": "OFFICIAL_FACT"
+  },
+  {
+    "id": "negative_009",
+    "question": "Will my H-1B transfer definitely be approved?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "case prediction",
+    "answerable": false,
+    "expected_policy_category": "CASE_PREDICTION"
+  },
+  {
+    "id": "negative_010",
+    "question": "Which Day 1 CPT university has the lowest chance of an RFE?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "recommendation",
+    "answerable": false,
+    "expected_policy_category": "RECOMMENDATION"
+  },
+  {
+    "id": "negative_011",
+    "question": "Will the H-1B lottery become easier next year?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "future prediction",
+    "answerable": false,
+    "expected_policy_category": "FUTURE_PREDICTION"
+  },
+  {
+    "id": "negative_012",
+    "question": "Should I switch from OPT to Day 1 CPT?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "personal decision",
+    "answerable": false,
+    "expected_policy_category": "PERSONAL_DECISION"
+  },
+  {
+    "id": "negative_013",
+    "question": "Find me the cheapest immigration attorney near my apartment.",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "local service",
+    "answerable": false,
+    "expected_policy_category": "LOCAL_SERVICE"
+  },
+  {
+    "id": "negative_014",
+    "question": "What will the EB-2 India final action date be in 2028?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "future prediction",
+    "answerable": false,
+    "expected_policy_category": "FUTURE_PREDICTION"
+  },
+  {
+    "id": "negative_015",
+    "question": "Which employer is safest for getting my H-1B approved?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "recommendation",
+    "answerable": false,
+    "expected_policy_category": "RECOMMENDATION"
+  },
+  {
+    "id": "negative_016",
+    "question": "Based on my profile, will USCIS send me an RFE?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "case prediction",
+    "answerable": false,
+    "expected_policy_category": "CASE_PREDICTION"
+  },
+  {
+    "id": "negative_017",
+    "question": "Should I resign before my I-140 is approved?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "personal decision",
+    "answerable": false,
+    "expected_policy_category": "PERSONAL_DECISION"
+  },
+  {
+    "id": "negative_018",
+    "question": "Which consulting company has the easiest PERM process?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "recommendation",
+    "answerable": false,
+    "expected_policy_category": "RECOMMENDATION"
+  }
+]

@@ -1,0 +1,1109 @@
+{
+  "dataset": {
+    "total_questions": 63,
+    "answerable_questions": 45,
+    "unanswerable_questions": 18
+  },
+  "retrieval_config": {
+    "reranker_enabled": false,
+    "source_diversity": true,
+    "max_chunks_per_source": 2,
+    "evaluation_depth": 10
+  },
+  "metrics": {
+    "recall_at_1": 0.6,
+    "recall_at_3": 0.9333333333333333,
+    "recall_at_5": 1.0,
+    "mrr": 0.77,
+    "failures_at_5": 0
+  },
+  "results": [
+    {
+      "id": "f1_001",
+      "question": "What is CPT?",
+      "topic_filter": "CPT",
+      "retrieval_query": "What is CPT?",
+      "expected_source_ids": [
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "sevp_practical_training_overview",
+        "sevp_practical_training_overview",
+        "sevp_academic_year_guidance",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_academic_year_guidance"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "f1_002",
+      "question": "What is Day 1 CPT?",
+      "topic_filter": "CPT",
+      "retrieval_query": "curricular practical training graduate student immediate participation internship required by curriculum one academic year eligibility CPT authorization",
+      "expected_source_ids": [
+        "sevp_cpt_immediate_graduate_guidance",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_cpt_immediate_graduate_guidance",
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview",
+        "sevp_practical_training_overview",
+        "sevp_academic_year_guidance",
+        "sevp_academic_year_guidance"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "f1_003",
+      "question": "Can a graduate student begin CPT immediately?",
+      "topic_filter": "CPT",
+      "retrieval_query": "Can a graduate student begin CPT immediately?",
+      "expected_source_ids": [
+        "sevp_cpt_immediate_graduate_guidance",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "sevp_practical_training_overview",
+        "sevp_practical_training_overview",
+        "sevp_cpt_immediate_graduate_guidance",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_academic_year_guidance",
+        "sevp_academic_year_guidance"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 3,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "id": "f1_004",
+      "question": "Does 12 months of full-time CPT affect OPT eligibility?",
+      "topic_filter": "CPT",
+      "retrieval_query": "Does 12 months of full-time CPT affect OPT eligibility?",
+      "expected_source_ids": [
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "sevp_practical_training_overview",
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "sevp_academic_year_guidance",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_academic_year_guidance"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "f1_005",
+      "question": "Who authorizes CPT?",
+      "topic_filter": "CPT",
+      "retrieval_query": "Who authorizes CPT?",
+      "expected_source_ids": [
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "sevp_academic_year_guidance",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_cpt_immediate_graduate_guidance"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "opt_001",
+      "question": "What is OPT?",
+      "topic_filter": "OPT",
+      "retrieval_query": "What is OPT?",
+      "expected_source_ids": [
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "sevp_practical_training_overview",
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview",
+        "uscis_i765_instructions",
+        "uscis_opt_f1_students",
+        "uscis_i765_instructions",
+        "uscis_stem_opt_policy",
+        "uscis_stem_opt_policy"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "opt_002",
+      "question": "What is pre-completion OPT?",
+      "topic_filter": "OPT",
+      "retrieval_query": "What is pre-completion OPT?",
+      "expected_source_ids": [
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "sevp_practical_training_overview",
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2",
+        "uscis_opt_f1_students",
+        "uscis_i765_instructions",
+        "uscis_stem_opt_policy",
+        "uscis_i765_instructions",
+        "uscis_stem_opt_policy"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "opt_003",
+      "question": "What is post-completion OPT?",
+      "topic_filter": "OPT",
+      "retrieval_query": "What is post-completion OPT?",
+      "expected_source_ids": [
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "uscis_opt_f1_students",
+        "sevp_practical_training_overview",
+        "uscis_opt_f1_students",
+        "uscis_stem_opt_policy",
+        "uscis_i765_instructions",
+        "uscis_i765_instructions",
+        "uscis_stem_opt_policy"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "stem_001",
+      "question": "What is STEM OPT?",
+      "topic_filter": "STEM OPT",
+      "retrieval_query": "What is STEM OPT?",
+      "expected_source_ids": [
+        "uscis_stem_opt_policy",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "uscis_i765_instructions",
+        "sevp_practical_training_overview",
+        "sevp_practical_training_overview",
+        "uscis_stem_opt_policy",
+        "uscis_stem_opt_policy",
+        "uscis_i765_instructions",
+        "ecfr_8cfr_274a_12"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "stem_002",
+      "question": "Does a STEM OPT employer need to participate in E-Verify?",
+      "topic_filter": "STEM OPT",
+      "retrieval_query": "Does a STEM OPT employer need to participate in E-Verify?",
+      "expected_source_ids": [
+        "uscis_i765_instructions",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "uscis_i765_instructions",
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2",
+        "uscis_i765_instructions",
+        "ecfr_8cfr_274a_12",
+        "uscis_stem_opt_policy",
+        "uscis_stem_opt_policy",
+        "ecfr_8cfr_274a_12",
+        "sevp_practical_training_overview"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "h1b_001",
+      "question": "What is an H-1B Labor Condition Application?",
+      "topic_filter": "H-1B",
+      "retrieval_query": "What is an H-1B Labor Condition Application?",
+      "expected_source_ids": [
+        "dol_h1b_lca",
+        "ecfr_20cfr_655_subpart_h"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_8cfr_214_2",
+        "dol_h1b_lca"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "h1b_002",
+      "question": "What happens if I lose my job while on H-1B?",
+      "topic_filter": "H-1B",
+      "retrieval_query": "What happens if I lose my job while on H-1B?",
+      "expected_source_ids": [
+        "uscis_h1b_termination_options"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "uscis_h1b_termination_options",
+        "uscis_h1b_termination_options",
+        "dol_h1b_lca"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 0,
+      "recall_at_5": 1,
+      "first_relevant_rank": 5,
+      "reciprocal_rank": 0.2
+    },
+    {
+      "id": "h1b_003",
+      "question": "Is there a grace period after H-1B employment ends?",
+      "topic_filter": "H-1B",
+      "retrieval_query": "Is there a grace period after H-1B employment ends?",
+      "expected_source_ids": [
+        "ecfr_8cfr_214_1",
+        "uscis_h1b_termination_options"
+      ],
+      "retrieved_source_ids": [
+        "uscis_h1b_termination_options",
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "uscis_h1b_filing_checklist",
+        "uscis_h1b_termination_options"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "h1b_004",
+      "question": "What is cap-gap?",
+      "topic_filter": "F-1",
+      "retrieval_query": "F-1 student beneficiary H-1B cap subject petition requesting change of status extension of duration of status grant of employment authorization automatically extended until April 1 fiscal year timely filed nonfrivolous petition",
+      "expected_source_ids": [
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_274a_12"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "h4_001",
+      "question": "Can an H-4 spouse work in the United States?",
+      "topic_filter": "H-4",
+      "retrieval_query": "Can an H-4 spouse work in the United States?",
+      "expected_source_ids": [
+        "uscis_h4_employment_authorization",
+        "ecfr_8cfr_274a_12"
+      ],
+      "retrieved_source_ids": [
+        "uscis_h4_employment_authorization",
+        "uscis_h4_employment_authorization",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_274a_12"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "perm_001",
+      "question": "What is a prevailing wage determination?",
+      "topic_filter": "Prevailing Wage",
+      "retrieval_query": "What is a prevailing wage determination?",
+      "expected_source_ids": [
+        "dol_prevailing_wages",
+        "ecfr_20cfr_656"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_20cfr_656",
+        "dol_prevailing_wages",
+        "ecfr_20cfr_656",
+        "dol_prevailing_wages",
+        "dol_h1b_lca"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 3,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "id": "perm_002",
+      "question": "What is PERM labor certification?",
+      "topic_filter": "PERM",
+      "retrieval_query": "What is PERM labor certification?",
+      "expected_source_ids": [
+        "dol_perm",
+        "ecfr_20cfr_656"
+      ],
+      "retrieved_source_ids": [
+        "dol_perm",
+        "dol_perm",
+        "ecfr_20cfr_656",
+        "ecfr_20cfr_656",
+        "dol_prevailing_wages"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "perm_003",
+      "question": "What is Form ETA-9089?",
+      "topic_filter": "PERM",
+      "retrieval_query": "ETA Form 9089 Application for Permanent Employment Certification PERM labor certification Department of Labor employer application",
+      "expected_source_ids": [
+        "ecfr_20cfr_656"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_20cfr_656",
+        "ecfr_20cfr_656",
+        "dol_perm",
+        "dol_perm",
+        "dol_prevailing_wages",
+        "dol_prevailing_wages"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "i140_001",
+      "question": "What is Form I-140?",
+      "topic_filter": "I-140",
+      "retrieval_query": "What is Form I-140?",
+      "expected_source_ids": [
+        "uscis_i140",
+        "uscis_i140_instructions"
+      ],
+      "retrieved_source_ids": [
+        "uscis_i140_instructions",
+        "uscis_i140_instructions",
+        "uscis_i140",
+        "uscis_i140",
+        "ecfr_8cfr_204_5",
+        "ecfr_8cfr_204_5",
+        "uscis_priority_dates",
+        "uscis_priority_dates"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "i140_002",
+      "question": "What is a priority date?",
+      "topic_filter": "Priority Date",
+      "retrieval_query": "What is a priority date?",
+      "expected_source_ids": [
+        "uscis_priority_dates",
+        "ecfr_8cfr_204_5"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_204_5",
+        "ecfr_8cfr_204_5",
+        "uscis_priority_dates",
+        "uscis_priority_dates"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "i140_003",
+      "question": "Does Form I-140 include EB-2 and EB-3 petitions?",
+      "topic_filter": "I-140",
+      "retrieval_query": "Does Form I-140 include EB-2 and EB-3 petitions?",
+      "expected_source_ids": [
+        "uscis_i140",
+        "ecfr_8cfr_204_5"
+      ],
+      "retrieved_source_ids": [
+        "uscis_i140_instructions",
+        "uscis_i140",
+        "uscis_i140",
+        "ecfr_8cfr_204_5",
+        "ecfr_8cfr_204_5",
+        "uscis_i140_instructions",
+        "uscis_priority_dates",
+        "uscis_priority_dates"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "cpt_006",
+      "question": "Can I start CPT employment before receiving authorization from my DSO?",
+      "topic_filter": "CPT",
+      "retrieval_query": "Can I start CPT employment before receiving authorization from my DSO?",
+      "expected_source_ids": [
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_cpt_immediate_graduate_guidance"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "f1_007",
+      "question": "Do F-1 students normally need to complete one academic year before becoming eligible for CPT?",
+      "topic_filter": "CPT",
+      "retrieval_query": "Do F-1 students normally need to complete one academic year before becoming eligible for CPT?",
+      "expected_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview"
+      ],
+      "retrieved_source_ids": [
+        "sevp_cpt_immediate_graduate_guidance",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview",
+        "sevp_academic_year_guidance",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_academic_year_guidance",
+        "sevp_practical_training_overview"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "f1_008",
+      "question": "Does part-time CPT count toward the 12-month full-time CPT limit that affects OPT?",
+      "topic_filter": "CPT",
+      "retrieval_query": "Does part-time CPT count toward the 12-month full-time CPT limit that affects OPT?",
+      "expected_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview"
+      ],
+      "retrieved_source_ids": [
+        "sevp_practical_training_overview",
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "sevp_academic_year_guidance",
+        "sevp_academic_year_guidance",
+        "sevp_cpt_immediate_graduate_guidance"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "f1_009",
+      "question": "Who signs off on CPT for an F-1 student?",
+      "topic_filter": "CPT",
+      "retrieval_query": "Who signs off on CPT for an F-1 student?",
+      "expected_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_cpt_immediate_graduate_guidance",
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_academic_year_guidance",
+        "sevp_academic_year_guidance",
+        "sevp_practical_training_overview"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "f1_010",
+      "question": "Can I begin working on CPT before my DSO authorizes it in SEVIS?",
+      "topic_filter": "CPT",
+      "retrieval_query": "Can I begin working on CPT before my DSO authorizes it in SEVIS?",
+      "expected_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview",
+        "sevp_cpt_immediate_graduate_guidance"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_practical_training_overview",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_academic_year_guidance",
+        "sevp_practical_training_overview",
+        "sevp_academic_year_guidance"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "opt_004",
+      "question": "Who authorizes OPT employment for an F-1 student?",
+      "topic_filter": "OPT",
+      "retrieval_query": "Who authorizes OPT employment for an F-1 student?",
+      "expected_source_ids": [
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "uscis_i765_instructions",
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_214_2",
+        "uscis_opt_f1_students",
+        "uscis_i765_instructions",
+        "sevp_practical_training_overview",
+        "uscis_stem_opt_policy",
+        "ecfr_8cfr_274a_12"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "opt_005",
+      "question": "Does using pre-completion OPT reduce the amount of post-completion OPT available?",
+      "topic_filter": "OPT",
+      "retrieval_query": "Does using pre-completion OPT reduce the amount of post-completion OPT available?",
+      "expected_source_ids": [
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "sevp_practical_training_overview",
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview",
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2",
+        "uscis_stem_opt_policy",
+        "uscis_i765_instructions",
+        "uscis_stem_opt_policy",
+        "ecfr_8cfr_274a_12"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "opt_006",
+      "question": "Does OPT employment need to be related to the student's field of study?",
+      "topic_filter": "OPT",
+      "retrieval_query": "Does OPT employment need to be related to the student's field of study?",
+      "expected_source_ids": [
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview",
+        "uscis_i765_instructions",
+        "sevp_practical_training_overview",
+        "uscis_opt_f1_students",
+        "uscis_stem_opt_policy",
+        "uscis_i765_instructions",
+        "ecfr_8cfr_274a_12"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "stem_003",
+      "question": "How long is the STEM OPT extension?",
+      "topic_filter": "STEM OPT",
+      "retrieval_query": "How long is the STEM OPT extension?",
+      "expected_source_ids": [
+        "uscis_stem_opt_policy",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "uscis_i765_instructions",
+        "sevp_practical_training_overview",
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview",
+        "uscis_i765_instructions",
+        "uscis_stem_opt_policy",
+        "uscis_stem_opt_policy",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_274a_12"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "stem_004",
+      "question": "Is E-Verify mandatory for an employer hiring a student on STEM OPT?",
+      "topic_filter": "STEM OPT",
+      "retrieval_query": "Is E-Verify mandatory for an employer hiring a student on STEM OPT?",
+      "expected_source_ids": [
+        "uscis_i765_instructions",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "uscis_i765_instructions",
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview",
+        "uscis_i765_instructions",
+        "uscis_stem_opt_policy",
+        "ecfr_8cfr_274a_12",
+        "uscis_stem_opt_policy",
+        "ecfr_8cfr_274a_12",
+        "sevp_practical_training_overview"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "stem_005",
+      "question": "What is Form I-983 used for in the STEM OPT process?",
+      "topic_filter": "STEM OPT",
+      "retrieval_query": "What is Form I-983 used for in the STEM OPT process?",
+      "expected_source_ids": [
+        "uscis_stem_opt_policy"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "uscis_i765_instructions",
+        "uscis_i765_instructions",
+        "uscis_stem_opt_policy",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_274a_12",
+        "uscis_stem_opt_policy",
+        "sevp_practical_training_overview",
+        "sevp_practical_training_overview"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 0,
+      "recall_at_5": 1,
+      "first_relevant_rank": 5,
+      "reciprocal_rank": 0.2
+    },
+    {
+      "id": "h1b_005",
+      "question": "What is the maximum discretionary grace period after H-1B employment ends?",
+      "topic_filter": "H-1B",
+      "retrieval_query": "What is the maximum discretionary grace period after H-1B employment ends?",
+      "expected_source_ids": [
+        "ecfr_8cfr_214_1",
+        "uscis_h1b_termination_options"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "ecfr_20cfr_655_subpart_h",
+        "uscis_h1b_termination_options",
+        "ecfr_20cfr_655_subpart_h",
+        "uscis_h1b_termination_options",
+        "uscis_h1b_filing_checklist"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 0,
+      "recall_at_5": 1,
+      "first_relevant_rank": 4,
+      "reciprocal_rank": 0.25
+    },
+    {
+      "id": "h1b_006",
+      "question": "What does H-1B portability mean?",
+      "topic_filter": "H-1B",
+      "retrieval_query": "What does H-1B portability mean?",
+      "expected_source_ids": [
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "ecfr_20cfr_655_subpart_h",
+        "uscis_h1b_filing_checklist"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "h1b_007",
+      "question": "When can an eligible H-1B worker start working for a new employer under portability?",
+      "topic_filter": "H-1B",
+      "retrieval_query": "When can an eligible H-1B worker start working for a new employer under portability?",
+      "expected_source_ids": [
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "ecfr_20cfr_655_subpart_h",
+        "uscis_h1b_termination_options",
+        "ecfr_20cfr_655_subpart_h",
+        "uscis_h1b_filing_checklist",
+        "uscis_h1b_termination_options",
+        "dol_h1b_lca"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "h1b_008",
+      "question": "Does an H-1B employer need a Labor Condition Application?",
+      "topic_filter": "H-1B",
+      "retrieval_query": "Does an H-1B employer need a Labor Condition Application?",
+      "expected_source_ids": [
+        "dol_h1b_lca",
+        "ecfr_20cfr_655_subpart_h"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_8cfr_214_2",
+        "dol_h1b_lca"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "h1b_009",
+      "question": "I was laid off on H-1B. What official immigration options may exist after termination of employment?",
+      "topic_filter": "H-1B",
+      "retrieval_query": "I was laid off on H-1B. What official immigration options may exist after termination of employment?",
+      "expected_source_ids": [
+        "uscis_h1b_termination_options",
+        "ecfr_8cfr_214_1"
+      ],
+      "retrieved_source_ids": [
+        "uscis_h1b_termination_options",
+        "uscis_h1b_termination_options",
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_214_2",
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_8cfr_214_1"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "h1b_010",
+      "question": "What does the F-1 cap-gap provision automatically extend?",
+      "topic_filter": "F-1",
+      "retrieval_query": "F-1 student beneficiary H-1B cap subject petition requesting change of status extension of duration of status grant of employment authorization automatically extended until April 1 fiscal year timely filed nonfrivolous petition",
+      "expected_source_ids": [
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_274a_12"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "h4_002",
+      "question": "Are all H-4 spouses automatically authorized to work?",
+      "topic_filter": "H-4",
+      "retrieval_query": "Are all H-4 spouses automatically authorized to work?",
+      "expected_source_ids": [
+        "uscis_h4_employment_authorization",
+        "ecfr_8cfr_274a_12"
+      ],
+      "retrieved_source_ids": [
+        "uscis_h4_employment_authorization",
+        "uscis_h4_employment_authorization",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_274a_12"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "perm_004",
+      "question": "Who issues the prevailing wage determination used in the PERM process?",
+      "topic_filter": "Prevailing Wage",
+      "retrieval_query": "Who issues the prevailing wage determination used in the PERM process?",
+      "expected_source_ids": [
+        "dol_prevailing_wages",
+        "ecfr_20cfr_656"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_20cfr_656",
+        "ecfr_20cfr_655_subpart_h",
+        "dol_prevailing_wages",
+        "dol_prevailing_wages",
+        "dol_h1b_lca",
+        "ecfr_20cfr_656"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "perm_005",
+      "question": "What role does the prevailing wage determination play in PERM?",
+      "topic_filter": "Prevailing Wage",
+      "retrieval_query": "What role does the prevailing wage determination play in PERM?",
+      "expected_source_ids": [
+        "dol_prevailing_wages",
+        "ecfr_20cfr_656"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_20cfr_655_subpart_h",
+        "ecfr_20cfr_656",
+        "ecfr_20cfr_656",
+        "dol_prevailing_wages",
+        "dol_prevailing_wages",
+        "dol_h1b_lca"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 3,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "id": "perm_006",
+      "question": "What is ETA Form 9089 used for?",
+      "topic_filter": "PERM",
+      "retrieval_query": "ETA Form 9089 Application for Permanent Employment Certification PERM labor certification Department of Labor employer application",
+      "expected_source_ids": [
+        "ecfr_20cfr_656"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_20cfr_656",
+        "ecfr_20cfr_656",
+        "dol_perm",
+        "dol_perm",
+        "dol_prevailing_wages",
+        "dol_prevailing_wages"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "i140_004",
+      "question": "Who generally files Form I-140?",
+      "topic_filter": "I-140",
+      "retrieval_query": "Who generally files Form I-140?",
+      "expected_source_ids": [
+        "uscis_i140",
+        "uscis_i140_instructions"
+      ],
+      "retrieved_source_ids": [
+        "uscis_i140_instructions",
+        "ecfr_8cfr_204_5",
+        "uscis_i140_instructions",
+        "uscis_i140",
+        "uscis_i140",
+        "uscis_priority_dates",
+        "ecfr_8cfr_204_5",
+        "uscis_priority_dates"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "i140_005",
+      "question": "What employment-based immigrant categories are covered by Form I-140?",
+      "topic_filter": "I-140",
+      "retrieval_query": "What employment-based immigrant categories are covered by Form I-140?",
+      "expected_source_ids": [
+        "uscis_i140",
+        "ecfr_8cfr_204_5"
+      ],
+      "retrieved_source_ids": [
+        "uscis_i140_instructions",
+        "ecfr_8cfr_204_5",
+        "uscis_i140_instructions",
+        "ecfr_8cfr_204_5",
+        "uscis_i140",
+        "uscis_priority_dates",
+        "uscis_i140",
+        "uscis_priority_dates"
+      ],
+      "recall_at_1": 0,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 2,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "i140_006",
+      "question": "How is a priority date determined for an employment-based immigrant petition?",
+      "topic_filter": "Priority Date",
+      "retrieval_query": "How is a priority date determined for an employment-based immigrant petition?",
+      "expected_source_ids": [
+        "uscis_priority_dates",
+        "ecfr_8cfr_204_5"
+      ],
+      "retrieved_source_ids": [
+        "uscis_priority_dates",
+        "ecfr_8cfr_204_5",
+        "ecfr_8cfr_204_5",
+        "uscis_priority_dates"
+      ],
+      "recall_at_1": 1,
+      "recall_at_3": 1,
+      "recall_at_5": 1,
+      "first_relevant_rank": 1,
+      "reciprocal_rank": 1.0
+    }
+  ]
+}

@@ -1,0 +1,728 @@
+{
+  "dataset": {
+    "total_questions": 63,
+    "category_labeled_questions": 55,
+    "category_unlabeled_questions": 8
+  },
+  "metrics": {
+    "category_accuracy": 0.9636363636363636,
+    "route_accuracy": 1.0,
+    "official_fact_precision": 1.0,
+    "official_fact_recall": 1.0,
+    "official_fact_specificity": 1.0,
+    "official_fact_f1": 1.0,
+    "true_positive": 45,
+    "false_positive": 0,
+    "false_negative": 0,
+    "true_negative": 18
+  },
+  "confusion_matrix": {
+    "OFFICIAL_FACT": {
+      "OFFICIAL_FACT": 45
+    },
+    "CASE_PREDICTION": {
+      "CASE_PREDICTION": 2
+    },
+    "RECOMMENDATION": {
+      "RECOMMENDATION": 3
+    },
+    "FUTURE_PREDICTION": {
+      "FUTURE_PREDICTION": 2
+    },
+    "PERSONAL_DECISION": {
+      "RECOMMENDATION": 1,
+      "PERSONAL_DECISION": 1
+    },
+    "LOCAL_SERVICE": {
+      "RECOMMENDATION": 1
+    }
+  },
+  "failures": [
+    {
+      "id": "negative_012",
+      "question": "Should I switch from OPT to Day 1 CPT?",
+      "expected_category": "PERSONAL_DECISION",
+      "predicted_category": "RECOMMENDATION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": false
+    },
+    {
+      "id": "negative_013",
+      "question": "Find me the cheapest immigration attorney near my apartment.",
+      "expected_category": "LOCAL_SERVICE",
+      "predicted_category": "RECOMMENDATION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": false
+    }
+  ],
+  "unlabeled_categories": [
+    {
+      "id": "negative_001",
+      "question": "What is the best immigration lawyer near me?"
+    },
+    {
+      "id": "negative_002",
+      "question": "Will USCIS approve my H-1B petition?"
+    },
+    {
+      "id": "negative_003",
+      "question": "What are my chances of getting selected in the next H-1B lottery?"
+    },
+    {
+      "id": "negative_004",
+      "question": "Which university should I join for guaranteed Day 1 CPT?"
+    },
+    {
+      "id": "negative_005",
+      "question": "Can you guarantee that my I-140 will be approved?"
+    },
+    {
+      "id": "negative_006",
+      "question": "What will the EB-2 India priority date be next year?"
+    },
+    {
+      "id": "negative_007",
+      "question": "Should I quit my current employer and move to another company?"
+    },
+    {
+      "id": "negative_008",
+      "question": "Which consulting company gives the easiest H-1B sponsorship?"
+    }
+  ],
+  "results": [
+    {
+      "id": "f1_001",
+      "question": "What is CPT?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "f1_002",
+      "question": "What is Day 1 CPT?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "f1_003",
+      "question": "Can a graduate student begin CPT immediately?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "f1_004",
+      "question": "Does 12 months of full-time CPT affect OPT eligibility?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "f1_005",
+      "question": "Who authorizes CPT?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "opt_001",
+      "question": "What is OPT?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "opt_002",
+      "question": "What is pre-completion OPT?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "opt_003",
+      "question": "What is post-completion OPT?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "stem_001",
+      "question": "What is STEM OPT?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "stem_002",
+      "question": "Does a STEM OPT employer need to participate in E-Verify?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h1b_001",
+      "question": "What is an H-1B Labor Condition Application?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h1b_002",
+      "question": "What happens if I lose my job while on H-1B?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h1b_003",
+      "question": "Is there a grace period after H-1B employment ends?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h1b_004",
+      "question": "What is cap-gap?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h4_001",
+      "question": "Can an H-4 spouse work in the United States?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "perm_001",
+      "question": "What is a prevailing wage determination?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "perm_002",
+      "question": "What is PERM labor certification?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "perm_003",
+      "question": "What is Form ETA-9089?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "i140_001",
+      "question": "What is Form I-140?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "i140_002",
+      "question": "What is a priority date?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "i140_003",
+      "question": "Does Form I-140 include EB-2 and EB-3 petitions?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "negative_001",
+      "question": "What is the best immigration lawyer near me?",
+      "expected_category": null,
+      "predicted_category": "LOCAL_SERVICE",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": null
+    },
+    {
+      "id": "negative_002",
+      "question": "Will USCIS approve my H-1B petition?",
+      "expected_category": null,
+      "predicted_category": "CASE_PREDICTION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": null
+    },
+    {
+      "id": "negative_003",
+      "question": "What are my chances of getting selected in the next H-1B lottery?",
+      "expected_category": null,
+      "predicted_category": "FUTURE_PREDICTION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": null
+    },
+    {
+      "id": "negative_004",
+      "question": "Which university should I join for guaranteed Day 1 CPT?",
+      "expected_category": null,
+      "predicted_category": "RECOMMENDATION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": null
+    },
+    {
+      "id": "negative_005",
+      "question": "Can you guarantee that my I-140 will be approved?",
+      "expected_category": null,
+      "predicted_category": "CASE_PREDICTION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": null
+    },
+    {
+      "id": "negative_006",
+      "question": "What will the EB-2 India priority date be next year?",
+      "expected_category": null,
+      "predicted_category": "FUTURE_PREDICTION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": null
+    },
+    {
+      "id": "negative_007",
+      "question": "Should I quit my current employer and move to another company?",
+      "expected_category": null,
+      "predicted_category": "PERSONAL_DECISION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": null
+    },
+    {
+      "id": "negative_008",
+      "question": "Which consulting company gives the easiest H-1B sponsorship?",
+      "expected_category": null,
+      "predicted_category": "RECOMMENDATION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": null
+    },
+    {
+      "id": "cpt_006",
+      "question": "Can I start CPT employment before receiving authorization from my DSO?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "f1_007",
+      "question": "Do F-1 students normally need to complete one academic year before becoming eligible for CPT?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "f1_008",
+      "question": "Does part-time CPT count toward the 12-month full-time CPT limit that affects OPT?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "f1_009",
+      "question": "Who signs off on CPT for an F-1 student?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "f1_010",
+      "question": "Can I begin working on CPT before my DSO authorizes it in SEVIS?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "opt_004",
+      "question": "Who authorizes OPT employment for an F-1 student?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "opt_005",
+      "question": "Does using pre-completion OPT reduce the amount of post-completion OPT available?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "opt_006",
+      "question": "Does OPT employment need to be related to the student's field of study?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "stem_003",
+      "question": "How long is the STEM OPT extension?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "stem_004",
+      "question": "Is E-Verify mandatory for an employer hiring a student on STEM OPT?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "stem_005",
+      "question": "What is Form I-983 used for in the STEM OPT process?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h1b_005",
+      "question": "What is the maximum discretionary grace period after H-1B employment ends?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h1b_006",
+      "question": "What does H-1B portability mean?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h1b_007",
+      "question": "When can an eligible H-1B worker start working for a new employer under portability?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h1b_008",
+      "question": "Does an H-1B employer need a Labor Condition Application?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h1b_009",
+      "question": "I was laid off on H-1B. What official immigration options may exist after termination of employment?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h1b_010",
+      "question": "What does the F-1 cap-gap provision automatically extend?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "h4_002",
+      "question": "Are all H-4 spouses automatically authorized to work?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "perm_004",
+      "question": "Who issues the prevailing wage determination used in the PERM process?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "perm_005",
+      "question": "What role does the prevailing wage determination play in PERM?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "perm_006",
+      "question": "What is ETA Form 9089 used for?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "i140_004",
+      "question": "Who generally files Form I-140?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "i140_005",
+      "question": "What employment-based immigrant categories are covered by Form I-140?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "i140_006",
+      "question": "How is a priority date determined for an employment-based immigrant petition?",
+      "expected_category": "OFFICIAL_FACT",
+      "predicted_category": "OFFICIAL_FACT",
+      "expected_route": true,
+      "predicted_route": true,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "negative_009",
+      "question": "Will my H-1B transfer definitely be approved?",
+      "expected_category": "CASE_PREDICTION",
+      "predicted_category": "CASE_PREDICTION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "negative_010",
+      "question": "Which Day 1 CPT university has the lowest chance of an RFE?",
+      "expected_category": "RECOMMENDATION",
+      "predicted_category": "RECOMMENDATION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "negative_011",
+      "question": "Will the H-1B lottery become easier next year?",
+      "expected_category": "FUTURE_PREDICTION",
+      "predicted_category": "FUTURE_PREDICTION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "negative_012",
+      "question": "Should I switch from OPT to Day 1 CPT?",
+      "expected_category": "PERSONAL_DECISION",
+      "predicted_category": "RECOMMENDATION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": false
+    },
+    {
+      "id": "negative_013",
+      "question": "Find me the cheapest immigration attorney near my apartment.",
+      "expected_category": "LOCAL_SERVICE",
+      "predicted_category": "RECOMMENDATION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": false
+    },
+    {
+      "id": "negative_014",
+      "question": "What will the EB-2 India final action date be in 2028?",
+      "expected_category": "FUTURE_PREDICTION",
+      "predicted_category": "FUTURE_PREDICTION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "negative_015",
+      "question": "Which employer is safest for getting my H-1B approved?",
+      "expected_category": "RECOMMENDATION",
+      "predicted_category": "RECOMMENDATION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "negative_016",
+      "question": "Based on my profile, will USCIS send me an RFE?",
+      "expected_category": "CASE_PREDICTION",
+      "predicted_category": "CASE_PREDICTION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "negative_017",
+      "question": "Should I resign before my I-140 is approved?",
+      "expected_category": "PERSONAL_DECISION",
+      "predicted_category": "PERSONAL_DECISION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": true
+    },
+    {
+      "id": "negative_018",
+      "question": "Which consulting company has the easiest PERM process?",
+      "expected_category": "RECOMMENDATION",
+      "predicted_category": "RECOMMENDATION",
+      "expected_route": false,
+      "predicted_route": false,
+      "route_correct": true,
+      "category_correct": true
+    }
+  ]
+}

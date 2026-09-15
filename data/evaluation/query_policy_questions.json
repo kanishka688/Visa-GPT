@@ -1,0 +1,607 @@
+[
+  {
+    "id": "policy_official_001",
+    "question": "My master's program requires an internship in the first semester. Can CPT be authorized before I finish one academic year?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_002",
+    "question": "Does part-time CPT count toward the 12 months that can make someone ineligible for OPT?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_003",
+    "question": "Can I work two CPT jobs at the same time if my school authorizes both?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_004",
+    "question": "Do I need an EAD card before starting CPT?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_005",
+    "question": "Does my DSO have to put CPT authorization on my I-20 before I begin work?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_006",
+    "question": "Is full-time CPT allowed during the semester?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_007",
+    "question": "If I use eleven months of full-time CPT, can I still qualify for OPT?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_008",
+    "question": "What does curricular practical training actually mean?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_009",
+    "question": "Bro what exactly is Day 1 CPT supposed to mean?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_010",
+    "question": "Does CPT employment have to be related to my curriculum?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_011",
+    "question": "Can pre-completion OPT be full time while school is in session?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_012",
+    "question": "How much post-completion OPT is normally available to an F-1 student?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_013",
+    "question": "If I already used pre-completion OPT, does that reduce my post-completion OPT time?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_014",
+    "question": "When can an F-1 student file for post-completion OPT?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_015",
+    "question": "Does OPT employment have to be directly related to my degree?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_016",
+    "question": "What happens to my OPT if I transfer to another school?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_017",
+    "question": "Is STEM OPT an extra 24 months after regular post-completion OPT?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_018",
+    "question": "Can I work for more than one employer on STEM OPT?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_019",
+    "question": "How many hours per week do I need to work for a STEM OPT employer?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_020",
+    "question": "Does every STEM OPT employer have to use E-Verify?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_021",
+    "question": "What is the purpose of Form I-983?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_022",
+    "question": "What does cap-gap do for an F-1 student whose H-1B was filed?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_023",
+    "question": "My OPT ends before October 1 and my cap-subject H-1B change of status was filed. What rule covers that gap?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_024",
+    "question": "Is cap-gap about extending F-1 status, work authorization, or both?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_025",
+    "question": "What is an H-1B LCA and why does the employer file it?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_026",
+    "question": "Who files the Labor Condition Application for an H-1B worker?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_027",
+    "question": "Is an approved LCA the same thing as an approved H-1B petition?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_028",
+    "question": "What happens to my immigration status if my H-1B employer terminates me?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_029",
+    "question": "People keep saying H-1B has a 60-day rule after layoffs. What is that rule?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_030",
+    "question": "Is the H-1B grace period automatically always 60 days?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_031",
+    "question": "What immigration options can exist after H-1B employment ends?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_032",
+    "question": "What does an H-1B change of employer mean?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_033",
+    "question": "When people say H1 transfer, what immigration process are they talking about?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_034",
+    "question": "Does losing my H-1B job immediately cancel an approved I-140?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_035",
+    "question": "What is the difference between H-1B status and an H-1B visa stamp?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_036",
+    "question": "What does consular processing mean for an H-1B petition?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_037",
+    "question": "What does change of status mean in an H-1B filing?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_038",
+    "question": "Can every H-4 spouse automatically work in the U.S.?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_039",
+    "question": "What makes an H-4 spouse eligible to apply for employment authorization?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_040",
+    "question": "Is H-4 status itself permission to work?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_041",
+    "question": "What is PWD in the green card process?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_042",
+    "question": "Why does an employer need a prevailing wage determination before PERM?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_043",
+    "question": "Who determines the prevailing wage for a PERM case?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_044",
+    "question": "What are the main stages before an employer files PERM?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_045",
+    "question": "What does PERM actually certify?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_046",
+    "question": "Is PERM filed by the employee or the employer?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_047",
+    "question": "Where does ETA-9089 fit into the employment green card process?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_048",
+    "question": "Is ETA-9089 the same thing as Form I-140?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_049",
+    "question": "What happens after PERM is certified?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_050",
+    "question": "What is an I-140 petition used for?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_051",
+    "question": "Who normally files Form I-140 in an employer-sponsored EB-2 or EB-3 case?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_052",
+    "question": "What is the difference between EB-2 and EB-3 on an I-140?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_053",
+    "question": "What does priority date mean after PERM and I-140?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_054",
+    "question": "How is the priority date determined in a PERM-based employment case?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_055",
+    "question": "Does an approved I-140 by itself give me permanent resident status?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_056",
+    "question": "Does I-140 approval itself give me an EAD?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_057",
+    "question": "What does USCIS mean by ability to pay in an I-140 case?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_058",
+    "question": "Can Form I-140 be used for both EB-2 and EB-3 employment petitions?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_059",
+    "question": "Does filing an I-140 automatically change someone's nonimmigrant status?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+  {
+    "id": "policy_official_060",
+    "question": "In simple terms, where does I-140 come after PWD and PERM?",
+    "expected_category": "OFFICIAL_FACT",
+    "route_to_rag": true
+  },
+
+  {
+    "id": "policy_case_001",
+    "question": "My company responded to my RFE last week. Do you think USCIS is going to approve my H-1B?",
+    "expected_category": "CASE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_case_002",
+    "question": "I have a master's degree and six years of experience. Will my EB-2 I-140 definitely get approved?",
+    "expected_category": "CASE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_case_003",
+    "question": "My employer is a small startup. Is USCIS likely to deny my H-1B because of that?",
+    "expected_category": "CASE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_case_004",
+    "question": "I got a 221(g). Does that mean my visa will eventually be issued?",
+    "expected_category": "CASE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_case_005",
+    "question": "My PERM audit response was strong. Will DOL certify my case?",
+    "expected_category": "CASE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_case_006",
+    "question": "Based on my profile, do you think I will get an H-1B approval without RFE?",
+    "expected_category": "CASE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_case_007",
+    "question": "My lawyer says my I-140 case is clean. Can you tell me if USCIS will approve it?",
+    "expected_category": "CASE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_case_008",
+    "question": "I changed job duties after filing. Is my pending petition going to be denied?",
+    "expected_category": "CASE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_case_009",
+    "question": "My employer has low revenue this year. Will USCIS reject the I-140?",
+    "expected_category": "CASE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_case_010",
+    "question": "Everything in my H-1B petition looks correct. Can I assume approval is guaranteed?",
+    "expected_category": "CASE_PREDICTION",
+    "route_to_rag": false
+  },
+
+  {
+    "id": "policy_future_001",
+    "question": "Do you think EB-2 India will move by at least six months next year?",
+    "expected_category": "FUTURE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_future_002",
+    "question": "What are the odds of selection in next year's H-1B registration?",
+    "expected_category": "FUTURE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_future_003",
+    "question": "Will USCIS increase the H-1B registration fee again next year?",
+    "expected_category": "FUTURE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_future_004",
+    "question": "When do you think my 2024 EB-2 India priority date will become current?",
+    "expected_category": "FUTURE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_future_005",
+    "question": "Will the government make Day 1 CPT illegal in the future?",
+    "expected_category": "FUTURE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_future_006",
+    "question": "Do you expect PERM processing times to get much faster next year?",
+    "expected_category": "FUTURE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_future_007",
+    "question": "Will there be another H-1B lottery round this year?",
+    "expected_category": "FUTURE_PREDICTION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_future_008",
+    "question": "How far will the EB-3 India final action date move over the next twelve months?",
+    "expected_category": "FUTURE_PREDICTION",
+    "route_to_rag": false
+  },
+
+  {
+    "id": "policy_recommendation_001",
+    "question": "Which Day 1 CPT university has the lowest chance of causing an RFE?",
+    "expected_category": "RECOMMENDATION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_recommendation_002",
+    "question": "Which immigration lawyer is best for a difficult H-1B case?",
+    "expected_category": "RECOMMENDATION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_recommendation_003",
+    "question": "Which consultancy should I use if I want an H-1B sponsor quickly?",
+    "expected_category": "RECOMMENDATION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_recommendation_004",
+    "question": "Which employer is safest if my goal is eventually getting PERM and I-140?",
+    "expected_category": "RECOMMENDATION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_recommendation_005",
+    "question": "What is the best school for keeping F-1 status while working full time?",
+    "expected_category": "RECOMMENDATION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_recommendation_006",
+    "question": "Which company has the easiest H-1B transfer process?",
+    "expected_category": "RECOMMENDATION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_recommendation_007",
+    "question": "Can you recommend the safest university for Day 1 CPT?",
+    "expected_category": "RECOMMENDATION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_recommendation_008",
+    "question": "Which attorney should I hire for my PERM audit?",
+    "expected_category": "RECOMMENDATION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_recommendation_009",
+    "question": "Which strategy is better for me, H-1B transfer or joining a CPT school?",
+    "expected_category": "RECOMMENDATION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_recommendation_010",
+    "question": "What employer should I target if I want the fastest green card sponsorship?",
+    "expected_category": "RECOMMENDATION",
+    "route_to_rag": false
+  },
+
+  {
+    "id": "policy_decision_001",
+    "question": "My manager is terrible. Should I quit before finding another H-1B employer?",
+    "expected_category": "PERSONAL_DECISION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_decision_002",
+    "question": "Should I stay on OPT or enroll in another degree?",
+    "expected_category": "PERSONAL_DECISION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_decision_003",
+    "question": "My H-1B employer is unstable. Should I transfer right now?",
+    "expected_category": "PERSONAL_DECISION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_decision_004",
+    "question": "Should I accept a lower salary if the company promises to start PERM?",
+    "expected_category": "PERSONAL_DECISION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_decision_005",
+    "question": "Should I go to India for stamping or stay in the U.S.?",
+    "expected_category": "PERSONAL_DECISION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_decision_006",
+    "question": "Is premium processing worth paying for in my situation?",
+    "expected_category": "PERSONAL_DECISION",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_decision_007",
+    "question": "Should I wait for my I-140 approval before changing jobs?",
+    "expected_category": "PERSONAL_DECISION",
+    "route_to_rag": false
+  },
+
+  {
+    "id": "policy_local_001",
+    "question": "Find me an immigration attorney close to my apartment.",
+    "expected_category": "LOCAL_SERVICE",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_local_002",
+    "question": "Are there any good immigration lawyers near me who handle H-1B RFEs?",
+    "expected_category": "LOCAL_SERVICE",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_local_003",
+    "question": "Where is the closest immigration law office?",
+    "expected_category": "LOCAL_SERVICE",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_local_004",
+    "question": "Can you find a nearby attorney who handles PERM cases?",
+    "expected_category": "LOCAL_SERVICE",
+    "route_to_rag": false
+  },
+  {
+    "id": "policy_local_005",
+    "question": "Which immigration lawyer near me is open today?",
+    "expected_category": "LOCAL_SERVICE",
+    "route_to_rag": false
+  }
+]

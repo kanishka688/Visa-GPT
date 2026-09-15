@@ -1,0 +1,811 @@
+[
+  {
+    "id": "f1_001",
+    "question": "What is CPT?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_practical_training_overview",
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "sevp_practical_training_overview",
+        "agency": "DHS-SEVP",
+        "title": "F-1 Practical Training Overview",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_academic_year_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Policy Guidance for Adjudicators: Academic Year",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_cpt_immediate_graduate_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Spotlight Practical Training for F and M Students",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "Gold sources directly define and govern CPT."
+  },
+  {
+    "id": "f1_002",
+    "question": "What is Day 1 CPT?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_cpt_immediate_graduate_guidance",
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "sevp_practical_training_overview",
+        "agency": "DHS-SEVP",
+        "title": "F-1 Practical Training Overview",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_academic_year_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Policy Guidance for Adjudicators: Academic Year",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_cpt_immediate_graduate_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Spotlight Practical Training for F and M Students",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "Uses official immediate-CPT guidance and the governing F-1 regulation."
+  },
+  {
+    "id": "f1_003",
+    "question": "Can a graduate student begin CPT immediately?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_cpt_immediate_graduate_guidance",
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "sevp_practical_training_overview",
+        "agency": "DHS-SEVP",
+        "title": "F-1 Practical Training Overview",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_academic_year_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Policy Guidance for Adjudicators: Academic Year",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_cpt_immediate_graduate_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Spotlight Practical Training for F and M Students",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "These sources directly address immediate CPT participation for qualifying graduate programs."
+  },
+  {
+    "id": "f1_004",
+    "question": "Does 12 months of full-time CPT affect OPT eligibility?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_practical_training_overview",
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "sevp_practical_training_overview",
+        "agency": "DHS-SEVP",
+        "title": "F-1 Practical Training Overview",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_academic_year_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Policy Guidance for Adjudicators: Academic Year",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_cpt_immediate_graduate_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Spotlight Practical Training for F and M Students",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "Directly supported by official CPT/OPT eligibility rules."
+  },
+  {
+    "id": "f1_005",
+    "question": "Who authorizes CPT?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_practical_training_overview",
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "sevp_practical_training_overview",
+        "agency": "DHS-SEVP",
+        "title": "F-1 Practical Training Overview",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_academic_year_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Policy Guidance for Adjudicators: Academic Year",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_cpt_immediate_graduate_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Spotlight Practical Training for F and M Students",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "Official sources describe DSO authorization of CPT."
+  },
+  {
+    "id": "opt_001",
+    "question": "What is OPT?",
+    "stage": "F-1",
+    "topic": "OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_opt_f1_students",
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "sevp_practical_training_overview",
+        "agency": "DHS-SEVP",
+        "title": "F-1 Practical Training Overview",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "uscis_opt_f1_students",
+        "agency": "USCIS",
+        "title": "Optional Practical Training for F-1 Students",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "uscis_i765_instructions",
+        "agency": "USCIS",
+        "title": "Form I-765 Instructions",
+        "authority_type": "FORM_INSTRUCTIONS"
+      },
+      {
+        "source_id": "uscis_stem_opt_policy",
+        "agency": "USCIS",
+        "title": "STEM Optional Practical Training Policy Update",
+        "authority_type": "POLICY_MANUAL"
+      },
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      },
+      {
+        "source_id": "ecfr_8cfr_274a_12",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 274a.12 - Classes of Aliens Authorized to Accept Employment",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "USCIS OPT guidance and the governing F-1 regulation directly define OPT."
+  },
+  {
+    "id": "opt_002",
+    "question": "What is pre-completion OPT?",
+    "stage": "F-1",
+    "topic": "OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_opt_f1_students",
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "sevp_practical_training_overview",
+        "agency": "DHS-SEVP",
+        "title": "F-1 Practical Training Overview",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "uscis_opt_f1_students",
+        "agency": "USCIS",
+        "title": "Optional Practical Training for F-1 Students",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "uscis_i765_instructions",
+        "agency": "USCIS",
+        "title": "Form I-765 Instructions",
+        "authority_type": "FORM_INSTRUCTIONS"
+      },
+      {
+        "source_id": "uscis_stem_opt_policy",
+        "agency": "USCIS",
+        "title": "STEM Optional Practical Training Policy Update",
+        "authority_type": "POLICY_MANUAL"
+      },
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      },
+      {
+        "source_id": "ecfr_8cfr_274a_12",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 274a.12 - Classes of Aliens Authorized to Accept Employment",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "USCIS and 8 CFR 214.2 directly distinguish pre-completion OPT."
+  },
+  {
+    "id": "opt_003",
+    "question": "What is post-completion OPT?",
+    "stage": "F-1",
+    "topic": "OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_opt_f1_students",
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "sevp_practical_training_overview",
+        "agency": "DHS-SEVP",
+        "title": "F-1 Practical Training Overview",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "uscis_opt_f1_students",
+        "agency": "USCIS",
+        "title": "Optional Practical Training for F-1 Students",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "uscis_i765_instructions",
+        "agency": "USCIS",
+        "title": "Form I-765 Instructions",
+        "authority_type": "FORM_INSTRUCTIONS"
+      },
+      {
+        "source_id": "uscis_stem_opt_policy",
+        "agency": "USCIS",
+        "title": "STEM Optional Practical Training Policy Update",
+        "authority_type": "POLICY_MANUAL"
+      },
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      },
+      {
+        "source_id": "ecfr_8cfr_274a_12",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 274a.12 - Classes of Aliens Authorized to Accept Employment",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "USCIS and 8 CFR 214.2 directly distinguish post-completion OPT."
+  },
+  {
+    "id": "stem_001",
+    "question": "What is STEM OPT?",
+    "stage": "F-1",
+    "topic": "STEM OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_stem_opt_policy",
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "sevp_practical_training_overview",
+        "agency": "DHS-SEVP",
+        "title": "F-1 Practical Training Overview",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "uscis_i765_instructions",
+        "agency": "USCIS",
+        "title": "Form I-765 Instructions",
+        "authority_type": "FORM_INSTRUCTIONS"
+      },
+      {
+        "source_id": "uscis_stem_opt_policy",
+        "agency": "USCIS",
+        "title": "STEM Optional Practical Training Policy Update",
+        "authority_type": "POLICY_MANUAL"
+      },
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      },
+      {
+        "source_id": "ecfr_8cfr_274a_12",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 274a.12 - Classes of Aliens Authorized to Accept Employment",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "STEM OPT policy and governing F-1 regulation directly support the definition."
+  },
+  {
+    "id": "stem_002",
+    "question": "Does a STEM OPT employer need to participate in E-Verify?",
+    "stage": "F-1",
+    "topic": "STEM OPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_i765_instructions",
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "sevp_practical_training_overview",
+        "agency": "DHS-SEVP",
+        "title": "F-1 Practical Training Overview",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "uscis_i765_instructions",
+        "agency": "USCIS",
+        "title": "Form I-765 Instructions",
+        "authority_type": "FORM_INSTRUCTIONS"
+      },
+      {
+        "source_id": "uscis_stem_opt_policy",
+        "agency": "USCIS",
+        "title": "STEM Optional Practical Training Policy Update",
+        "authority_type": "POLICY_MANUAL"
+      },
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      },
+      {
+        "source_id": "ecfr_8cfr_274a_12",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 274a.12 - Classes of Aliens Authorized to Accept Employment",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "These sources directly support the E-Verify requirement for STEM OPT employment."
+  },
+  {
+    "id": "h1b_001",
+    "question": "What is an H-1B Labor Condition Application?",
+    "stage": "H-1B",
+    "topic": "H-1B LCA",
+    "answerable": true,
+    "expected_source_ids": [
+      "dol_h1b_lca",
+      "ecfr_20cfr_655_subpart_h"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "dol_h1b_lca",
+        "agency": "DOL",
+        "title": "Labor Condition Application for H-1B",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_20cfr_655_subpart_h",
+        "agency": "DOL-eCFR",
+        "title": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "DOL guidance and 20 CFR Part 655 Subpart H directly govern H-1B LCAs."
+  },
+  {
+    "id": "h1b_002",
+    "question": "What happens if I lose my job while on H-1B?",
+    "stage": "H-1B",
+    "topic": "H-1B layoff",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_h1b_termination_options"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "uscis_h1b_termination_options",
+        "agency": "USCIS",
+        "title": "Options for Nonimmigrant Workers Following Termination of Employment",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      }
+    ],
+    "_evaluation_notes": "USCIS termination guidance directly addresses options following H-1B job loss."
+  },
+  {
+    "id": "h1b_003",
+    "question": "Is there a grace period after H-1B employment ends?",
+    "stage": "H-1B",
+    "topic": "H-1B grace period",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_1",
+      "uscis_h1b_termination_options"
+    ],
+    "_candidate_sources": [],
+    "_evaluation_notes": "Candidate-source helper missed 8 CFR 214.1 because of topic-label matching. Gold source added manually."
+  },
+  {
+    "id": "h1b_004",
+    "question": "What is cap-gap?",
+    "stage": "H-1B",
+    "topic": "cap-gap",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      },
+      {
+        "source_id": "uscis_h1b_filing_checklist",
+        "agency": "USCIS",
+        "title": "Optional Checklist for Form I-129 H-1B Filings",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      }
+    ],
+    "_evaluation_notes": "8 CFR 214.2 contains the governing cap-gap provisions."
+  },
+  {
+    "id": "h4_001",
+    "question": "Can an H-4 spouse work in the United States?",
+    "stage": "H-4",
+    "topic": "H-4 EAD",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_h4_employment_authorization",
+      "ecfr_8cfr_274a_12"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "uscis_h4_employment_authorization",
+        "agency": "USCIS",
+        "title": "Employment Authorization for Certain H-4 Dependent Spouses",
+        "authority_type": "POLICY_MANUAL"
+      }
+    ],
+    "_evaluation_notes": "USCIS guidance and employment-authorization regulation support H-4 spouse work eligibility."
+  },
+  {
+    "id": "perm_001",
+    "question": "What is a prevailing wage determination?",
+    "stage": "PERM",
+    "topic": "Prevailing Wage",
+    "answerable": true,
+    "expected_source_ids": [
+      "dol_prevailing_wages",
+      "ecfr_20cfr_656"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "dol_h1b_lca",
+        "agency": "DOL",
+        "title": "Labor Condition Application for H-1B",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_20cfr_655_subpart_h",
+        "agency": "DOL-eCFR",
+        "title": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+        "authority_type": "REGULATION"
+      },
+      {
+        "source_id": "dol_prevailing_wages",
+        "agency": "DOL",
+        "title": "Prevailing Wage Determination",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_20cfr_656",
+        "agency": "DOL-eCFR",
+        "title": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "DOL prevailing-wage guidance and 20 CFR Part 656 directly support the definition."
+  },
+  {
+    "id": "perm_002",
+    "question": "What is PERM labor certification?",
+    "stage": "PERM",
+    "topic": "PERM",
+    "answerable": true,
+    "expected_source_ids": [
+      "dol_perm",
+      "ecfr_20cfr_656"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "dol_prevailing_wages",
+        "agency": "DOL",
+        "title": "Prevailing Wage Determination",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "dol_perm",
+        "agency": "DOL",
+        "title": "Permanent Labor Certification",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_20cfr_656",
+        "agency": "DOL-eCFR",
+        "title": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "DOL PERM guidance and 20 CFR Part 656 directly define the permanent labor certification process."
+  },
+  {
+    "id": "perm_003",
+    "question": "What is Form ETA-9089?",
+    "stage": "PERM",
+    "topic": "PERM ETA-9089",
+    "answerable": true,
+    "expected_source_ids": [
+      "ecfr_20cfr_656"
+    ],
+    "_candidate_sources": [],
+    "_evaluation_notes": "20 CFR Part 656 directly identifies ETA Form 9089 as the Application for Permanent Employment Certification."
+  },
+  {
+    "id": "i140_001",
+    "question": "What is Form I-140?",
+    "stage": "I-140",
+    "topic": "I-140",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_i140",
+      "uscis_i140_instructions"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "uscis_i140",
+        "agency": "USCIS",
+        "title": "Form I-140 Immigrant Petition for Alien Workers",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "uscis_i140_instructions",
+        "agency": "USCIS",
+        "title": "Instructions for Form I-140",
+        "authority_type": "FORM_INSTRUCTIONS"
+      },
+      {
+        "source_id": "uscis_priority_dates",
+        "agency": "USCIS",
+        "title": "Visa Availability and Priority Dates",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_8cfr_204_5",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "USCIS form page and instructions directly define Form I-140."
+  },
+  {
+    "id": "i140_002",
+    "question": "What is a priority date?",
+    "stage": "I-140",
+    "topic": "Priority Date",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_priority_dates",
+      "ecfr_8cfr_204_5"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "uscis_priority_dates",
+        "agency": "USCIS",
+        "title": "Visa Availability and Priority Dates",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_8cfr_204_5",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "USCIS priority-date guidance and 8 CFR 204.5 directly support the definition."
+  },
+  {
+    "id": "i140_003",
+    "question": "Does Form I-140 include EB-2 and EB-3 petitions?",
+    "stage": "I-140",
+    "topic": "I-140",
+    "answerable": true,
+    "expected_source_ids": [
+      "uscis_i140",
+      "ecfr_8cfr_204_5"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "uscis_i140",
+        "agency": "USCIS",
+        "title": "Form I-140 Immigrant Petition for Alien Workers",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "uscis_i140_instructions",
+        "agency": "USCIS",
+        "title": "Instructions for Form I-140",
+        "authority_type": "FORM_INSTRUCTIONS"
+      },
+      {
+        "source_id": "uscis_priority_dates",
+        "agency": "USCIS",
+        "title": "Visa Availability and Priority Dates",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_8cfr_204_5",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "USCIS I-140 material and 8 CFR 204.5 directly cover EB-2 and EB-3 immigrant petitions."
+  },
+  {
+    "id": "negative_001",
+    "question": "What is the best immigration lawyer near me?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "lawyer recommendation",
+    "answerable": false
+  },
+  {
+    "id": "negative_002",
+    "question": "Will USCIS approve my H-1B petition?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "case prediction",
+    "answerable": false
+  },
+  {
+    "id": "negative_003",
+    "question": "What are my chances of getting selected in the next H-1B lottery?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "future prediction",
+    "answerable": false
+  },
+  {
+    "id": "negative_004",
+    "question": "Which university should I join for guaranteed Day 1 CPT?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "school recommendation",
+    "answerable": false
+  },
+  {
+    "id": "negative_005",
+    "question": "Can you guarantee that my I-140 will be approved?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "case prediction",
+    "answerable": false
+  },
+  {
+    "id": "negative_006",
+    "question": "What will the EB-2 India priority date be next year?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "future prediction",
+    "answerable": false
+  },
+  {
+    "id": "negative_007",
+    "question": "Should I quit my current employer and move to another company?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "personal decision",
+    "answerable": false
+  },
+  {
+    "id": "negative_008",
+    "question": "Which consulting company gives the easiest H-1B sponsorship?",
+    "stage": "OUT_OF_SCOPE",
+    "topic": "company recommendation",
+    "answerable": false
+  },
+  {
+    "id": "cpt_006",
+    "question": "Can I start CPT employment before receiving authorization from my DSO?",
+    "stage": "F-1",
+    "topic": "CPT",
+    "answerable": true,
+    "expected_source_ids": [
+      "sevp_practical_training_overview",
+      "ecfr_8cfr_214_2"
+    ],
+    "_candidate_sources": [
+      {
+        "source_id": "sevp_practical_training_overview",
+        "agency": "DHS-SEVP",
+        "title": "F-1 Practical Training Overview",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_academic_year_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Policy Guidance for Adjudicators: Academic Year",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "sevp_cpt_immediate_graduate_guidance",
+        "agency": "DHS-SEVP",
+        "title": "SEVP Spotlight Practical Training for F and M Students",
+        "authority_type": "OFFICIAL_GUIDANCE"
+      },
+      {
+        "source_id": "ecfr_8cfr_214_2",
+        "agency": "DHS-eCFR",
+        "title": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+        "authority_type": "REGULATION"
+      }
+    ],
+    "_evaluation_notes": "Official CPT sources require authorization before CPT employment begins."
+  }
+]

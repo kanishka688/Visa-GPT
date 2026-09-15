@@ -1,0 +1,3347 @@
+{
+  "evaluation_type": "manual_gold_source_ids",
+  "dataset": {
+    "total_questions": 30,
+    "answerable_questions": 22,
+    "unanswerable_questions": 8
+  },
+  "before_reranking": {
+    "recall_at_1": 0.6363636363636364,
+    "recall_at_3": 0.9545454545454546,
+    "recall_at_5": 1.0,
+    "mrr": 0.7893939393939394
+  },
+  "after_reranking": {
+    "recall_at_1": 0.5909090909090909,
+    "recall_at_3": 0.9545454545454546,
+    "recall_at_5": 0.9545454545454546,
+    "mrr": 0.7727272727272727
+  },
+  "delta_after_reranking": {
+    "recall_at_1": -0.045454545454545414,
+    "recall_at_3": 0.0,
+    "recall_at_5": -0.045454545454545414,
+    "mrr": -0.01666666666666672
+  },
+  "details": [
+    {
+      "id": "f1_001",
+      "question": "What is CPT?",
+      "stage": "F-1",
+      "topic": "CPT",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview"
+      ],
+      "evaluation_notes": "Gold sources directly define and govern CPT.",
+      "retrieval_query": "What is CPT?",
+      "topic_filter": "CPT",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.3046233057975769,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.29411736130714417,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_academic_year_guidance",
+            "document": "SEVP Policy Guidance for Adjudicators: Academic Year",
+            "agency": "DHS-SEVP",
+            "topic": "F-1 CPT academic year eligibility practical training",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.2464698702096939,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.23658867180347443,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.2313394695520401,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.3046233057975769,
+            "reranker_score": 0.13311263918876648,
+            "final_score": 0.1483438044786453,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.29411736130714417,
+            "reranker_score": -3.3483004570007324,
+            "final_score": -3.3335945889353753,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.1997102051973343,
+            "reranker_score": -6.636354923248291,
+            "final_score": -6.276369412988425,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.2003764808177948,
+            "reranker_score": -8.431751251220703,
+            "final_score": -8.071732427179812,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.2176610827445984,
+            "reranker_score": -8.641124725341797,
+            "final_score": -8.280241671204566,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "f1_002",
+      "question": "What is Day 1 CPT?",
+      "stage": "F-1",
+      "topic": "CPT",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_cpt_immediate_graduate_guidance"
+      ],
+      "evaluation_notes": "Uses official immediate-CPT guidance and the governing F-1 regulation.",
+      "retrieval_query": "curricular practical training graduate student immediate participation internship required by curriculum one academic year eligibility CPT authorization",
+      "topic_filter": "CPT",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.7343658208847046,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_cpt_immediate_graduate_guidance",
+            "document": "SEVP Spotlight Practical Training for F and M Students",
+            "agency": "DHS-SEVP",
+            "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6304255723953247,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_cpt_immediate_graduate_guidance",
+            "document": "SEVP Spotlight Practical Training for F and M Students",
+            "agency": "DHS-SEVP",
+            "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.612207293510437,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.547599196434021,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.4926164746284485,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.4926164746284485,
+            "reranker_score": -3.259716510772705,
+            "final_score": -3.2350856870412827,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.4658360183238983,
+            "reranker_score": -6.636733055114746,
+            "final_score": -6.613441254198551,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.7343658208847046,
+            "reranker_score": -10.368943214416504,
+            "final_score": -9.982224923372268,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5015336871147156,
+            "reranker_score": -10.537537574768066,
+            "final_score": -10.16246089041233,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4852811098098755,
+            "reranker_score": -10.676305770874023,
+            "final_score": -10.302041715383528,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "f1_003",
+      "question": "Can a graduate student begin CPT immediately?",
+      "stage": "F-1",
+      "topic": "CPT",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_cpt_immediate_graduate_guidance"
+      ],
+      "evaluation_notes": "These sources directly address immediate CPT participation for qualifying graduate programs.",
+      "retrieval_query": "Can a graduate student begin CPT immediately?",
+      "topic_filter": "CPT",
+      "before_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5416415929794312,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.457912802696228,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_cpt_immediate_graduate_guidance",
+            "document": "SEVP Spotlight Practical Training for F and M Students",
+            "agency": "DHS-SEVP",
+            "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.41954419016838074,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.41683629155158997,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.41671305894851685,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "sevp_cpt_immediate_graduate_guidance",
+            "document": "SEVP Spotlight Practical Training for F and M Students",
+            "agency": "DHS-SEVP",
+            "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.40274593234062195,
+            "reranker_score": 5.6761345863342285,
+            "final_score": 5.69627188295126,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5416415929794312,
+            "reranker_score": -0.08225323259830475,
+            "final_score": -0.05517115294933319,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.41683629155158997,
+            "reranker_score": -2.967099189758301,
+            "final_score": -2.5962573751807216,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.457912802696228,
+            "reranker_score": -2.948817014694214,
+            "final_score": -2.9259213745594024,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.40161585807800293,
+            "reranker_score": -4.386223793029785,
+            "final_score": -4.0161430001258855,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "f1_004",
+      "question": "Does 12 months of full-time CPT affect OPT eligibility?",
+      "stage": "F-1",
+      "topic": "CPT",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview"
+      ],
+      "evaluation_notes": "Directly supported by official CPT/OPT eligibility rules.",
+      "retrieval_query": "Does 12 months of full-time CPT affect OPT eligibility?",
+      "topic_filter": "CPT",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.7171448469161987,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6432009935379028,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6230266094207764,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6081620454788208,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_academic_year_guidance",
+            "document": "SEVP Policy Guidance for Adjudicators: Academic Year",
+            "agency": "DHS-SEVP",
+            "topic": "F-1 CPT academic year eligibility practical training",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.4740126132965088,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.7171448469161987,
+            "reranker_score": 6.465013027191162,
+            "final_score": 6.500870269536972,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6432009935379028,
+            "reranker_score": 1.473917007446289,
+            "final_score": 1.5060770571231843,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5585296750068665,
+            "reranker_score": -0.7476094961166382,
+            "final_score": -0.36968301236629486,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5062240958213806,
+            "reranker_score": -0.9549614787101746,
+            "final_score": -0.5796502739191054,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5585102438926697,
+            "reranker_score": -1.6325315237045288,
+            "final_score": -1.2546060115098951,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "f1_005",
+      "question": "Who authorizes CPT?",
+      "stage": "F-1",
+      "topic": "CPT",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview"
+      ],
+      "evaluation_notes": "Official sources describe DSO authorization of CPT.",
+      "retrieval_query": "Who authorizes CPT?",
+      "topic_filter": "CPT",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.3437642455101013,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.33453500270843506,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.3340964913368225,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_academic_year_guidance",
+            "document": "SEVP Policy Guidance for Adjudicators: Academic Year",
+            "agency": "DHS-SEVP",
+            "topic": "F-1 CPT academic year eligibility practical training",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.32396310567855835,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_cpt_immediate_graduate_guidance",
+            "document": "SEVP Spotlight Practical Training for F and M Students",
+            "agency": "DHS-SEVP",
+            "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.2784962058067322,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.3437642455101013,
+            "reranker_score": -3.4216434955596924,
+            "final_score": -3.4044552832841872,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.30043554306030273,
+            "reranker_score": -7.578383922576904,
+            "final_score": -7.21336214542389,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.2950933575630188,
+            "reranker_score": -8.466699600219727,
+            "final_score": -8.101944932341574,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.3075396418571472,
+            "reranker_score": -9.772829055786133,
+            "final_score": -9.407452073693275,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.2895805239677429,
+            "reranker_score": -9.825846672058105,
+            "final_score": -9.461367645859717,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "opt_001",
+      "question": "What is OPT?",
+      "stage": "F-1",
+      "topic": "OPT",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2",
+        "uscis_opt_f1_students"
+      ],
+      "evaluation_notes": "USCIS OPT guidance and the governing F-1 regulation directly define OPT.",
+      "retrieval_query": "What is OPT?",
+      "topic_filter": "OPT",
+      "before_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5380727052688599,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_opt_f1_students",
+            "document": "Optional Practical Training for F-1 Students",
+            "agency": "USCIS",
+            "topic": "OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.47750234603881836,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4559395909309387,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.44667813181877136,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.3836289942264557,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "uscis_opt_f1_students",
+            "document": "Optional Practical Training for F-1 Students",
+            "agency": "USCIS",
+            "topic": "OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.47750234603881836,
+            "reranker_score": 6.088235378265381,
+            "final_score": 6.112110495567322,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5380727052688599,
+            "reranker_score": 2.834935188293457,
+            "final_score": 2.8618388235569,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i765_instructions",
+            "document": "Form I-765 Instructions",
+            "agency": "USCIS",
+            "topic": "OPT STEM OPT EAD filing",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.35638484358787537,
+            "reranker_score": 1.6756216287612915,
+            "final_score": 1.5434408709406853,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.37265533208847046,
+            "reranker_score": -1.2321072816848755,
+            "final_score": -0.8634745150804519,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4559395909309387,
+            "reranker_score": -1.5682514905929565,
+            "final_score": -1.1954545110464094,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "opt_002",
+      "question": "What is pre-completion OPT?",
+      "stage": "F-1",
+      "topic": "OPT",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2",
+        "uscis_opt_f1_students"
+      ],
+      "evaluation_notes": "USCIS and 8 CFR 214.2 directly distinguish pre-completion OPT.",
+      "retrieval_query": "What is pre-completion OPT?",
+      "topic_filter": "OPT",
+      "before_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.7301992177963257,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_opt_f1_students",
+            "document": "Optional Practical Training for F-1 Students",
+            "agency": "USCIS",
+            "topic": "OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5816511511802673,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.534263014793396,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.4981997609138489,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4780581593513489,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.7301992177963257,
+            "reranker_score": 7.813461780548096,
+            "final_score": 7.849971741437912,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_opt_f1_students",
+            "document": "Optional Practical Training for F-1 Students",
+            "agency": "USCIS",
+            "topic": "OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5816511511802673,
+            "reranker_score": 6.782149791717529,
+            "final_score": 6.811232349276542,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.534263014793396,
+            "reranker_score": 5.232095718383789,
+            "final_score": 5.608808869123458,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i765_instructions",
+            "document": "Form I-765 Instructions",
+            "agency": "USCIS",
+            "topic": "OPT STEM OPT EAD filing",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.431988000869751,
+            "reranker_score": 4.8000288009643555,
+            "final_score": 4.6716282010078425,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_opt_f1_students",
+            "document": "Optional Practical Training for F-1 Students",
+            "agency": "USCIS",
+            "topic": "OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4475656747817993,
+            "reranker_score": 4.30139684677124,
+            "final_score": 4.32377513051033,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "opt_003",
+      "question": "What is post-completion OPT?",
+      "stage": "F-1",
+      "topic": "OPT",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2",
+        "uscis_opt_f1_students"
+      ],
+      "evaluation_notes": "USCIS and 8 CFR 214.2 directly distinguish post-completion OPT.",
+      "retrieval_query": "What is post-completion OPT?",
+      "topic_filter": "OPT",
+      "before_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6764627695083618,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5105769634246826,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5049055814743042,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_opt_f1_students",
+            "document": "Optional Practical Training for F-1 Students",
+            "agency": "USCIS",
+            "topic": "OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.49524062871932983,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.48671281337738037,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6764627695083618,
+            "reranker_score": 7.55108642578125,
+            "final_score": 7.584909564256668,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_opt_f1_students",
+            "document": "Optional Practical Training for F-1 Students",
+            "agency": "USCIS",
+            "topic": "OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.49524062871932983,
+            "reranker_score": 6.3913984298706055,
+            "final_score": 6.416160461306572,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.48671281337738037,
+            "reranker_score": 5.548362731933594,
+            "final_score": 5.572698372602463,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5105769634246826,
+            "reranker_score": 4.961757183074951,
+            "final_score": 5.337286031246185,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5009591579437256,
+            "reranker_score": 4.850055694580078,
+            "final_score": 5.225103652477264,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stem_001",
+      "question": "What is STEM OPT?",
+      "stage": "F-1",
+      "topic": "STEM OPT",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2",
+        "uscis_stem_opt_policy"
+      ],
+      "evaluation_notes": "STEM OPT policy and governing F-1 regulation directly support the definition.",
+      "retrieval_query": "What is STEM OPT?",
+      "topic_filter": "STEM OPT",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.538323700428009,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5032015442848206,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i765_instructions",
+            "document": "Form I-765 Instructions",
+            "agency": "USCIS",
+            "topic": "OPT STEM OPT EAD filing",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.49615713953971863,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.4623349606990814,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.4268426299095154,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.4623349606990814,
+            "reranker_score": 3.1409900188446045,
+            "final_score": 3.1641067668795584,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.538323700428009,
+            "reranker_score": 2.1310105323791504,
+            "final_score": 2.5079267174005504,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_stem_opt_policy",
+            "document": "STEM Optional Practical Training Policy Update",
+            "agency": "USCIS",
+            "topic": "STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.40719136595726013,
+            "reranker_score": 2.1049346923828125,
+            "final_score": 2.2752942606806754,
+            "authority_type": "POLICY_MANUAL",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5032015442848206,
+            "reranker_score": 1.5018620491027832,
+            "final_score": 1.8770221263170244,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.479549378156662,
+            "reranker_score": 1.4244890213012695,
+            "final_score": 1.7984664902091028,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stem_002",
+      "question": "Does a STEM OPT employer need to participate in E-Verify?",
+      "stage": "F-1",
+      "topic": "STEM OPT",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2",
+        "uscis_i765_instructions"
+      ],
+      "evaluation_notes": "These sources directly support the E-Verify requirement for STEM OPT employment.",
+      "retrieval_query": "Does a STEM OPT employer need to participate in E-Verify?",
+      "topic_filter": "STEM OPT",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.7068358063697815,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i765_instructions",
+            "document": "Form I-765 Instructions",
+            "agency": "USCIS",
+            "topic": "OPT STEM OPT EAD filing",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6153683066368103,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5456886291503906,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.539379894733429,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i765_instructions",
+            "document": "Form I-765 Instructions",
+            "agency": "USCIS",
+            "topic": "OPT STEM OPT EAD filing",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5367031693458557,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5456886291503906,
+            "reranker_score": 5.6673431396484375,
+            "final_score": 5.694627571105957,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i765_instructions",
+            "document": "Form I-765 Instructions",
+            "agency": "USCIS",
+            "topic": "OPT STEM OPT EAD filing",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6153683066368103,
+            "reranker_score": 3.6519577503204346,
+            "final_score": 3.5327261656522753,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.7068358063697815,
+            "reranker_score": 3.1126809120178223,
+            "final_score": 3.498022702336311,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i765_instructions",
+            "document": "Form I-765 Instructions",
+            "agency": "USCIS",
+            "topic": "OPT STEM OPT EAD filing",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5367031693458557,
+            "reranker_score": 3.426593780517578,
+            "final_score": 3.303428938984871,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.539379894733429,
+            "reranker_score": 2.0018322467803955,
+            "final_score": 2.3788012415170665,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1b_001",
+      "question": "What is an H-1B Labor Condition Application?",
+      "stage": "H-1B",
+      "topic": "H-1B LCA",
+      "gold_source_ids": [
+        "dol_h1b_lca",
+        "ecfr_20cfr_655_subpart_h"
+      ],
+      "evaluation_notes": "DOL guidance and 20 CFR Part 655 Subpart H directly govern H-1B LCAs.",
+      "retrieval_query": "What is an H-1B Labor Condition Application?",
+      "topic_filter": "H-1B",
+      "before_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.7840741276741028,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.7157543301582336,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6915890574455261,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6895748972892761,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_h1b_lca",
+            "document": "Labor Condition Application for H-1B",
+            "agency": "DOL",
+            "topic": "H-1B LCA prevailing wage employer requirements",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5999265909194946,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "dol_h1b_lca",
+            "document": "Labor Condition Application for H-1B",
+            "agency": "DOL",
+            "topic": "H-1B LCA prevailing wage employer requirements",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5999265909194946,
+            "reranker_score": 7.097027778625488,
+            "final_score": 7.127024108171463,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.7840741276741028,
+            "reranker_score": 6.138090133666992,
+            "final_score": 6.527293840050697,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6862835884094238,
+            "reranker_score": 6.007561683654785,
+            "final_score": 6.391875863075256,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.684852123260498,
+            "reranker_score": 5.8580121994018555,
+            "final_score": 6.24225480556488,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6551294326782227,
+            "reranker_score": 5.522397994995117,
+            "final_score": 5.905154466629028,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1b_002",
+      "question": "What happens if I lose my job while on H-1B?",
+      "stage": "H-1B",
+      "topic": "H-1B layoff",
+      "gold_source_ids": [
+        "uscis_h1b_termination_options"
+      ],
+      "evaluation_notes": "USCIS termination guidance directly addresses options following H-1B job loss.",
+      "retrieval_query": "What happens if I lose my job while on H-1B?",
+      "topic_filter": "H-1B",
+      "before_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 0,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.2,
+        "first_relevant_rank": 5,
+        "top_5": [
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6119471788406372,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5944361090660095,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.535282552242279,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5153424739837646,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_h1b_termination_options",
+            "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+            "agency": "USCIS",
+            "topic": "H-1B layoff termination grace period",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5086063146591187,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 0,
+        "recall_at_5": 0,
+        "reciprocal_rank": 0.16666666666666666,
+        "first_relevant_rank": 6,
+        "top_5": [
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.560348391532898,
+            "reranker_score": 1.2538710832595825,
+            "final_score": 1.6318885028362276,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.557108998298645,
+            "reranker_score": -1.1224637031555176,
+            "final_score": -0.7446082532405852,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5203776955604553,
+            "reranker_score": -1.1613181829452515,
+            "final_score": -0.7852992981672287,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5282214879989624,
+            "reranker_score": -1.3559706211090088,
+            "final_score": -0.9795595467090605,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5306292772293091,
+            "reranker_score": -1.3647677898406982,
+            "final_score": -0.9882363259792327,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1b_003",
+      "question": "Is there a grace period after H-1B employment ends?",
+      "stage": "H-1B",
+      "topic": "H-1B grace period",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_1",
+        "uscis_h1b_termination_options"
+      ],
+      "evaluation_notes": "Candidate-source helper missed 8 CFR 214.1 because of topic-label matching. Gold source added manually.",
+      "retrieval_query": "Is there a grace period after H-1B employment ends?",
+      "topic_filter": "H-1B",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "uscis_h1b_termination_options",
+            "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+            "agency": "USCIS",
+            "topic": "H-1B layoff termination grace period",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6435111165046692,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6227998733520508,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6212736964225769,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6172528266906738,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6170771718025208,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "uscis_h1b_termination_options",
+            "document": "Options for Nonimmigrant Workers Following Termination of Employment",
+            "agency": "USCIS",
+            "topic": "H-1B layoff termination grace period",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6435111165046692,
+            "reranker_score": 5.44670295715332,
+            "final_score": 5.478878512978554,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.590166449546814,
+            "reranker_score": 2.97027587890625,
+            "final_score": 3.3497842013835903,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6013772487640381,
+            "reranker_score": 2.3791849613189697,
+            "final_score": 2.759253823757171,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5909523367881775,
+            "reranker_score": 2.2758655548095703,
+            "final_score": 2.655413171648979,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6227998733520508,
+            "reranker_score": 1.335335612297058,
+            "final_score": 1.7164756059646606,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "h1b_004",
+      "question": "What is cap-gap?",
+      "stage": "H-1B",
+      "topic": "cap-gap",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2"
+      ],
+      "evaluation_notes": "8 CFR 214.2 contains the governing cap-gap provisions.",
+      "retrieval_query": "F-1 student beneficiary H-1B cap subject petition requesting change of status extension of duration of status grant of employment authorization automatically extended until April 1 fiscal year timely filed nonfrivolous petition",
+      "topic_filter": "F-1",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.8714063167572021,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_opt_f1_students",
+            "document": "Optional Practical Training for F-1 Students",
+            "agency": "USCIS",
+            "topic": "OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.7165676355361938,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.7050619125366211,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_274a_12",
+            "document": "8 CFR 274a.12 - Classes of Aliens Authorized to Accept Employment",
+            "agency": "DHS-eCFR",
+            "topic": "employment authorization EAD H-4 OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6899504661560059,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_274a_12",
+            "document": "8 CFR 274a.12 - Classes of Aliens Authorized to Accept Employment",
+            "agency": "DHS-eCFR",
+            "topic": "employment authorization EAD H-4 OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.658904492855072,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "uscis_opt_f1_students",
+            "document": "Optional Practical Training for F-1 Students",
+            "agency": "USCIS",
+            "topic": "OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.7165676355361938,
+            "reranker_score": 0.07134365290403366,
+            "final_score": 0.10717203468084335,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6951403617858887,
+            "reranker_score": -7.275451183319092,
+            "final_score": -6.890694165229798,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6457682847976685,
+            "reranker_score": -9.316863059997559,
+            "final_score": -8.934574645757674,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6988220810890198,
+            "reranker_score": -10.975021362304688,
+            "final_score": -10.590080258250236,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_274a_12",
+            "document": "8 CFR 274a.12 - Classes of Aliens Authorized to Accept Employment",
+            "agency": "DHS-eCFR",
+            "topic": "employment authorization EAD H-4 OPT STEM OPT",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6530678272247314,
+            "reranker_score": -10.988653182983398,
+            "final_score": -10.60599979162216,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "h4_001",
+      "question": "Can an H-4 spouse work in the United States?",
+      "stage": "H-4",
+      "topic": "H-4 EAD",
+      "gold_source_ids": [
+        "ecfr_8cfr_274a_12",
+        "uscis_h4_employment_authorization"
+      ],
+      "evaluation_notes": "USCIS guidance and employment-authorization regulation support H-4 spouse work eligibility.",
+      "retrieval_query": "Can an H-4 spouse work in the United States?",
+      "topic_filter": "H-4",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "uscis_h4_employment_authorization",
+            "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+            "agency": "USCIS",
+            "topic": "H-4 H-4 EAD employment authorization",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.637136697769165,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "POLICY_MANUAL",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_h4_employment_authorization",
+            "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+            "agency": "USCIS",
+            "topic": "H-4 H-4 EAD employment authorization",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5985236167907715,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "POLICY_MANUAL",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_274a_12",
+            "document": "8 CFR 274a.12 - Classes of Aliens Authorized to Accept Employment",
+            "agency": "DHS-eCFR",
+            "topic": "employment authorization EAD H-4 OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4743741750717163,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_274a_12",
+            "document": "8 CFR 274a.12 - Classes of Aliens Authorized to Accept Employment",
+            "agency": "DHS-eCFR",
+            "topic": "employment authorization EAD H-4 OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.45785707235336304,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_h4_employment_authorization",
+            "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+            "agency": "USCIS",
+            "topic": "H-4 H-4 EAD employment authorization",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5878040790557861,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "POLICY_MANUAL",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "uscis_h4_employment_authorization",
+            "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+            "agency": "USCIS",
+            "topic": "H-4 H-4 EAD employment authorization",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5985236167907715,
+            "reranker_score": 1.8438262939453125,
+            "final_score": 2.023752474784851,
+            "authority_type": "POLICY_MANUAL",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_h4_employment_authorization",
+            "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+            "agency": "USCIS",
+            "topic": "H-4 H-4 EAD employment authorization",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5878040790557861,
+            "reranker_score": 1.3901692628860474,
+            "final_score": 1.5695594668388366,
+            "authority_type": "POLICY_MANUAL",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_h4_employment_authorization",
+            "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+            "agency": "USCIS",
+            "topic": "H-4 H-4 EAD employment authorization",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.637136697769165,
+            "reranker_score": 1.184882640838623,
+            "final_score": 1.3667394757270812,
+            "authority_type": "POLICY_MANUAL",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_h4_employment_authorization",
+            "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+            "agency": "USCIS",
+            "topic": "H-4 H-4 EAD employment authorization",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5247413516044617,
+            "reranker_score": 0.16463465988636017,
+            "final_score": 0.3408717274665833,
+            "authority_type": "POLICY_MANUAL",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_h4_employment_authorization",
+            "document": "Employment Authorization for Certain H-4 Dependent Spouses",
+            "agency": "USCIS",
+            "topic": "H-4 H-4 EAD employment authorization",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5279664397239685,
+            "reranker_score": 0.14829090237617493,
+            "final_score": 0.32468922436237335,
+            "authority_type": "POLICY_MANUAL",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "perm_001",
+      "question": "What is a prevailing wage determination?",
+      "stage": "PERM",
+      "topic": "Prevailing Wage",
+      "gold_source_ids": [
+        "dol_prevailing_wages",
+        "ecfr_20cfr_656"
+      ],
+      "evaluation_notes": "DOL prevailing-wage guidance and 20 CFR Part 656 directly support the definition.",
+      "retrieval_query": "What is a prevailing wage determination?",
+      "topic_filter": "Prevailing Wage",
+      "before_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333,
+        "first_relevant_rank": 3,
+        "top_5": [
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6851415634155273,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6719147562980652,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6529868841171265,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_prevailing_wages",
+            "document": "Prevailing Wage Determination",
+            "agency": "DOL",
+            "topic": "Prevailing Wage PWD PERM H-1B",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6484576463699341,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6096739768981934,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5745341777801514,
+            "reranker_score": 5.839871406555176,
+            "final_score": 6.218598115444183,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_prevailing_wages",
+            "document": "Prevailing Wage Determination",
+            "agency": "DOL",
+            "topic": "Prevailing Wage PWD PERM H-1B",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6484576463699341,
+            "reranker_score": 5.905942916870117,
+            "final_score": 5.938365799188614,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6529868841171265,
+            "reranker_score": 4.755853176116943,
+            "final_score": 5.138502520322799,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_655_subpart_h",
+            "document": "20 CFR Part 655 Subpart H - H-1B Labor Condition Applications",
+            "agency": "DOL-eCFR",
+            "topic": "H-1B LCA wages prevailing wage working conditions employer requirements",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6492599844932556,
+            "reranker_score": 4.73610782623291,
+            "final_score": 5.118570825457573,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_prevailing_wages",
+            "document": "Prevailing Wage Determination",
+            "agency": "DOL",
+            "topic": "Prevailing Wage PWD PERM H-1B",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5442254543304443,
+            "reranker_score": 4.675027847290039,
+            "final_score": 4.702239120006562,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "perm_002",
+      "question": "What is PERM labor certification?",
+      "stage": "PERM",
+      "topic": "PERM",
+      "gold_source_ids": [
+        "dol_perm",
+        "ecfr_20cfr_656"
+      ],
+      "evaluation_notes": "DOL PERM guidance and 20 CFR Part 656 directly define the permanent labor certification process.",
+      "retrieval_query": "What is PERM labor certification?",
+      "topic_filter": "PERM",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "dol_perm",
+            "document": "Permanent Labor Certification",
+            "agency": "DOL",
+            "topic": "PERM recruitment labor certification employer sponsorship",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6481781601905823,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_perm",
+            "document": "Permanent Labor Certification",
+            "agency": "DOL",
+            "topic": "PERM recruitment labor certification employer sponsorship",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5895060300827026,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5291748642921448,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5149396657943726,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_prevailing_wages",
+            "document": "Prevailing Wage Determination",
+            "agency": "DOL",
+            "topic": "Prevailing Wage PWD PERM H-1B",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.44785380363464355,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "dol_perm",
+            "document": "Permanent Labor Certification",
+            "agency": "DOL",
+            "topic": "PERM recruitment labor certification employer sponsorship",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5895060300827026,
+            "reranker_score": 9.179869651794434,
+            "final_score": 9.209344953298569,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_perm",
+            "document": "Permanent Labor Certification",
+            "agency": "DOL",
+            "topic": "PERM recruitment labor certification employer sponsorship",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5777050256729126,
+            "reranker_score": 4.8661603927612305,
+            "final_score": 4.895045644044876,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_perm",
+            "document": "Permanent Labor Certification",
+            "agency": "DOL",
+            "topic": "PERM recruitment labor certification employer sponsorship",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6481781601905823,
+            "reranker_score": 3.2983593940734863,
+            "final_score": 3.3307683020830154,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_prevailing_wages",
+            "document": "Prevailing Wage Determination",
+            "agency": "DOL",
+            "topic": "Prevailing Wage PWD PERM H-1B",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.44785380363464355,
+            "reranker_score": 1.9859275817871094,
+            "final_score": 2.0083202719688416,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.513907790184021,
+            "reranker_score": -1.2001869678497314,
+            "final_score": -0.8244915783405303,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "perm_003",
+      "question": "What is Form ETA-9089?",
+      "stage": "PERM",
+      "topic": "PERM ETA-9089",
+      "gold_source_ids": [
+        "ecfr_20cfr_656"
+      ],
+      "evaluation_notes": "20 CFR Part 656 directly identifies ETA Form 9089 as the Application for Permanent Employment Certification.",
+      "retrieval_query": "ETA Form 9089 Application for Permanent Employment Certification PERM labor certification Department of Labor employer application",
+      "topic_filter": "PERM",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.7166789770126343,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.687832236289978,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_perm",
+            "document": "Permanent Labor Certification",
+            "agency": "DOL",
+            "topic": "PERM recruitment labor certification employer sponsorship",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6443111896514893,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_perm",
+            "document": "Permanent Labor Certification",
+            "agency": "DOL",
+            "topic": "PERM recruitment labor certification employer sponsorship",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.6316846013069153,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_prevailing_wages",
+            "document": "Prevailing Wage Determination",
+            "agency": "DOL",
+            "topic": "Prevailing Wage PWD PERM H-1B",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5861567258834839,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.687832236289978,
+            "reranker_score": 5.202524185180664,
+            "final_score": 5.586915796995163,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6668851971626282,
+            "reranker_score": 3.5088605880737305,
+            "final_score": 3.8922048479318616,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5713008642196655,
+            "reranker_score": 2.822803020477295,
+            "final_score": 3.2013680636882778,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "dol_prevailing_wages",
+            "document": "Prevailing Wage Determination",
+            "agency": "DOL",
+            "topic": "Prevailing Wage PWD PERM H-1B",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.46176010370254517,
+            "reranker_score": 0.6431723237037659,
+            "final_score": 0.6662603288888931,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_20cfr_656",
+            "document": "20 CFR Part 656 - Labor Certification Process for Permanent Employment",
+            "agency": "DOL-eCFR",
+            "topic": "PERM prevailing wage PWD recruitment labor certification ETA-9089",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.6203615069389343,
+            "reranker_score": -2.8846240043640137,
+            "final_score": -2.503605929017067,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "i140_001",
+      "question": "What is Form I-140?",
+      "stage": "I-140",
+      "topic": "I-140",
+      "gold_source_ids": [
+        "uscis_i140",
+        "uscis_i140_instructions"
+      ],
+      "evaluation_notes": "USCIS form page and instructions directly define Form I-140.",
+      "retrieval_query": "What is Form I-140?",
+      "topic_filter": "I-140",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "uscis_i140_instructions",
+            "document": "Instructions for Form I-140",
+            "agency": "USCIS",
+            "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5554385781288147,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i140_instructions",
+            "document": "Instructions for Form I-140",
+            "agency": "USCIS",
+            "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5533177852630615,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i140",
+            "document": "Form I-140 Immigrant Petition for Alien Workers",
+            "agency": "USCIS",
+            "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.545555591583252,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i140",
+            "document": "Form I-140 Immigrant Petition for Alien Workers",
+            "agency": "USCIS",
+            "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5352094173431396,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_204_5",
+            "document": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+            "agency": "DHS-eCFR",
+            "topic": "I-140 EB-1 EB-2 EB-3 priority date petition employment immigrant",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5303510427474976,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "ecfr_8cfr_204_5",
+            "document": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+            "agency": "DHS-eCFR",
+            "topic": "I-140 EB-1 EB-2 EB-3 priority date petition employment immigrant",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.5303510427474976,
+            "reranker_score": 7.02526330947876,
+            "final_score": 7.4017808616161345,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i140_instructions",
+            "document": "Instructions for Form I-140",
+            "agency": "USCIS",
+            "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5533177852630615,
+            "reranker_score": 7.51190185546875,
+            "final_score": 7.389567744731902,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i140",
+            "document": "Form I-140 Immigrant Petition for Alien Workers",
+            "agency": "USCIS",
+            "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5352094173431396,
+            "reranker_score": 7.351836204528809,
+            "final_score": 7.378596675395966,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i140_instructions",
+            "document": "Instructions for Form I-140",
+            "agency": "USCIS",
+            "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5290666222572327,
+            "reranker_score": 6.860082626342773,
+            "final_score": 6.736535957455635,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i140_instructions",
+            "document": "Instructions for Form I-140",
+            "agency": "USCIS",
+            "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.44532740116119385,
+            "reranker_score": 6.749364852905273,
+            "final_score": 6.621631222963333,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "i140_002",
+      "question": "What is a priority date?",
+      "stage": "I-140",
+      "topic": "Priority Date",
+      "gold_source_ids": [
+        "ecfr_8cfr_204_5",
+        "uscis_priority_dates"
+      ],
+      "evaluation_notes": "USCIS priority-date guidance and 8 CFR 204.5 directly support the definition.",
+      "retrieval_query": "What is a priority date?",
+      "topic_filter": "Priority Date",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "ecfr_8cfr_204_5",
+            "document": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+            "agency": "DHS-eCFR",
+            "topic": "I-140 EB-1 EB-2 EB-3 priority date petition employment immigrant",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.507877767086029,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_204_5",
+            "document": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+            "agency": "DHS-eCFR",
+            "topic": "I-140 EB-1 EB-2 EB-3 priority date petition employment immigrant",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5068725347518921,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_priority_dates",
+            "document": "Visa Availability and Priority Dates",
+            "agency": "USCIS",
+            "topic": "Priority Date visa availability employment green card",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4896899461746216,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_priority_dates",
+            "document": "Visa Availability and Priority Dates",
+            "agency": "USCIS",
+            "topic": "Priority Date visa availability employment green card",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4855164885520935,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_priority_dates",
+            "document": "Visa Availability and Priority Dates",
+            "agency": "USCIS",
+            "topic": "Priority Date visa availability employment green card",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4665323495864868,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "uscis_priority_dates",
+            "document": "Visa Availability and Priority Dates",
+            "agency": "USCIS",
+            "topic": "Priority Date visa availability employment green card",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4896899461746216,
+            "reranker_score": 7.408557891845703,
+            "final_score": 7.433042389154434,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_204_5",
+            "document": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+            "agency": "DHS-eCFR",
+            "topic": "I-140 EB-1 EB-2 EB-3 priority date petition employment immigrant",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.507877767086029,
+            "reranker_score": 3.825507640838623,
+            "final_score": 4.200901529192924,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_204_5",
+            "document": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+            "agency": "DHS-eCFR",
+            "topic": "I-140 EB-1 EB-2 EB-3 priority date petition employment immigrant",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5068725347518921,
+            "reranker_score": 1.9003543853759766,
+            "final_score": 2.275698012113571,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_priority_dates",
+            "document": "Visa Availability and Priority Dates",
+            "agency": "USCIS",
+            "topic": "Priority Date visa availability employment green card",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4665323495864868,
+            "reranker_score": 1.2125756740570068,
+            "final_score": 1.2359022915363311,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_priority_dates",
+            "document": "Visa Availability and Priority Dates",
+            "agency": "USCIS",
+            "topic": "Priority Date visa availability employment green card",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.38785725831985474,
+            "reranker_score": 1.1223115921020508,
+            "final_score": 1.1417044550180435,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "i140_003",
+      "question": "Does Form I-140 include EB-2 and EB-3 petitions?",
+      "stage": "I-140",
+      "topic": "I-140",
+      "gold_source_ids": [
+        "ecfr_8cfr_204_5",
+        "uscis_i140"
+      ],
+      "evaluation_notes": "USCIS I-140 material and 8 CFR 204.5 directly cover EB-2 and EB-3 immigrant petitions.",
+      "retrieval_query": "Does Form I-140 include EB-2 and EB-3 petitions?",
+      "topic_filter": "I-140",
+      "before_reranking": {
+        "recall_at_1": 0,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 0.5,
+        "first_relevant_rank": 2,
+        "top_5": [
+          {
+            "source_id": "uscis_i140_instructions",
+            "document": "Instructions for Form I-140",
+            "agency": "USCIS",
+            "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.581733226776123,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i140",
+            "document": "Form I-140 Immigrant Petition for Alien Workers",
+            "agency": "USCIS",
+            "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5727411508560181,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i140",
+            "document": "Form I-140 Immigrant Petition for Alien Workers",
+            "agency": "USCIS",
+            "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5709057450294495,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_204_5",
+            "document": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+            "agency": "DHS-eCFR",
+            "topic": "I-140 EB-1 EB-2 EB-3 priority date petition employment immigrant",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5673329830169678,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_204_5",
+            "document": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+            "agency": "DHS-eCFR",
+            "topic": "I-140 EB-1 EB-2 EB-3 priority date petition employment immigrant",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5594426393508911,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "ecfr_8cfr_204_5",
+            "document": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+            "agency": "DHS-eCFR",
+            "topic": "I-140 EB-1 EB-2 EB-3 priority date petition employment immigrant",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5391661524772644,
+            "reranker_score": 3.8018646240234375,
+            "final_score": 4.1788229316473,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i140",
+            "document": "Form I-140 Immigrant Petition for Alien Workers",
+            "agency": "USCIS",
+            "topic": "I-140 employment based immigrant petition EB-2 EB-3",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5140020251274109,
+            "reranker_score": 4.11104154586792,
+            "final_score": 4.136741647124291,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "uscis_i140_instructions",
+            "document": "Instructions for Form I-140",
+            "agency": "USCIS",
+            "topic": "I-140 eligibility evidence filing EB-2 EB-3",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.581733226776123,
+            "reranker_score": 3.972055435180664,
+            "final_score": 3.8511420965194705,
+            "authority_type": "FORM_INSTRUCTIONS",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_204_5",
+            "document": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+            "agency": "DHS-eCFR",
+            "topic": "I-140 EB-1 EB-2 EB-3 priority date petition employment immigrant",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5673329830169678,
+            "reranker_score": 3.433852195739746,
+            "final_score": 3.812218844890594,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_204_5",
+            "document": "8 CFR 204.5 - Petitions for Employment-Based Immigrants",
+            "agency": "DHS-eCFR",
+            "topic": "I-140 EB-1 EB-2 EB-3 priority date petition employment immigrant",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5594426393508911,
+            "reranker_score": 3.4313602447509766,
+            "final_score": 3.8093323767185208,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cpt_006",
+      "question": "Can I start CPT employment before receiving authorization from my DSO?",
+      "stage": "F-1",
+      "topic": "CPT",
+      "gold_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview"
+      ],
+      "evaluation_notes": "Official CPT sources require authorization before CPT employment begins.",
+      "retrieval_query": "Can I start CPT employment before receiving authorization from my DSO?",
+      "topic_filter": "CPT",
+      "before_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5570785403251648,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_practical_training_overview",
+            "document": "F-1 Practical Training Overview",
+            "agency": "DHS-SEVP",
+            "topic": "CPT OPT STEM OPT",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.49787580966949463,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4972549080848694,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_cpt_immediate_graduate_guidance",
+            "document": "SEVP Spotlight Practical Training for F and M Students",
+            "agency": "DHS-SEVP",
+            "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.4232378602027893,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_cpt_immediate_graduate_guidance",
+            "document": "SEVP Spotlight Practical Training for F and M Students",
+            "agency": "DHS-SEVP",
+            "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.3801732361316681,
+            "reranker_score": null,
+            "final_score": null,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      },
+      "after_reranking": {
+        "recall_at_1": 1,
+        "recall_at_3": 1,
+        "recall_at_5": 1,
+        "reciprocal_rank": 1.0,
+        "first_relevant_rank": 1,
+        "top_5": [
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4972549080848694,
+            "reranker_score": 4.9435834884643555,
+            "final_score": 5.318446233868599,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.5570785403251648,
+            "reranker_score": 3.576220989227295,
+            "final_score": 3.954074916243553,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4814324378967285,
+            "reranker_score": 3.0397403240203857,
+            "final_score": 3.4138119459152216,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "ecfr_8cfr_214_2",
+            "document": "8 CFR 214.2 - Special Requirements for Nonimmigrant Classes",
+            "agency": "DHS-eCFR",
+            "topic": "F-1 CPT OPT STEM OPT cap-gap H-1B requirements portability status",
+            "is_gold_relevant": true,
+            "retrieval_score": 0.4670860767364502,
+            "reranker_score": 2.197899341583252,
+            "final_score": 2.5712536454200743,
+            "authority_type": "REGULATION",
+            "source_status": "CURRENT"
+          },
+          {
+            "source_id": "sevp_cpt_immediate_graduate_guidance",
+            "document": "SEVP Spotlight Practical Training for F and M Students",
+            "agency": "DHS-SEVP",
+            "topic": "CPT Day 1 CPT graduate immediate participation internship one academic year",
+            "is_gold_relevant": false,
+            "retrieval_score": 0.4232378602027893,
+            "reranker_score": 2.0894365310668945,
+            "final_score": 2.110598424077034,
+            "authority_type": "OFFICIAL_GUIDANCE",
+            "source_status": "CURRENT"
+          }
+        ]
+      }
+    }
+  ]
+}
