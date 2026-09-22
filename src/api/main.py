@@ -9,6 +9,8 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict, Field
 from sentence_transformers import SentenceTransformer
 
+from src.buzz.web_buzz import get_web_buzz
+
 from src.retrieval.query_policy import classify_query
 
 from src.retrieval.search_with_reranker import (
@@ -21,11 +23,6 @@ from src.retrieval.search_with_reranker import (
 from src.generation.generate_answer import (
     generate_grounded_answer,
 )
-
-
-# ==================================================
-# CONFIG
-# ==================================================
 
 from src.core.settings import (
     RETRIEVAL_TOP_K,
@@ -123,6 +120,41 @@ class SourceResponse(BaseModel):
     authority_type: Optional[str] = None
 
 
+class WebBuzzSourceResponse(BaseModel):
+
+    title: str
+
+    url: str
+
+    domain: str
+
+    source_type: str
+
+    published_at: Optional[str] = None
+
+
+class WebBuzzResponse(BaseModel):
+
+    available: bool
+
+    label: str = "Current Web Buzz"
+
+    disclaimer: str = (
+        "Community, news, forum, and web discussion only. "
+        "This is not official immigration evidence."
+    )
+
+    summary: str
+
+    source_class: str
+
+    latency_ms: float
+
+    sources: list[
+        WebBuzzSourceResponse
+    ]
+
+
 class TimingResponse(BaseModel):
 
     query_policy_ms: float
@@ -130,6 +162,8 @@ class TimingResponse(BaseModel):
     retrieval_ms: float
 
     generation_ms: float
+
+    web_buzz_ms: float
 
     total_ms: float
 
@@ -152,7 +186,11 @@ class AskResponse(BaseModel):
 
     timings_ms: TimingResponse
 
-    sources: list[SourceResponse]
+    sources: list[
+        SourceResponse
+    ]
+
+    web_buzz: WebBuzzResponse
 
 
 class HealthResponse(BaseModel):
@@ -166,6 +204,27 @@ class HealthResponse(BaseModel):
     corpus_chunks: int
 
     embedding_model: str
+
+
+# ==================================================
+# WEB BUZZ FALLBACK
+# ==================================================
+
+
+def empty_web_buzz_response(
+    latency_ms: float = 0.0,
+) -> WebBuzzResponse:
+
+    return WebBuzzResponse(
+        available=False,
+        summary="",
+        source_class="WEB_BUZZ",
+        latency_ms=round(
+            latency_ms,
+            2,
+        ),
+        sources=[],
+    )
 
 
 # ==================================================
@@ -194,7 +253,9 @@ async def lifespan(
 
     log_event(
         "corpus_loaded",
-        corpus_chunks=len(chunks),
+        corpus_chunks=len(
+            chunks
+        ),
     )
 
     embedding_model = (
@@ -210,7 +271,9 @@ async def lifespan(
 
     log_event(
         "startup_complete",
-        corpus_chunks=len(chunks),
+        corpus_chunks=len(
+            chunks
+        ),
         embedding_model=(
             EMBEDDING_MODEL_NAME
         ),
@@ -235,10 +298,10 @@ async def lifespan(
 app = FastAPI(
     title="KK-GPT API",
     description=(
-        "Official-source U.S. immigration "
-        "RAG API."
+        "Official-source U.S. immigration RAG "
+        "with a separate current Web Buzz layer."
     ),
-    version="1.0.0",
+    version="1.2.0",
     lifespan=lifespan,
 )
 
@@ -365,6 +428,7 @@ def ask(
     query_policy_ms = 0.0
     retrieval_ms = 0.0
     generation_ms = 0.0
+    web_buzz_ms = 0.0
 
     current_stage = (
         "query_policy"
@@ -437,6 +501,7 @@ def ask(
                 ),
                 retrieval_ms=0.0,
                 generation_ms=0.0,
+                web_buzz_ms=0.0,
                 total_ms=round(
                     total_ms,
                     2,
@@ -477,6 +542,8 @@ def ask(
 
                     generation_ms=0.0,
 
+                    web_buzz_ms=0.0,
+
                     total_ms=round(
                         total_ms,
                         2,
@@ -484,6 +551,10 @@ def ask(
                 ),
 
                 sources=[],
+
+                web_buzz=(
+                    empty_web_buzz_response()
+                ),
             )
 
         # ==================================================
@@ -517,7 +588,7 @@ def ask(
         )
 
         # ==================================================
-        # STEP 3 — FROZEN RETRIEVAL
+        # STEP 3 — FROZEN OFFICIAL RETRIEVAL
         # ==================================================
 
         results = (
@@ -565,7 +636,7 @@ def ask(
         )
 
         # ==================================================
-        # STEP 4 — EVIDENCE + GENERATION
+        # STEP 4 — OFFICIAL EVIDENCE + GENERATION
         # ==================================================
 
         current_stage = (
@@ -602,7 +673,7 @@ def ask(
         )
 
         # ==================================================
-        # STEP 5 — SOURCES
+        # STEP 5 — OFFICIAL SOURCES
         # ==================================================
 
         source_rows = []
@@ -652,6 +723,159 @@ def ask(
                 )
 
         # ==================================================
+        # STEP 6 — CURRENT WEB BUZZ
+        # ==================================================
+        #
+        # IMPORTANT:
+        #
+        # Web Buzz is completely independent from:
+        #
+        # - official retrieval
+        # - evidence sufficiency
+        # - grounded generation
+        # - official citations
+        #
+        # A Web Buzz failure must NOT cause the
+        # official RAG request to fail.
+        # ==================================================
+
+        current_stage = (
+            "web_buzz"
+        )
+
+        buzz_started = (
+            perf_counter()
+        )
+
+        try:
+
+            buzz_result = (
+                get_web_buzz(
+                    question
+                )
+            )
+
+            web_buzz_ms = (
+                perf_counter()
+                - buzz_started
+            ) * 1000
+
+            buzz_sources = []
+
+            for source in buzz_result.get(
+                "sources",
+                [],
+            ):
+
+                buzz_sources.append(
+                    WebBuzzSourceResponse(
+                        title=(
+                            source.get(
+                                "title"
+                            )
+                            or "Web source"
+                        ),
+
+                        url=(
+                            source.get(
+                                "url"
+                            )
+                            or ""
+                        ),
+
+                        domain=(
+                            source.get(
+                                "domain"
+                            )
+                            or ""
+                        ),
+
+                        source_type=(
+                            source.get(
+                                "source_type"
+                            )
+                            or "WEB"
+                        ),
+
+                        published_at=(
+                            source.get(
+                                "published_at"
+                            )
+                        ),
+                    )
+                )
+
+            web_buzz_response = (
+                WebBuzzResponse(
+                    available=True,
+
+                    summary=(
+                        buzz_result.get(
+                            "summary"
+                        )
+                        or ""
+                    ),
+
+                    source_class=(
+                        buzz_result.get(
+                            "source_class"
+                        )
+                        or "WEB_BUZZ"
+                    ),
+
+                    latency_ms=round(
+                        web_buzz_ms,
+                        2,
+                    ),
+
+                    sources=(
+                        buzz_sources
+                    ),
+                )
+            )
+
+            log_event(
+                "web_buzz_complete",
+                request_id=request_id,
+                source_count=len(
+                    buzz_sources
+                ),
+                latency_ms=round(
+                    web_buzz_ms,
+                    2,
+                ),
+            )
+
+        except Exception as buzz_exc:
+
+            web_buzz_ms = (
+                perf_counter()
+                - buzz_started
+            ) * 1000
+
+            log_event(
+                "web_buzz_failed",
+                request_id=request_id,
+                error_type=(
+                    type(
+                        buzz_exc
+                    ).__name__
+                ),
+                latency_ms=round(
+                    web_buzz_ms,
+                    2,
+                ),
+            )
+
+            web_buzz_response = (
+                empty_web_buzz_response(
+                    latency_ms=(
+                        web_buzz_ms
+                    )
+                )
+            )
+
+        # ==================================================
         # FINAL RESPONSE
         # ==================================================
 
@@ -676,6 +900,12 @@ def ask(
             source_count=len(
                 source_rows
             ),
+            web_buzz_available=(
+                web_buzz_response.available
+            ),
+            web_buzz_source_count=len(
+                web_buzz_response.sources
+            ),
             query_policy_ms=round(
                 query_policy_ms,
                 2,
@@ -686,6 +916,10 @@ def ask(
             ),
             generation_ms=round(
                 generation_ms,
+                2,
+            ),
+            web_buzz_ms=round(
+                web_buzz_ms,
                 2,
             ),
             total_ms=round(
@@ -730,13 +964,24 @@ def ask(
                     2,
                 ),
 
+                web_buzz_ms=round(
+                    web_buzz_ms,
+                    2,
+                ),
+
                 total_ms=round(
                     total_ms,
                     2,
                 ),
             ),
 
-            sources=source_rows,
+            sources=(
+                source_rows
+            ),
+
+            web_buzz=(
+                web_buzz_response
+            ),
         )
 
     except HTTPException:

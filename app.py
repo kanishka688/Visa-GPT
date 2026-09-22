@@ -36,8 +36,7 @@ st.title("KK-GPT")
 
 st.caption(
     "Official-source U.S. immigration information "
-    "for F-1, CPT, OPT, STEM OPT, H-1B, H-4, "
-    "PERM and I-140."
+    "with current community and web discussion."
 )
 
 st.info(
@@ -97,7 +96,8 @@ if health.get("status") != "ok":
 question = st.text_area(
     "Ask an immigration question",
     placeholder=(
-        "Example: What is CPT?"
+        "Example: What happens to an "
+        "H-1B worker after a layoff?"
     ),
     height=100,
 )
@@ -129,7 +129,8 @@ if ask_clicked:
         st.stop()
 
     with st.spinner(
-        "Checking official sources..."
+        "Checking official sources "
+        "and current web discussion..."
     ):
 
         try:
@@ -141,14 +142,14 @@ if ask_clicked:
                         cleaned_question
                     )
                 },
-                timeout=120,
+                timeout=180,
             )
 
             response.raise_for_status()
 
             result = response.json()
 
-        except requests.RequestException as exc:
+        except requests.RequestException:
 
             st.error(
                 "KK-GPT could not process "
@@ -156,22 +157,6 @@ if ask_clicked:
             )
 
             st.stop()
-
-
-    # ==================================================
-    # ANSWER
-    # ==================================================
-
-    st.subheader(
-        "Answer"
-    )
-
-    st.markdown(
-        result.get(
-            "answer",
-            "No answer returned.",
-        )
-    )
 
 
     # ==================================================
@@ -193,16 +178,33 @@ if ask_clicked:
         True,
     )
 
+
+    # ==================================================
+    # OFFICIAL ANSWER
+    # ==================================================
+
+    st.subheader(
+        "Official Answer"
+    )
+
+    st.markdown(
+        result.get(
+            "answer",
+            "No answer returned.",
+        )
+    )
+
     if abstained:
 
         st.caption(
             "KK-GPT abstained rather than "
-            "answer without sufficient evidence."
+            "answer without sufficient "
+            "official evidence."
         )
 
 
     # ==================================================
-    # SOURCES
+    # OFFICIAL SOURCES
     # ==================================================
 
     sources = result.get(
@@ -253,9 +255,164 @@ if ask_clicked:
             if url:
 
                 st.link_button(
-                    f"Open source [{citation_id}]",
+                    f"Open official source "
+                    f"[{citation_id}]",
                     url,
                 )
+
+
+    # ==================================================
+    # DIVIDER
+    # ==================================================
+
+    st.divider()
+
+
+    # ==================================================
+    # CURRENT WEB BUZZ
+    # ==================================================
+
+    web_buzz = result.get(
+        "web_buzz",
+        {},
+    )
+
+    buzz_available = web_buzz.get(
+        "available",
+        False,
+    )
+
+    st.subheader(
+        web_buzz.get(
+            "label",
+            "Current Web Buzz",
+        )
+    )
+
+    st.caption(
+        web_buzz.get(
+            "disclaimer",
+            (
+                "Community, news, forum, and web "
+                "discussion only. This is not "
+                "official immigration evidence."
+            ),
+        )
+    )
+
+    if buzz_available:
+
+        buzz_summary = web_buzz.get(
+            "summary",
+            "",
+        )
+
+        if buzz_summary:
+
+            st.markdown(
+                buzz_summary
+            )
+
+        else:
+
+            st.caption(
+                "No meaningful current discussion "
+                "was returned."
+            )
+
+
+        # ==================================================
+        # WEB BUZZ SOURCES
+        # ==================================================
+
+        buzz_sources = web_buzz.get(
+            "sources",
+            [],
+        )
+
+        if buzz_sources:
+
+            with st.expander(
+                "Web Buzz Sources",
+                expanded=False,
+            ):
+
+                for index, source in enumerate(
+                    buzz_sources,
+                    start=1,
+                ):
+
+                    title = source.get(
+                        "title"
+                    ) or "Web source"
+
+                    url = source.get(
+                        "url"
+                    )
+
+                    domain = source.get(
+                        "domain"
+                    )
+
+                    source_type = source.get(
+                        "source_type"
+                    ) or "WEB"
+
+                    published_at = source.get(
+                        "published_at"
+                    )
+
+                    st.markdown(
+                        f"**[{index}] {title}**"
+                    )
+
+                    source_details = [
+                        source_type
+                    ]
+
+                    if domain:
+
+                        source_details.append(
+                            domain
+                        )
+
+                    if published_at:
+
+                        source_details.append(
+                            str(
+                                published_at
+                            )
+                        )
+
+                    st.caption(
+                        " · ".join(
+                            source_details
+                        )
+                    )
+
+                    if url:
+
+                        st.link_button(
+                            f"Open buzz source "
+                            f"[{index}]",
+                            url,
+                        )
+
+                    if index < len(
+                        buzz_sources
+                    ):
+
+                        st.markdown(
+                            "---"
+                        )
+
+    else:
+
+        st.caption(
+            "Current Web Buzz is unavailable "
+            "for this request. The official "
+            "answer above is unaffected."
+        )
 
 
     # ==================================================
@@ -280,6 +437,10 @@ if ask_clicked:
 
                 "abstained": (
                     abstained
+                ),
+
+                "web_buzz_available": (
+                    buzz_available
                 ),
 
                 "timings_ms": result.get(
