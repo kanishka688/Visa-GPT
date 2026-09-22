@@ -9,9 +9,21 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict, Field
 from sentence_transformers import SentenceTransformer
 
-from src.buzz.web_buzz import get_web_buzz
+from src.buzz.web_buzz import (
+    get_web_buzz,
+)
 
-from src.retrieval.query_policy import classify_query
+from src.core.settings import (
+    RETRIEVAL_TOP_K,
+)
+
+from src.generation.generate_answer import (
+    generate_grounded_answer,
+)
+
+from src.retrieval.query_policy import (
+    classify_query,
+)
 
 from src.retrieval.search_with_reranker import (
     EMBEDDING_MODEL_NAME,
@@ -20,12 +32,16 @@ from src.retrieval.search_with_reranker import (
     understand_query,
 )
 
-from src.generation.generate_answer import (
-    generate_grounded_answer,
+from src.social.anlf_insight import (
+    generate_anlf_insight,
 )
 
-from src.core.settings import (
-    RETRIEVAL_TOP_K,
+from src.social.anlf_live_index import (
+    ANLFLiveIndex,
+)
+
+from src.social.anlf_retrieval import (
+    retrieve_anlf,
 )
 
 
@@ -85,6 +101,10 @@ chunks = None
 embeddings = None
 embedding_model = None
 
+anlf_index = (
+    ANLFLiveIndex()
+)
+
 
 # ==================================================
 # REQUEST / RESPONSE MODELS
@@ -137,11 +157,14 @@ class WebBuzzResponse(BaseModel):
 
     available: bool
 
-    label: str = "Current Web Buzz"
+    label: str = (
+        "Current Web Buzz"
+    )
 
     disclaimer: str = (
-        "Community, news, forum, and web discussion only. "
-        "This is not official immigration evidence."
+        "Community, news, forum, and web "
+        "discussion only. This is not "
+        "official immigration evidence."
     )
 
     summary: str
@@ -155,6 +178,52 @@ class WebBuzzResponse(BaseModel):
     ]
 
 
+class SocialSourceResponse(BaseModel):
+
+    account: str
+
+    platform: str
+
+    topic: Optional[str] = None
+
+    post_url: str
+
+    posted_at: Optional[str] = None
+
+    source_class: str
+
+
+class SocialInsightResponse(BaseModel):
+
+    account: str
+
+    label: str
+
+    available: bool
+
+    disclaimer: str = (
+        "Community/admin-reported information "
+        "only. This is not official immigration "
+        "guidance."
+    )
+
+    summary: str
+
+    admin_points: list[str]
+
+    community_points: list[str]
+
+    caution: str
+
+    source_class: str
+
+    latency_ms: float
+
+    sources: list[
+        SocialSourceResponse
+    ]
+
+
 class TimingResponse(BaseModel):
 
     query_policy_ms: float
@@ -164,6 +233,8 @@ class TimingResponse(BaseModel):
     generation_ms: float
 
     web_buzz_ms: float
+
+    social_ms: float
 
     total_ms: float
 
@@ -192,6 +263,10 @@ class AskResponse(BaseModel):
 
     web_buzz: WebBuzzResponse
 
+    social_insights: list[
+        SocialInsightResponse
+    ]
+
 
 class HealthResponse(BaseModel):
 
@@ -205,9 +280,13 @@ class HealthResponse(BaseModel):
 
     embedding_model: str
 
+    social_index_loaded: bool
+
+    social_chunks: int
+
 
 # ==================================================
-# WEB BUZZ FALLBACK
+# EMPTY AUXILIARY RESPONSES
 # ==================================================
 
 
@@ -217,12 +296,60 @@ def empty_web_buzz_response(
 
     return WebBuzzResponse(
         available=False,
+
         summary="",
-        source_class="WEB_BUZZ",
+
+        source_class=(
+            "WEB_BUZZ"
+        ),
+
         latency_ms=round(
             latency_ms,
             2,
         ),
+
+        sources=[],
+    )
+
+
+def empty_anlf_response(
+    latency_ms: float = 0.0,
+    caution: str = (
+        "No sufficiently relevant America NRI "
+        "Frustration content was found."
+    ),
+) -> SocialInsightResponse:
+
+    return SocialInsightResponse(
+        account=(
+            "america_nri_la_frustration"
+        ),
+
+        label=(
+            "America NRI Frustration"
+        ),
+
+        available=False,
+
+        summary="",
+
+        admin_points=[],
+
+        community_points=[],
+
+        caution=(
+            caution
+        ),
+
+        source_class=(
+            "SOCIAL_DISCUSSION"
+        ),
+
+        latency_ms=round(
+            latency_ms,
+            2,
+        ),
+
         sources=[],
     )
 
@@ -241,11 +368,17 @@ async def lifespan(
     global embeddings
     global embedding_model
 
-    startup_started = perf_counter()
+    startup_started = (
+        perf_counter()
+    )
 
     log_event(
         "startup_started"
     )
+
+    # ==================================================
+    # OFFICIAL RAG
+    # ==================================================
 
     chunks, embeddings = (
         load_local_corpus()
@@ -253,6 +386,7 @@ async def lifespan(
 
     log_event(
         "corpus_loaded",
+
         corpus_chunks=len(
             chunks
         ),
@@ -264,6 +398,48 @@ async def lifespan(
         )
     )
 
+    # ==================================================
+    # ANLF SOCIAL INDEX
+    # ==================================================
+    #
+    # Social data is optional.
+    #
+    # Failure to load it must NOT prevent
+    # official KK-GPT from starting.
+    # ==================================================
+
+    social_loaded = (
+        anlf_index.load_initial()
+    )
+
+    if social_loaded:
+
+        log_event(
+            "social_index_loaded",
+
+            account=(
+                "america_nri_la_frustration"
+            ),
+
+            chunk_count=(
+                anlf_index.chunk_count()
+            ),
+        )
+
+    else:
+
+        log_event(
+            "social_index_unavailable",
+
+            account=(
+                "america_nri_la_frustration"
+            ),
+        )
+
+    # ==================================================
+    # STARTUP COMPLETE
+    # ==================================================
+
     startup_ms = (
         perf_counter()
         - startup_started
@@ -271,12 +447,19 @@ async def lifespan(
 
     log_event(
         "startup_complete",
+
         corpus_chunks=len(
             chunks
         ),
+
         embedding_model=(
             EMBEDDING_MODEL_NAME
         ),
+
+        social_chunks=(
+            anlf_index.chunk_count()
+        ),
+
         startup_ms=round(
             startup_ms,
             2,
@@ -296,13 +479,23 @@ async def lifespan(
 
 
 app = FastAPI(
-    title="KK-GPT API",
+    title=(
+        "KK-GPT API"
+    ),
+
     description=(
         "Official-source U.S. immigration RAG "
-        "with a separate current Web Buzz layer."
+        "with separate Web Buzz and curated "
+        "community intelligence layers."
     ),
-    version="1.2.0",
-    lifespan=lifespan,
+
+    version=(
+        "1.2.0"
+    ),
+
+    lifespan=(
+        lifespan
+    ),
 )
 
 
@@ -325,6 +518,10 @@ def health():
     model_loaded = (
         embedding_model
         is not None
+    )
+
+    social_loaded = (
+        anlf_index.is_loaded()
     )
 
     return HealthResponse(
@@ -351,6 +548,14 @@ def health():
 
         embedding_model=(
             EMBEDDING_MODEL_NAME
+        ),
+
+        social_index_loaded=(
+            social_loaded
+        ),
+
+        social_chunks=(
+            anlf_index.chunk_count()
         ),
     )
 
@@ -382,12 +587,23 @@ def ask(
 
     log_event(
         "request_started",
-        request_id=request_id,
-        endpoint="/ask",
+
+        request_id=(
+            request_id
+        ),
+
+        endpoint=(
+            "/ask"
+        ),
+
         question_length=len(
             question
         ),
     )
+
+    # ==================================================
+    # READINESS
+    # ==================================================
 
     if (
         chunks is None
@@ -397,13 +613,21 @@ def ask(
 
         log_event(
             "request_failed",
-            request_id=request_id,
-            stage="readiness",
+
+            request_id=(
+                request_id
+            ),
+
+            stage=(
+                "readiness"
+            ),
+
             status_code=503,
         )
 
         raise HTTPException(
             status_code=503,
+
             detail=(
                 "KK-GPT is not ready."
             ),
@@ -413,13 +637,21 @@ def ask(
 
         log_event(
             "request_failed",
-            request_id=request_id,
-            stage="validation",
+
+            request_id=(
+                request_id
+            ),
+
+            stage=(
+                "validation"
+            ),
+
             status_code=422,
         )
 
         raise HTTPException(
             status_code=422,
+
             detail=(
                 "Question cannot be empty."
             ),
@@ -429,6 +661,7 @@ def ask(
     retrieval_ms = 0.0
     generation_ms = 0.0
     web_buzz_ms = 0.0
+    social_ms = 0.0
 
     current_stage = (
         "query_policy"
@@ -444,8 +677,10 @@ def ask(
             perf_counter()
         )
 
-        policy = classify_query(
-            question
+        policy = (
+            classify_query(
+                question
+            )
         )
 
         query_policy_ms = (
@@ -467,11 +702,19 @@ def ask(
 
         log_event(
             "query_policy_complete",
-            request_id=request_id,
-            category=category,
+
+            request_id=(
+                request_id
+            ),
+
+            category=(
+                category
+            ),
+
             routed_to_rag=(
                 route_to_rag
             ),
+
             latency_ms=round(
                 query_policy_ms,
                 2,
@@ -491,17 +734,32 @@ def ask(
 
             log_event(
                 "request_complete",
-                request_id=request_id,
-                category=category,
+
+                request_id=(
+                    request_id
+                ),
+
+                category=(
+                    category
+                ),
+
                 routed_to_rag=False,
+
                 abstained=True,
+
                 query_policy_ms=round(
                     query_policy_ms,
                     2,
                 ),
+
                 retrieval_ms=0.0,
+
                 generation_ms=0.0,
+
                 web_buzz_ms=0.0,
+
+                social_ms=0.0,
+
                 total_ms=round(
                     total_ms,
                     2,
@@ -509,11 +767,17 @@ def ask(
             )
 
             return AskResponse(
-                request_id=request_id,
+                request_id=(
+                    request_id
+                ),
 
-                question=question,
+                question=(
+                    question
+                ),
 
-                category=category,
+                category=(
+                    category
+                ),
 
                 routed_to_rag=False,
 
@@ -532,22 +796,26 @@ def ask(
                     2,
                 ),
 
-                timings_ms=TimingResponse(
-                    query_policy_ms=round(
-                        query_policy_ms,
-                        2,
-                    ),
+                timings_ms=(
+                    TimingResponse(
+                        query_policy_ms=round(
+                            query_policy_ms,
+                            2,
+                        ),
 
-                    retrieval_ms=0.0,
+                        retrieval_ms=0.0,
 
-                    generation_ms=0.0,
+                        generation_ms=0.0,
 
-                    web_buzz_ms=0.0,
+                        web_buzz_ms=0.0,
 
-                    total_ms=round(
-                        total_ms,
-                        2,
-                    ),
+                        social_ms=0.0,
+
+                        total_ms=round(
+                            total_ms,
+                            2,
+                        ),
+                    )
                 ),
 
                 sources=[],
@@ -555,6 +823,10 @@ def ask(
                 web_buzz=(
                     empty_web_buzz_response()
                 ),
+
+                social_insights=[
+                    empty_anlf_response()
+                ],
             )
 
         # ==================================================
@@ -588,7 +860,7 @@ def ask(
         )
 
         # ==================================================
-        # STEP 3 — FROZEN OFFICIAL RETRIEVAL
+        # STEP 3 — OFFICIAL RETRIEVAL
         # ==================================================
 
         results = (
@@ -597,9 +869,13 @@ def ask(
                     retrieval_query
                 ),
 
-                chunks=chunks,
+                chunks=(
+                    chunks
+                ),
 
-                embeddings=embeddings,
+                embeddings=(
+                    embeddings
+                ),
 
                 embedding_model=(
                     embedding_model
@@ -622,13 +898,19 @@ def ask(
 
         log_event(
             "retrieval_complete",
-            request_id=request_id,
+
+            request_id=(
+                request_id
+            ),
+
             topic_filter=(
                 topic_filter
             ),
+
             result_count=len(
                 results
             ),
+
             latency_ms=round(
                 retrieval_ms,
                 2,
@@ -636,7 +918,7 @@ def ask(
         )
 
         # ==================================================
-        # STEP 4 — OFFICIAL EVIDENCE + GENERATION
+        # STEP 4 — OFFICIAL GENERATION
         # ==================================================
 
         current_stage = (
@@ -659,13 +941,24 @@ def ask(
             - stage_started
         ) * 1000
 
-        log_event(
-            "generation_complete",
-            request_id=request_id,
-            abstained=generation.get(
+        abstained = (
+            generation.get(
                 "abstained",
                 True,
+            )
+        )
+
+        log_event(
+            "generation_complete",
+
+            request_id=(
+                request_id
             ),
+
+            abstained=(
+                abstained
+            ),
+
             latency_ms=round(
                 generation_ms,
                 2,
@@ -673,15 +966,12 @@ def ask(
         )
 
         # ==================================================
-        # STEP 5 — OFFICIAL SOURCES
+        # OFFICIAL SOURCES
         # ==================================================
 
         source_rows = []
 
-        if not generation.get(
-            "abstained",
-            True,
-        ):
+        if not abstained:
 
             for source in generation.get(
                 "sources",
@@ -690,28 +980,40 @@ def ask(
 
                 source_rows.append(
                     SourceResponse(
-                        citation_id=source[
-                            "citation_id"
-                        ],
-
-                        source_id=source.get(
-                            "source_id"
+                        citation_id=(
+                            source[
+                                "citation_id"
+                            ]
                         ),
 
-                        agency=source.get(
-                            "agency"
+                        source_id=(
+                            source.get(
+                                "source_id"
+                            )
                         ),
 
-                        document=source.get(
-                            "document"
+                        agency=(
+                            source.get(
+                                "agency"
+                            )
                         ),
 
-                        topic=source.get(
-                            "topic"
+                        document=(
+                            source.get(
+                                "document"
+                            )
                         ),
 
-                        url=source.get(
-                            "url"
+                        topic=(
+                            source.get(
+                                "topic"
+                            )
+                        ),
+
+                        url=(
+                            source.get(
+                                "url"
+                            )
                         ),
 
                         authority_type=(
@@ -723,20 +1025,7 @@ def ask(
                 )
 
         # ==================================================
-        # STEP 6 — CURRENT WEB BUZZ
-        # ==================================================
-        #
-        # IMPORTANT:
-        #
-        # Web Buzz is completely independent from:
-        #
-        # - official retrieval
-        # - evidence sufficiency
-        # - grounded generation
-        # - official citations
-        #
-        # A Web Buzz failure must NOT cause the
-        # official RAG request to fail.
+        # STEP 5 — WEB BUZZ
         # ==================================================
 
         current_stage = (
@@ -836,17 +1125,22 @@ def ask(
 
             log_event(
                 "web_buzz_complete",
-                request_id=request_id,
+
+                request_id=(
+                    request_id
+                ),
+
                 source_count=len(
                     buzz_sources
                 ),
+
                 latency_ms=round(
                     web_buzz_ms,
                     2,
                 ),
             )
 
-        except Exception as buzz_exc:
+        except Exception as exc:
 
             web_buzz_ms = (
                 perf_counter()
@@ -855,12 +1149,15 @@ def ask(
 
             log_event(
                 "web_buzz_failed",
-                request_id=request_id,
-                error_type=(
-                    type(
-                        buzz_exc
-                    ).__name__
+
+                request_id=(
+                    request_id
                 ),
+
+                error_type=(
+                    type(exc).__name__
+                ),
+
                 latency_ms=round(
                     web_buzz_ms,
                     2,
@@ -869,11 +1166,338 @@ def ask(
 
             web_buzz_response = (
                 empty_web_buzz_response(
-                    latency_ms=(
-                        web_buzz_ms
-                    )
+                    web_buzz_ms
                 )
             )
+
+        # ==================================================
+        # STEP 6 — SOCIAL INTELLIGENCE
+        # ==================================================
+
+        current_stage = (
+            "social"
+        )
+
+        social_started = (
+            perf_counter()
+        )
+
+        social_insights = []
+
+        # --------------------------------------------------
+        # HOT RELOAD CHECK
+        # --------------------------------------------------
+
+        reload_status = (
+            anlf_index.reload_if_changed()
+        )
+
+        if (
+            reload_status
+            == "reloaded"
+        ):
+
+            log_event(
+                "social_index_reloaded",
+
+                request_id=(
+                    request_id
+                ),
+
+                account=(
+                    "america_nri_la_frustration"
+                ),
+
+                chunk_count=(
+                    anlf_index.chunk_count()
+                ),
+            )
+
+        elif (
+            reload_status
+            == "reload_failed"
+        ):
+
+            log_event(
+                "social_index_reload_failed",
+
+                request_id=(
+                    request_id
+                ),
+
+                account=(
+                    "america_nri_la_frustration"
+                ),
+            )
+
+        elif (
+            reload_status
+            == "unavailable"
+        ):
+
+            log_event(
+                "social_index_files_unavailable",
+
+                request_id=(
+                    request_id
+                ),
+
+                account=(
+                    "america_nri_la_frustration"
+                ),
+            )
+
+        (
+            current_anlf_chunks,
+            current_anlf_embeddings,
+        ) = (
+            anlf_index.get_snapshot()
+        )
+
+        # --------------------------------------------------
+        # ANLF RETRIEVAL + INSIGHT
+        # --------------------------------------------------
+
+        try:
+
+            if (
+                current_anlf_chunks
+                is None
+                or current_anlf_embeddings
+                is None
+            ):
+
+                social_insights.append(
+                    empty_anlf_response(
+                        caution=(
+                            "America NRI Frustration "
+                            "index is currently unavailable."
+                        )
+                    )
+                )
+
+            else:
+
+                social_results = (
+                    retrieve_anlf(
+                        question=(
+                            question
+                        ),
+
+                        chunks=(
+                            current_anlf_chunks
+                        ),
+
+                        embeddings=(
+                            current_anlf_embeddings
+                        ),
+
+                        embedding_model=(
+                            embedding_model
+                        ),
+                    )
+                )
+
+                insight = (
+                    generate_anlf_insight(
+                        question,
+                        social_results,
+                    )
+                )
+
+                social_ms = (
+                    perf_counter()
+                    - social_started
+                ) * 1000
+
+                social_sources = []
+
+                for source in insight.get(
+                    "sources",
+                    [],
+                ):
+
+                    social_sources.append(
+                        SocialSourceResponse(
+                            account=(
+                                source.get(
+                                    "account"
+                                )
+                                or (
+                                    "america_nri_"
+                                    "la_frustration"
+                                )
+                            ),
+
+                            platform=(
+                                source.get(
+                                    "platform"
+                                )
+                                or "instagram"
+                            ),
+
+                            topic=(
+                                source.get(
+                                    "topic"
+                                )
+                            ),
+
+                            post_url=(
+                                source.get(
+                                    "post_url"
+                                )
+                                or ""
+                            ),
+
+                            posted_at=(
+                                source.get(
+                                    "posted_at"
+                                )
+                            ),
+
+                            source_class=(
+                                source.get(
+                                    "source_class"
+                                )
+                                or (
+                                    "SOCIAL_DISCUSSION"
+                                )
+                            ),
+                        )
+                    )
+
+                social_insights.append(
+                    SocialInsightResponse(
+                        account=(
+                            "america_nri_la_frustration"
+                        ),
+
+                        label=(
+                            "America NRI Frustration"
+                        ),
+
+                        available=(
+                            insight.get(
+                                "available",
+                                False,
+                            )
+                        ),
+
+                        summary=(
+                            insight.get(
+                                "summary",
+                                "",
+                            )
+                        ),
+
+                        admin_points=(
+                            insight.get(
+                                "admin_points",
+                                [],
+                            )
+                        ),
+
+                        community_points=(
+                            insight.get(
+                                "community_points",
+                                [],
+                            )
+                        ),
+
+                        caution=(
+                            insight.get(
+                                "caution",
+                                ""
+                            )
+                        ),
+
+                        source_class=(
+                            insight.get(
+                                "source_class",
+                                "SOCIAL_DISCUSSION",
+                            )
+                        ),
+
+                        latency_ms=round(
+                            social_ms,
+                            2,
+                        ),
+
+                        sources=(
+                            social_sources
+                        ),
+                    )
+                )
+
+                log_event(
+                    "social_insight_complete",
+
+                    request_id=(
+                        request_id
+                    ),
+
+                    account=(
+                        "america_nri_la_frustration"
+                    ),
+
+                    result_count=len(
+                        social_results
+                    ),
+
+                    available=(
+                        insight.get(
+                            "available",
+                            False,
+                        )
+                    ),
+
+                    latency_ms=round(
+                        social_ms,
+                        2,
+                    ),
+                )
+
+        except Exception as exc:
+
+            social_ms = (
+                perf_counter()
+                - social_started
+            ) * 1000
+
+            log_event(
+                "social_insight_failed",
+
+                request_id=(
+                    request_id
+                ),
+
+                account=(
+                    "america_nri_la_frustration"
+                ),
+
+                error_type=(
+                    type(exc).__name__
+                ),
+
+                latency_ms=round(
+                    social_ms,
+                    2,
+                ),
+            )
+
+            social_insights = [
+                empty_anlf_response(
+                    latency_ms=(
+                        social_ms
+                    ),
+
+                    caution=(
+                        "America NRI Frustration "
+                        "community insight is currently "
+                        "unavailable."
+                    ),
+                )
+            ]
 
         # ==================================================
         # FINAL RESPONSE
@@ -884,44 +1508,62 @@ def ask(
             - total_started
         ) * 1000
 
-        abstained = (
-            generation.get(
-                "abstained",
-                True,
-            )
-        )
-
         log_event(
             "request_complete",
-            request_id=request_id,
-            category=category,
+
+            request_id=(
+                request_id
+            ),
+
+            category=(
+                category
+            ),
+
             routed_to_rag=True,
-            abstained=abstained,
+
+            abstained=(
+                abstained
+            ),
+
             source_count=len(
                 source_rows
             ),
+
             web_buzz_available=(
                 web_buzz_response.available
             ),
-            web_buzz_source_count=len(
-                web_buzz_response.sources
+
+            social_available=any(
+                item.available
+                for item
+                in social_insights
             ),
+
             query_policy_ms=round(
                 query_policy_ms,
                 2,
             ),
+
             retrieval_ms=round(
                 retrieval_ms,
                 2,
             ),
+
             generation_ms=round(
                 generation_ms,
                 2,
             ),
+
             web_buzz_ms=round(
                 web_buzz_ms,
                 2,
             ),
+
+            social_ms=round(
+                social_ms,
+                2,
+            ),
+
             total_ms=round(
                 total_ms,
                 2,
@@ -929,50 +1571,67 @@ def ask(
         )
 
         return AskResponse(
-            request_id=request_id,
+            request_id=(
+                request_id
+            ),
 
-            question=question,
+            question=(
+                question
+            ),
 
-            category=category,
+            category=(
+                category
+            ),
 
             routed_to_rag=True,
 
-            answer=generation[
-                "answer"
-            ],
+            answer=(
+                generation[
+                    "answer"
+                ]
+            ),
 
-            abstained=abstained,
+            abstained=(
+                abstained
+            ),
 
             latency_ms=round(
                 total_ms,
                 2,
             ),
 
-            timings_ms=TimingResponse(
-                query_policy_ms=round(
-                    query_policy_ms,
-                    2,
-                ),
+            timings_ms=(
+                TimingResponse(
+                    query_policy_ms=round(
+                        query_policy_ms,
+                        2,
+                    ),
 
-                retrieval_ms=round(
-                    retrieval_ms,
-                    2,
-                ),
+                    retrieval_ms=round(
+                        retrieval_ms,
+                        2,
+                    ),
 
-                generation_ms=round(
-                    generation_ms,
-                    2,
-                ),
+                    generation_ms=round(
+                        generation_ms,
+                        2,
+                    ),
 
-                web_buzz_ms=round(
-                    web_buzz_ms,
-                    2,
-                ),
+                    web_buzz_ms=round(
+                        web_buzz_ms,
+                        2,
+                    ),
 
-                total_ms=round(
-                    total_ms,
-                    2,
-                ),
+                    social_ms=round(
+                        social_ms,
+                        2,
+                    ),
+
+                    total_ms=round(
+                        total_ms,
+                        2,
+                    ),
+                )
             ),
 
             sources=(
@@ -981,6 +1640,10 @@ def ask(
 
             web_buzz=(
                 web_buzz_response
+            ),
+
+            social_insights=(
+                social_insights
             ),
         )
 
@@ -997,11 +1660,19 @@ def ask(
 
         log_event(
             "request_error",
-            request_id=request_id,
-            stage=current_stage,
+
+            request_id=(
+                request_id
+            ),
+
+            stage=(
+                current_stage
+            ),
+
             error_type=(
                 type(exc).__name__
             ),
+
             total_ms=round(
                 total_ms,
                 2,
@@ -1010,6 +1681,7 @@ def ask(
 
         raise HTTPException(
             status_code=500,
+
             detail=(
                 "KK-GPT failed to process "
                 "the request."

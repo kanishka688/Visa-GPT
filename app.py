@@ -36,7 +36,7 @@ st.title("KK-GPT")
 
 st.caption(
     "Official-source U.S. immigration information "
-    "with current community and web discussion."
+    "with current web and community discussion."
 )
 
 st.info(
@@ -96,8 +96,8 @@ if health.get("status") != "ok":
 question = st.text_area(
     "Ask an immigration question",
     placeholder=(
-        "Example: What happens to an "
-        "H-1B worker after a layoff?"
+        "Example: What is happening with "
+        "the H-1B 60 day grace period?"
     ),
     height=100,
 )
@@ -129,8 +129,8 @@ if ask_clicked:
         st.stop()
 
     with st.spinner(
-        "Checking official sources "
-        "and current web discussion..."
+        "Checking official sources, current web "
+        "discussion, and community insights..."
     ):
 
         try:
@@ -224,13 +224,19 @@ if ask_clicked:
                 "citation_id"
             )
 
-            agency = source.get(
-                "agency"
-            ) or "Official source"
+            agency = (
+                source.get(
+                    "agency"
+                )
+                or "Official source"
+            )
 
-            document = source.get(
-                "document"
-            ) or "Document"
+            document = (
+                source.get(
+                    "document"
+                )
+                or "Document"
+            )
 
             url = source.get(
                 "url"
@@ -262,15 +268,10 @@ if ask_clicked:
 
 
     # ==================================================
-    # DIVIDER
+    # WEB BUZZ
     # ==================================================
 
     st.divider()
-
-
-    # ==================================================
-    # CURRENT WEB BUZZ
-    # ==================================================
 
     web_buzz = result.get(
         "web_buzz",
@@ -342,9 +343,12 @@ if ask_clicked:
                     start=1,
                 ):
 
-                    title = source.get(
-                        "title"
-                    ) or "Web source"
+                    title = (
+                        source.get(
+                            "title"
+                        )
+                        or "Web source"
+                    )
 
                     url = source.get(
                         "url"
@@ -354,9 +358,12 @@ if ask_clicked:
                         "domain"
                     )
 
-                    source_type = source.get(
-                        "source_type"
-                    ) or "WEB"
+                    source_type = (
+                        source.get(
+                            "source_type"
+                        )
+                        or "WEB"
+                    )
 
                     published_at = source.get(
                         "published_at"
@@ -416,6 +423,234 @@ if ask_clicked:
 
 
     # ==================================================
+    # SOCIAL / CURATED COMMUNITY INSIGHTS
+    # ==================================================
+
+    social_insights = result.get(
+        "social_insights",
+        [],
+    )
+
+    for social in social_insights:
+
+        st.divider()
+
+        label = social.get(
+            "label",
+            "Community Insight",
+        )
+
+        st.subheader(
+            label
+        )
+
+        st.caption(
+            social.get(
+                "disclaimer",
+                (
+                    "Community/admin-reported "
+                    "information only. This is not "
+                    "official immigration guidance."
+                ),
+            )
+        )
+
+        social_available = social.get(
+            "available",
+            False,
+        )
+
+        if not social_available:
+
+            caution = social.get(
+                "caution",
+                (
+                    "No sufficiently relevant "
+                    "community content was found "
+                    "for this question."
+                ),
+            )
+
+            if caution:
+
+                st.caption(
+                    caution
+                )
+
+            continue
+
+
+        # ==================================================
+        # SOCIAL SUMMARY
+        # ==================================================
+
+        summary = social.get(
+            "summary",
+            "",
+        )
+
+        if summary:
+
+            st.markdown(
+                summary
+            )
+
+
+        # ==================================================
+        # ADMIN / POST INSIGHT
+        # ==================================================
+
+        admin_points = social.get(
+            "admin_points",
+            [],
+        )
+
+        if admin_points:
+
+            st.markdown(
+                "**Admin / Post Insight**"
+            )
+
+            for point in admin_points:
+
+                st.markdown(
+                    f"- {point}"
+                )
+
+
+        # ==================================================
+        # COMMUNITY COMMENTS
+        # ==================================================
+
+        community_points = social.get(
+            "community_points",
+            [],
+        )
+
+        if community_points:
+
+            st.markdown(
+                "**Community Comments**"
+            )
+
+            for point in community_points:
+
+                st.markdown(
+                    f"- {point}"
+                )
+
+
+        # ==================================================
+        # SOCIAL CAUTION
+        # ==================================================
+
+        caution = social.get(
+            "caution"
+        )
+
+        if caution:
+
+            st.caption(
+                caution
+            )
+
+
+        # ==================================================
+        # SOCIAL SOURCES
+        # ==================================================
+
+        social_sources = social.get(
+            "sources",
+            [],
+        )
+
+        if social_sources:
+
+            with st.expander(
+                f"{label} Sources",
+                expanded=False,
+            ):
+
+                for index, source in enumerate(
+                    social_sources,
+                    start=1,
+                ):
+
+                    topic = (
+                        source.get(
+                            "topic"
+                        )
+                        or "Community post"
+                    )
+
+                    url = source.get(
+                        "post_url"
+                    )
+
+                    platform = (
+                        source.get(
+                            "platform"
+                        )
+                        or "instagram"
+                    )
+
+                    account = (
+                        source.get(
+                            "account"
+                        )
+                        or ""
+                    )
+
+                    posted_at = source.get(
+                        "posted_at"
+                    )
+
+                    st.markdown(
+                        f"**[{index}] {topic}**"
+                    )
+
+                    details = [
+                        platform
+                    ]
+
+                    if account:
+
+                        details.append(
+                            f"@{account}"
+                        )
+
+                    if posted_at:
+
+                        details.append(
+                            str(
+                                posted_at
+                            )
+                        )
+
+                    st.caption(
+                        " · ".join(
+                            details
+                        )
+                    )
+
+                    if url:
+
+                        st.link_button(
+                            f"Open community source "
+                            f"[{index}]",
+                            url,
+                        )
+
+                    if index < len(
+                        social_sources
+                    ):
+
+                        st.markdown(
+                            "---"
+                        )
+
+
+    # ==================================================
     # DEBUG / METRICS
     # ==================================================
 
@@ -429,7 +664,9 @@ if ask_clicked:
                     "request_id"
                 ),
 
-                "category": category,
+                "category": (
+                    category
+                ),
 
                 "routed_to_rag": (
                     routed_to_rag
@@ -442,6 +679,22 @@ if ask_clicked:
                 "web_buzz_available": (
                     buzz_available
                 ),
+
+                "social_insights": [
+                    {
+                        "account": social.get(
+                            "account"
+                        ),
+
+                        "available": social.get(
+                            "available",
+                            False,
+                        ),
+                    }
+                    for social in (
+                        social_insights
+                    )
+                ],
 
                 "timings_ms": result.get(
                     "timings_ms",

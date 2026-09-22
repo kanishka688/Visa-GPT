@@ -6,3 +6,13 @@ __pycache__/
 
 data/raw/
 data/processed/
+
+# ANLF generated/social data
+data/social/anlf/raw/
+data/social/anlf/anlf_master.jsonl
+data/social/anlf/anlf_relevant.jsonl
+data/social/anlf/anlf_relevance_report.json
+data/social/anlf/index/
+
+# Runtime logs
+logs/
