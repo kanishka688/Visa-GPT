@@ -4,13 +4,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 
-PROJECT_ROOT = Path(
-    __file__
-).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-load_dotenv(
-    PROJECT_ROOT / ".env"
-)
+load_dotenv(PROJECT_ROOT / ".env")
 
 
 def get_positive_int(
@@ -24,24 +20,48 @@ def get_positive_int(
     )
 
     try:
-        value = int(
-            raw_value
-        )
+        value = int(raw_value)
 
     except ValueError as exc:
-
         raise ValueError(
             f"{name} must be an integer."
         ) from exc
 
     if value <= 0:
-
         raise ValueError(
             f"{name} must be greater than 0."
         )
 
     return value
 
+
+def get_llm_provider() -> str:
+
+    provider = os.getenv(
+        "KKGPT_LLM_PROVIDER",
+        "ollama",
+    ).strip().lower()
+
+    allowed = {
+        "ollama",
+        "openai",
+    }
+
+    if provider not in allowed:
+        raise ValueError(
+            "KKGPT_LLM_PROVIDER must be "
+            "'ollama' or 'openai'."
+        )
+
+    return provider
+
+
+LLM_PROVIDER = get_llm_provider()
+
+OPENAI_MODEL = os.getenv(
+    "KKGPT_OPENAI_MODEL",
+    "gpt-5.6-luna",
+)
 
 LLM_MODEL = os.getenv(
     "KKGPT_LLM_MODEL",

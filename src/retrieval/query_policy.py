@@ -1,16 +1,6 @@
 import json
 
-import requests
-
-
-# ==================================================
-# CONFIG
-# ==================================================
-
-from src.core.settings import (
-    LLM_MODEL,
-    OLLAMA_URL,
-)
+from src.core.llm_client import call_llm
 
 
 # ==================================================
@@ -49,7 +39,7 @@ def classify_query(
     """
 
     system_prompt = """
-You are the query-routing classifier for KK-Gpt,
+You are the query-routing classifier for KK-GPT,
 a U.S. immigration information system.
 
 Your ONLY task is to classify the user's intent.
@@ -182,6 +172,9 @@ Required format:
 
 route_to_rag MUST be true only when
 category is OFFICIAL_FACT.
+
+Do not wrap the JSON in markdown fences.
+Do not include any explanation before or after it.
 """
 
     user_prompt = f"""
@@ -190,42 +183,30 @@ Classify this question:
 {question}
 """
 
-    response = requests.post(
-        OLLAMA_URL,
-        json={
-            "model": LLM_MODEL,
-            "messages": [
-                {
-                    "role": "system",
-                    "content": system_prompt,
-                },
-                {
-                    "role": "user",
-                    "content": user_prompt,
-                },
-            ],
-            "stream": False,
-            "format": "json",
-            "options": {
-                "temperature": 0,
-            },
-        },
-        timeout=120,
-    )
+    try:
 
-    response.raise_for_status()
+        raw_content = call_llm(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            temperature=0.0,
+            max_output_tokens=100,
+        )
 
-    raw_content = response.json()[
-        "message"
-    ][
-        "content"
-    ]
+    except Exception:
+
+        # Fail closed if the model provider,
+        # network, API, or local inference fails.
+        return {
+            "category": "UNKNOWN",
+            "route_to_rag": False,
+        }
 
     # ----------------------------------------------
     # PARSE JSON
     # ----------------------------------------------
 
     try:
+
         result = json.loads(
             raw_content
         )
@@ -247,12 +228,13 @@ Classify this question:
     # ----------------------------------------------
 
     if category not in ALLOWED_CATEGORIES:
+
         category = "UNKNOWN"
 
-    # Never trust the model's route_to_rag field.
+    # Never trust the model's route_to_rag value.
     #
-    # We derive routing deterministically from the
-    # category ourselves.
+    # Routing is derived deterministically from
+    # the validated category.
     route_to_rag = (
         category
         == "OFFICIAL_FACT"
@@ -272,7 +254,7 @@ Classify this question:
 def main():
 
     question = input(
-        "Ask KK-Gpt: "
+        "Ask KK-GPT: "
     ).strip()
 
     result = classify_query(

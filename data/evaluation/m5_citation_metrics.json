@@ -1,43 +1,27 @@
 {
   "dataset": {
     "answerable_questions": 45,
-    "evidence_supported": 40,
-    "generated_answers": 38,
-    "generator_abstentions": 2
+    "evidence_supported": 36,
+    "generated_answers": 36,
+    "generator_abstentions": 0
   },
   "metrics": {
     "citation_presence_rate": 1.0,
     "citation_id_validity_rate": 1.0,
-    "citation_failures": 2
+    "citation_failures": 0
   },
-  "failures": [
-    {
-      "id": "h1b_009",
-      "question": "I was laid off on H-1B. What official immigration options may exist after termination of employment?",
-      "evidence_supported": true,
-      "status": "GENERATOR_ABSTENTION",
-      "answer": "After termination of employment on an H-1B visa, you may have a 60-day grace period to remain in the United States, during which you are considered to have maintained your nonimmigrant status [1]. This grace period applies to H-1B workers and their dependents, and it lasts for up to 60 consecutive calendar days or until the end of the authorized validity period, whichever is shorter [1].\n\nDuring this grace period, you may explore options such as applying for a new H-1B petition, transitioning to another nonimmigrant classification, or applying for a change of status, depending on your circumstances and eligibility [1][4]. However, no employment authorization is automatically provided by the grace period [1].\n\nNote: The grace period does not extend beyond 60 days or the validity of your previous H-1B status, and it does not apply to H-2A or H-2B workers as referenced in the evidence [5].\n\nI do not have enough official evidence to answer this question."
-    },
-    {
-      "id": "i140_006",
-      "question": "How is a priority date determined for an employment-based immigrant petition?",
-      "evidence_supported": true,
-      "status": "GENERATOR_ABSTENTION",
-      "answer": "For employment-based immigrant petitions, the priority date is determined as follows:\n\nIf the preference category requires a labor certification from the Department of Labor (DOL), the priority date is the date the petitioner files Form I-140 with USCIS within 180 days of the DOL’s approval of the labor certification, otherwise the labor certification is no longer valid [1].\n\nIf the preference category does not require a DOL labor certification, the priority date is the date USCIS accepts the Form I-140 for processing [1].\n\nA petition filed under section 203(b) of the Act accompanied by an application for Schedule A designation has a priority date equal to the date the completed, signed petition (including all initial evidence and the correct fee) is properly filed with USCIS [3].\n\nA priority date is not transferable to another alien [2].\n\nI do not have enough official evidence to answer this question."
-    }
-  ],
+  "failures": [],
   "results": [
     {
       "id": "f1_001",
       "question": "What is CPT?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "CPT stands for Curricular Practical Training, which is an alternative work/study, internship, cooperative education, or other type of required practicum that a sponsoring employer offers through agreements with a student’s college, university, seminary, or conservatory [1]. It occurs before a student’s program end date and must be offered by sponsoring employers through cooperative agreements with the school [2].",
+      "answer": "Curricular Practical Training (CPT) is an alternative work/study program, internship, cooperative education, or other required practicum offered by a sponsoring employer through an agreement with an F-1 student’s college, university, seminary, or conservatory. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        1,
-        2
+        1
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -54,13 +38,17 @@
       "question": "What is Day 1 CPT?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Day 1 CPT refers to curricular practical training that graduate students may begin immediately if enrolled in a program requiring immediate participation in an internship [3]. This type of training is an integral part of an established curriculum and must be authorized by the Designated School Official (DSO) prior to the student beginning employment [1][3].",
+      "answer": "Day 1 CPT refers to **curricular practical training (CPT) that a graduate student begins immediately** when enrolled in a program requiring immediate participation in an internship. [1][3]\n\nCPT must be an integral part of an established curriculum, such as an internship, work-study, cooperative education program, or required practicum, and must be directly related to the student’s major area of study. [1][2][5] The student must receive authorization from the DSO in SEVIS and a signed Form I-20 showing the CPT authorization before starting employment. [3][4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
+        1,
         3,
         1,
-        3
+        2,
+        5,
+        3,
+        4
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -77,12 +65,12 @@
       "question": "Can a graduate student begin CPT immediately?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "No, a graduate student cannot begin CPT immediately. CPT is only available after receiving a Form I-20 or successor form with DSO endorsement, and eligibility is limited to students enrolled in graduate studies that require immediate participation in curricular practical training, which is an exception to the one-year full-time requirement [4]. However, the evidence does not confirm that such immediate participation is automatically granted or available to all graduate students. Therefore, immediate CPT participation is not universally permitted and depends on specific program requirements and DSO authorization [4]. \n\n[4]",
+      "answer": "Yes, but only if the graduate program requires immediate participation in CPT. [4] Otherwise, most F-1 students are eligible for CPT after completing one full year of academic study. [3] In either case, the student may begin CPT only after receiving a Form I-20 with the DSO’s endorsement. [4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
         4,
-        4,
+        3,
         4
       ],
       "invalid_ids": [],
@@ -100,7 +88,7 @@
       "question": "Does 12 months of full-time CPT affect OPT eligibility?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Yes, 12 months of full-time CPT affects OPT eligibility. [1]",
+      "answer": "Yes. One year or more of full-time CPT affects eligibility for OPT. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
@@ -127,16 +115,12 @@
       "question": "What is OPT?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Optional Practical Training (OPT) is temporary employment that is directly related to an F-1 student’s major area of study. Eligible students can apply to receive up to 12 months of OPT employment authorization before completing their academic studies (pre-completion) and/or after completing their academic studies (post-completion). However, all periods of pre-completion OPT will be deducted from the available period of post-completion OPT [2]. A student may not begin OPT employment prior to the approved start date on his or her Employment Authorization Document, Form I-766 or successor form, except as described in paragraph (f)(11)(i)(C) of this section. A student may not request a start date that is more than 60 days after the student's program end date. Employment authorization will begin on the date requested or the date the employment authorization is adjudicated, whichever is later [3]. The student must have a recommendation from their Designated School Official (DSO) to apply for OPT, and the DSO must update the student's SEVIS record with the recommendation before the student can apply to USCIS for employment authorization [4]. The DSO must provide the student with a signed, dated Form I-20 or successor form indicating that OPT has been recommended [4]. If granted, the employment authorization period for post-completion OPT begins on the requested date of commencement or the date the Form I-765 or successor form is approved, whichever is later [4]. Student can work for any employer, but the training must directly relate to the student’s major course of study [5].",
+      "answer": "Optional Practical Training (OPT) is temporary employment for an F-1 student that is directly related to the student’s major area of study. [2]\n\nEligible students may receive up to 12 months of OPT employment authorization before completing their academic studies (pre-completion) and/or after completing them (post-completion). Any pre-completion OPT period is deducted from the available 12-month post-completion period. [2]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
         2,
-        3,
-        4,
-        4,
-        4,
-        5
+        2
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -153,17 +137,15 @@
       "question": "What is pre-completion OPT?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Pre-completion OPT is temporary employment that occurs before a student’s program end date and is directly related to the student’s major area of study [1][2]. The student may apply for up to 12 months of pre-completion OPT, and if the student changes to a higher education level, an additional 12 months may be eligible [1]. However, periods of pre-completion OPT will be deducted from the overall 12-month allotment of post-completion OPT [1][4]. The student must be lawfully enrolled on a full-time basis for one full academic year at a SEVP-certified institution to be eligible [2]. The application for pre-completion OPT must be filed up to 90 days before the student is enrolled for one full academic year, and employment must not start prior to the completion of that full academic year [3].",
+      "answer": "Pre-completion OPT is temporary employment authorization for an F-1 student before completing their academic studies and before the program end date. The employment must be directly related to the student’s major area of study. [1][2]\n\nA student may apply after being lawfully enrolled full time for one full academic year at an SEVP-certified school. [2] Pre-completion OPT may last up to 12 months, and any time used is deducted from the available post-completion OPT period. [1][2]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
         1,
         2,
-        1,
-        1,
-        4,
         2,
-        3
+        1,
+        2
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -180,14 +162,13 @@
       "question": "What is post-completion OPT?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Post-completion OPT is temporary employment that is directly related to an F-1 student’s major area of study and occurs after the student completes their academic program or after the completion of all course requirements [1][5]. The student may file their Form I-765 up to 90 days before their program end date and no later than 60 days after their program end date [2]. The duration of status begins when the application is properly filed and pending approval and ends 60 days after the employment authorization expires [3]. The overall period of post-completion OPT is up to 12 months, and periods of pre-completion OPT are deducted from this allotment [5].",
+      "answer": "Post-completion OPT is temporary employment for an F-1 student that occurs after the student’s program end date or after completing all course requirements and is directly related to the student’s major area of study. [1][4]\n\nIt may be available for up to 12 months, with any pre-completion OPT deducted from that 12-month allotment. [4][5]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
         1,
-        5,
-        2,
-        3,
+        4,
+        4,
         5
       ],
       "invalid_ids": [],
@@ -205,16 +186,16 @@
       "question": "What is STEM OPT?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "STEM OPT is a 24-month extension of post-completion Optional Practical Training (OPT) available to F-1 students who have a degree in a science, technology, engineering, or mathematics (STEM) field [2]. To qualify, the degree must be from a U.S. educational institution accredited by an accrediting agency recognized by the Department of Education and must be in a field designated as STEM under the Department of Education's Classification of Instructional Programs taxonomy, including engineering, biological sciences, mathematics, physical sciences, or related fields involving research, innovation, or development of new technologies [1][2]. The student must also have a recommendation from a Designated School Official (DSO) entered into their SEVIS record before filing Form I-765 [3]. The extension allows the student to work for any employer, with a minimum of 20 hours per week, and the employer must be enrolled with E-Verify [4]. Students may have up to two separate STEM OPT extensions under certain circumstances, but no more than two lifetime extensions are allowed [1].",
+      "answer": "STEM OPT is a 24-month extension of regular post-completion OPT for eligible F-1 students whose qualifying degree is in a science, technology, engineering, or mathematics field. [2][4]\n\nThe degree must be from an accredited U.S. educational institution and be included on the STEM Designated Degree Program List. [1][2][3] During STEM OPT, the student must work at least 20 hours per week, and the employer must be enrolled in E-Verify. [4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
         2,
+        4,
         1,
         2,
         3,
-        4,
-        1
+        4
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -231,12 +212,11 @@
       "question": "Does a STEM OPT employer need to participate in E-Verify?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Yes, a STEM OPT employer must participate in E-Verify. [1][3]",
+      "answer": "Yes. A STEM OPT employer must be enrolled in E-Verify and remain a participant in good standing. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        1,
-        3
+        1
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -253,11 +233,10 @@
       "question": "What is an H-1B Labor Condition Application?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "An H-1B Labor Condition Application (LCA) is a document that an employer must submit to certify that the proposed employment of a foreign worker in a specialty occupation or as a fashion model of distinguished merit and ability meets the requirements of the labor condition application under section 212(n)(1) of the Act [1]. The employer must submit a completed LCA on Form ETA 9035E or Form ETA 9035 in the manner prescribed by regulation [2]. The LCA includes documentation establishing the prevailing wage for the occupation and satisfies union or employee notification requirements as specified in § 655.734 [3].",
+      "answer": "An H-1B Labor Condition Application (LCA) is a completed application that an employer seeking an H-1B nonimmigrant in a specialty occupation or as a fashion model of distinguished merit and ability must submit on Form ETA 9035E or Form ETA 9035. [2] The LCA includes information such as documentation used to establish the occupation’s prevailing wage. [3]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        1,
         2,
         3
       ],
@@ -274,33 +253,15 @@
     {
       "id": "h1b_002",
       "question": "What happens if I lose my job while on H-1B?",
-      "evidence_supported": true,
-      "status": "PASS",
-      "answer": "If you lose your job while on H-1B, you must leave the United States or change your status. Your H-1B status ends upon the termination of employment. If you choose to depart the United States, your employer is responsible for covering the reasonable costs of your transportation to your last place of foreign residence [5]. After departure, you may seek U.S. employment and re-enter the United States to remain in H-1B status for the remaining period of your authorization [5]. Alternatively, you may apply to change status to another classification, such as L-2, which may be eligible for expedited adjudication if it prevents severe financial loss [5]. \n\nNote: The evidence does not address what happens if the employer terminates employment without providing a valid reason or if the H-1B worker is not given a chance to transition to another status. [5]",
-      "citation_present": true,
-      "citation_valid": true,
-      "cited_ids": [
-        5,
-        5,
-        5,
-        5
-      ],
-      "invalid_ids": [],
-      "citation_reason": "Citations are valid.",
-      "evidence_source_ids": [
-        "ecfr_20cfr_655_subpart_h",
-        "ecfr_20cfr_655_subpart_h",
-        "ecfr_8cfr_214_2",
-        "ecfr_8cfr_214_2",
-        "uscis_h1b_termination_options"
-      ]
+      "evidence_supported": false,
+      "status": "EVIDENCE_ABSTENTION"
     },
     {
       "id": "h1b_003",
       "question": "Is there a grace period after H-1B employment ends?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Yes, there is a 60-day grace period after H-1B employment ends. This grace period allows the worker to remain in the United States following the cessation of employment for up to 60 consecutive calendar days or until the end of the authorized validity period, whichever is shorter [1].",
+      "answer": "Yes. USCIS states that regulations permit a discretionary grace period of up to 60 consecutive calendar days after H-1B employment ends, or until the end of the authorized validity period, whichever is shorter. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
@@ -321,12 +282,14 @@
       "question": "What is cap-gap?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Cap-gap is an extension of an F-1 student's duration of status and employment authorization that allows them to remain in the United States and work while awaiting a decision on a change of status to H-1B, provided the H-1B petition is timely filed and requests an employment start date in the fiscal year for which the H-1B status is being requested [1][2].",
+      "answer": "Cap-gap is an automatic extension of an eligible F-1 student’s duration of status and employment authorization when the student has a timely filed, nonfrivolous H-1B petition requesting a qualifying change of status and the F-1 status or employment authorization would expire before the H-1B change of status occurs. [1][2]\n\nThe extension lasts until April 1 of the relevant fiscal year or the approved H-1B petition’s validity start date, whichever is earlier. [1] It automatically ends if the H-1B petition or change-of-status request is rejected, denied, revoked, or withdrawn. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
         1,
-        2
+        2,
+        1,
+        1
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -343,13 +306,11 @@
       "question": "Can an H-4 spouse work in the United States?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Yes, an H-4 spouse can work in the United States. Under 8 CFR 274a.12, an H-4 nonimmigrant spouse of an H-1B nonimmigrant is eligible for employment authorization [4]. USCIS has issued policy guidance affirming that such spouses are automatically granted employment authorization, consistent with the statutory directive to provide employment authorization to this population [1][2].",
+      "answer": "Yes. An H-4 nonimmigrant spouse of an eligible H-1B nonimmigrant may be authorized to work in the United States. [4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        4,
-        1,
-        2
+        4
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -365,16 +326,13 @@
       "question": "What is a prevailing wage determination?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "A prevailing wage determination is the wage rate established for a specific occupation in a specific geographic area of intended employment, based on the average wages paid to similarly employed U.S. workers. This rate is required to ensure that the hiring of a foreign worker does not adversely affect the wages and working conditions of U.S. workers comparably employed [4]. The prevailing wage may be determined using sources such as the OES (Online Wage Library), a collective bargaining agreement, or other legitimate wage data sources [2][4]. For labor certification purposes, if a job is covered by a collective bargaining agreement negotiated at arms-length, the wage rate in that agreement is considered the prevailing wage [3]. The determination is made by the National Prevailing Wage Center (NPWC) or through other authorized sources, and must be based on the best information available at the time of filing [2][4].",
+      "answer": "A prevailing wage determination is a wage rate provided by the National Prevailing Wage Center for a specific occupational classification in the area of intended employment. [4] The Department of Labor determines the appropriate prevailing wage using the best available information and applicable wage sources. [2][3]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
         4,
         2,
-        4,
-        3,
-        2,
-        4
+        3
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -391,12 +349,14 @@
       "question": "What is PERM labor certification?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "A Permanent Labor Certification (PERM) is a certification issued by the Department of Labor (DOL) that allows an employer to hire a foreign worker to work permanently in the United States. The DOL certifies that there are not sufficient U.S. workers able, willing, qualified, and available to accept the job opportunity in the area of intended employment, and that employment of the foreign worker will not adversely affect the wages and working conditions of similarly employed U.S. workers [2]. This certification is required before the U.S. employer can submit an immigration petition to U.S. Citizenship and Immigration Services (USCIS) [2].",
+      "answer": "PERM labor certification is a permanent labor certification issued by the Department of Labor (DOL) that allows an employer to hire a foreign worker for permanent employment in the United States. [2] In most cases, the employer must obtain a certified labor certification from DOL’s Employment and Training Administration before submitting an immigration petition to USCIS. [2]\n\nThe certification requires DOL to determine that there are not sufficient U.S. workers who are able, willing, qualified, and available for the job, and that employing the foreign worker will not adversely affect the wages and working conditions of similarly employed U.S. workers. [2] A PERM application may not be filed without a valid prevailing wage determination. [5]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
         2,
-        2
+        2,
+        2,
+        5
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -413,7 +373,7 @@
       "question": "What is Form ETA-9089?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Form ETA-9089 is the Department of Labor's Application for Permanent Employment Certification. An employer must file a completed Form ETA-9089 with an ETA application processing center to apply for a labor certification on behalf of an alien [1].",
+      "answer": "Form ETA-9089 is the Department of Labor’s **Application for Permanent Employment Certification** form. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
@@ -434,14 +394,12 @@
       "question": "What is Form I-140?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Form I-140 is the Immigrant Petition for Alien Workers, used to petition for an alien worker to become a lawful permanent resident in the United States [4]. A U.S. employer may file this petition for an outstanding professor or researcher with at least three years of experience in teaching or research in the academic area, who is recognized internationally as outstanding [2]. The purpose of Form I-140 is to file an employment-based immigrant visa petition [2]. Approval of the petition establishes eligibility for the requested classification, but does not grant permanent residence or employment authorization [1].",
+      "answer": "Form I-140 is the **Petition for Alien Workers**, which a petitioner may file with USCIS for an employment-based immigrant visa. [2] It is used to petition for a worker to become a lawful permanent resident in the United States. [4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        4,
         2,
-        2,
-        1
+        4
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -458,15 +416,13 @@
       "question": "What is a priority date?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "A priority date is the date a petition for immigration is properly filed with USCIS, or the date an alien applied for an immigrant visa or adjustment of status, depending on the type of petition and category [1]. For employment-based immigrants, if a labor certification is required, the priority date is the date the Form I-140 is filed with USCIS within 180 days of the DOL's approval of the labor certification [3]. If no labor certification is required, the priority date is the date USCIS accepts the Form I-140 for processing [3]. For family-sponsored immigrants, the priority date is the date the Form I-130 or Form I-360 is properly filed with USCIS [3]. A priority date is not transferable to another alien [2].",
+      "answer": "A priority date is the date used to determine an immigrant’s place in line for visa availability. For family-sponsored immigrants, it is generally the date USCIS properly receives the Form I-130 or, in certain cases, Form I-360. [3]\n\nFor employment-based immigrants, it is generally the date DOL accepts the labor-certification application when labor certification is required, or the date USCIS accepts Form I-140 for processing when it is not required. [3] A visa is available when the priority date is earlier than the applicable Visa Bulletin cutoff date. [4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        1,
         3,
         3,
-        3,
-        2
+        4
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -482,7 +438,7 @@
       "question": "Does Form I-140 include EB-2 and EB-3 petitions?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Yes, Form I-140 includes EB-2 and EB-3 petitions. [4]",
+      "answer": "Yes. A petition to classify an employment-based immigrant under sections 203(b)(2) or 203(b)(3)—the statutory categories corresponding to EB-2 and EB-3—must be filed on Form I-140. [4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
@@ -503,11 +459,12 @@
       "question": "Can I start CPT employment before receiving authorization from my DSO?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "No, you cannot start CPT employment before receiving authorization from your DSO. The student must receive authorization from their DSO in SEVIS prior to starting employment [4].",
+      "answer": "No. You must receive authorization from your DSO in SEVIS before starting CPT employment. [4] The DSO must also provide you with a signed Form I-20 showing that CPT has been approved before you begin employment. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        4
+        4,
+        1
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -524,10 +481,11 @@
       "question": "Do F-1 students normally need to complete one academic year before becoming eligible for CPT?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Yes, F-1 students normally need to complete one academic year before becoming eligible for Curricular Practical Training (CPT) [5].",
+      "answer": "Yes. Most F-1 students are eligible for CPT after completing one full year of academic study. [1] SEVP guidance states that F-1 student eligibility for practical training depends on completing at least one academic year at an SEVP-certified school. [5]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
+        1,
         5
       ],
       "invalid_ids": [],
@@ -549,23 +507,8 @@
     {
       "id": "f1_009",
       "question": "Who signs off on CPT for an F-1 student?",
-      "evidence_supported": true,
-      "status": "PASS",
-      "answer": "The Designated School Official (DSO) signs off on Curricular Practical Training (CPT) for an F-1 student [5].",
-      "citation_present": true,
-      "citation_valid": true,
-      "cited_ids": [
-        5
-      ],
-      "invalid_ids": [],
-      "citation_reason": "Citations are valid.",
-      "evidence_source_ids": [
-        "ecfr_8cfr_214_2",
-        "sevp_cpt_immediate_graduate_guidance",
-        "ecfr_8cfr_214_2",
-        "sevp_practical_training_overview",
-        "sevp_cpt_immediate_graduate_guidance"
-      ]
+      "evidence_supported": false,
+      "status": "EVIDENCE_ABSTENTION"
     },
     {
       "id": "f1_010",
@@ -576,34 +519,19 @@
     {
       "id": "opt_004",
       "question": "Who authorizes OPT employment for an F-1 student?",
-      "evidence_supported": true,
-      "status": "PASS",
-      "answer": "USCIS authorizes OPT employment for an F-1 student [5].",
-      "citation_present": true,
-      "citation_valid": true,
-      "cited_ids": [
-        5
-      ],
-      "invalid_ids": [],
-      "citation_reason": "Citations are valid.",
-      "evidence_source_ids": [
-        "uscis_i765_instructions",
-        "uscis_opt_f1_students",
-        "ecfr_8cfr_214_2",
-        "ecfr_8cfr_274a_12",
-        "ecfr_8cfr_214_2"
-      ]
+      "evidence_supported": false,
+      "status": "EVIDENCE_ABSTENTION"
     },
     {
       "id": "opt_005",
       "question": "Does using pre-completion OPT reduce the amount of post-completion OPT available?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Yes, using pre-completion OPT reduces the amount of post-completion OPT available. Specifically, if a student has already received 1 year of part-time (20 hours per week) pre-completion OPT, the total time of full-time post-completion OPT available is reduced by 6 months, or 50% of the previously authorized year at the same education level [5]. This means the student would only be entitled to a remaining period of 6 months of full-time post-completion OPT employment authorization [5].",
+      "answer": "Yes. All periods of pre-completion OPT are deducted from the available post-completion OPT period. [2]\n\nFor example, one year of part-time pre-completion OPT reduces the remaining full-time post-completion OPT by six months at the same education level. [5]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        5,
+        2,
         5
       ],
       "invalid_ids": [],
@@ -621,12 +549,11 @@
       "question": "Does OPT employment need to be related to the student's field of study?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Yes, OPT employment must be directly related to the student's major area of study [1][4].",
+      "answer": "Yes. OPT employment must be directly related to the student’s major area of study. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        1,
-        4
+        1
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -643,10 +570,11 @@
       "question": "How long is the STEM OPT extension?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "The STEM OPT extension is 24 months [3][4].",
+      "answer": "The STEM OPT extension lasts 24 months. [2][3][4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
+        2,
         3,
         4
       ],
@@ -665,16 +593,11 @@
       "question": "Is E-Verify mandatory for an employer hiring a student on STEM OPT?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Yes, E-Verify enrollment is mandatory for an employer hiring a student on STEM OPT. The employer must be enrolled in E-Verify, as evidenced by either a valid E-Verify Company Identification number or a valid E-Verify Client Company Identification number, and must remain in good standing with E-Verify [1]. This requirement is explicitly stated in the regulation and is referenced in the Form I-765 instructions, which mandate that the employer’s name as listed in E-Verify and the E-Verify identification number be provided when filing for a 24-month STEM OPT extension [5][2]. \n\nThus, E-Verify participation is a condition for eligibility under STEM OPT. [1][2][5]",
+      "answer": "Yes. An employer hiring a student on STEM OPT must be enrolled in E-Verify and remain a participant in good standing. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        1,
-        5,
-        2,
-        1,
-        2,
-        5
+        1
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -691,12 +614,12 @@
       "question": "What is Form I-983 used for in the STEM OPT process?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Form I-983 is used in the STEM OPT process to document a student's STEM practical training opportunity, including the employer's attestation that they have sufficient resources and personnel to provide appropriate training, the training plan with specific goals and methods of oversight, and the direct relationship between the training and the student's qualifying STEM degree [1][2].",
+      "answer": "Form I-983 is used to document the STEM OPT training plan. It must identify the training goals, explain how they will be achieved through work-based learning, describe performance evaluations and supervision, and explain how the training relates directly to the student’s qualifying STEM degree. [2]\n\nThe employer signs Form I-983 to attest that it has sufficient resources and personnel to provide appropriate training at the specified location and that the student will not replace a U.S. worker. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        1,
-        2
+        2,
+        1
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -713,7 +636,7 @@
       "question": "What is the maximum discretionary grace period after H-1B employment ends?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "The maximum discretionary grace period after H-1B employment ends is 60 consecutive calendar days or until the end of the authorized validity period, whichever is shorter [4].",
+      "answer": "The maximum discretionary grace period after H-1B employment ends is **up to 60 consecutive calendar days**, or until the end of the authorized validity period, whichever is shorter. [4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
@@ -740,10 +663,11 @@
       "question": "When can an eligible H-1B worker start working for a new employer under portability?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "An eligible H-1B worker can start working for a new employer under portability as soon as the new employer properly files a new H-1B petition with USCIS, without waiting for the petition to be approved [4].",
+      "answer": "An eligible H-1B worker may start working for a new employer as soon as the employer properly files a nonfrivolous H-1B petition for new employment with USCIS, without waiting for approval. [1][4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
+        1,
         4
       ],
       "invalid_ids": [],
@@ -761,12 +685,12 @@
       "question": "Does an H-1B employer need a Labor Condition Application?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "Yes, an H-1B employer needs a Labor Condition Application (LCA). [1][3]",
+      "answer": "Yes. An employer seeking an H-1B nonimmigrant in a specialty occupation or as a fashion model of distinguished merit and ability must submit a completed Labor Condition Application (LCA). [3] For H-1B classification, the prospective employer must have filed an LCA under section 212(n)(1). [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        1,
-        3
+        3,
+        1
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -781,16 +705,15 @@
     {
       "id": "h1b_009",
       "question": "I was laid off on H-1B. What official immigration options may exist after termination of employment?",
-      "evidence_supported": true,
-      "status": "GENERATOR_ABSTENTION",
-      "answer": "After termination of employment on an H-1B visa, you may have a 60-day grace period to remain in the United States, during which you are considered to have maintained your nonimmigrant status [1]. This grace period applies to H-1B workers and their dependents, and it lasts for up to 60 consecutive calendar days or until the end of the authorized validity period, whichever is shorter [1].\n\nDuring this grace period, you may explore options such as applying for a new H-1B petition, transitioning to another nonimmigrant classification, or applying for a change of status, depending on your circumstances and eligibility [1][4]. However, no employment authorization is automatically provided by the grace period [1].\n\nNote: The grace period does not extend beyond 60 days or the validity of your previous H-1B status, and it does not apply to H-2A or H-2B workers as referenced in the evidence [5].\n\nI do not have enough official evidence to answer this question."
+      "evidence_supported": false,
+      "status": "EVIDENCE_ABSTENTION"
     },
     {
       "id": "h1b_010",
       "question": "What does the F-1 cap-gap provision automatically extend?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "The F-1 cap-gap provision automatically extends the duration of status and employment authorization of an F-1 student until April 1 of the fiscal year for which such H-1B status is being requested or until the validity start date of the approved H-1B petition, whichever is earlier, where the H-1B petition has been timely filed, requests an H-1B employment start date in the fiscal year for which such H-1B status is being requested consistent with paragraph (h)(2)(i)(I) of this section, and is nonfrivolous [1].",
+      "answer": "The F-1 cap-gap provision automatically extends the student’s **duration of status and employment authorization** until April 1 of the relevant fiscal year or the approved H-1B petition’s validity start date, whichever is earlier. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
@@ -809,20 +732,33 @@
     {
       "id": "h4_002",
       "question": "Are all H-4 spouses automatically authorized to work?",
-      "evidence_supported": false,
-      "status": "EVIDENCE_ABSTENTION"
+      "evidence_supported": true,
+      "status": "PASS",
+      "answer": "No. H-4 spouses are not all automatically authorized to work. Employment authorization applies to an H-4 spouse of an H-1B nonimmigrant who is described as eligible under 8 CFR 214.2(h)(9)(iv). [3]",
+      "citation_present": true,
+      "citation_valid": true,
+      "cited_ids": [
+        3
+      ],
+      "invalid_ids": [],
+      "citation_reason": "Citations are valid.",
+      "evidence_source_ids": [
+        "uscis_h4_employment_authorization",
+        "uscis_h4_employment_authorization",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_274a_12"
+      ]
     },
     {
       "id": "perm_004",
       "question": "Who issues the prevailing wage determination used in the PERM process?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "The National Prevailing Wage Center (NPWC) issues the prevailing wage determination used in the PERM process [4][5].",
+      "answer": "The National Prevailing Wage Center (NPWC) issues the prevailing wage determination used in the PERM process. [4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        4,
-        5
+        4
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -839,17 +775,13 @@
       "question": "What role does the prevailing wage determination play in PERM?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "The prevailing wage determination plays a critical role in PERM by ensuring that the wage offered to a foreign worker is at least equal to the prevailing wage for the occupation in the area of intended employment, thereby complying with the requirement that the hiring of a foreign worker will not adversely affect the wages and working conditions of U.S. workers similarly employed [5]. The prevailing wage is defined as the average wage paid to similarly employed workers in a specific occupation in the area of intended employment [5]. For jobs in institutions of higher education or affiliated nonprofit entities, the prevailing wage is based solely on wage levels of employees at such institutions and organizations in the area of intended employment [3]. If the job opportunity is covered by a collective bargaining agreement (CBA) negotiated at arms-length, the wage rate in the CBA is considered the prevailing wage for labor certification purposes [4]. Employers must obtain a prevailing wage determination from the National Prevailing Wage Center (NPWC) or use other legitimate sources of wage information, and the wage rate must be submitted as part of the PERM application [4][5]. \n\nThis requirement ensures compliance with the Immigration and Nationality Act, which mandates that foreign workers are not paid less than the prevailing wage, and that such wages do not negatively impact U.S. workers similarly employed [5].",
+      "answer": "In PERM, the prevailing wage determination (PWD) establishes the appropriate prevailing wage rate for the job opportunity. [4] The employer must offer at least the prevailing wage rate for the occupational classification in the area of intended employment, helping ensure that hiring the foreign worker does not adversely affect the wages and working conditions of comparably employed U.S. workers. [5] The employer maintains the PWD in its files and submits it to the Certifying Officer if requested. [4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
-        5,
-        5,
-        3,
-        4,
         4,
         5,
-        5
+        4
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -866,7 +798,7 @@
       "question": "What is ETA Form 9089 used for?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "ETA Form 9089 is used as the Department of Labor's Application for Permanent Employment Certification, which an employer must file to apply for a labor certification allowing the hiring of a foreign worker permanently in the United States [1].",
+      "answer": "ETA Form 9089 is used by an employer to apply for permanent labor certification for a foreign worker. [1]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
@@ -887,12 +819,13 @@
       "question": "Who generally files Form I-140?",
       "evidence_supported": true,
       "status": "PASS",
-      "answer": "A U.S. employer may file Form I-140 [1][2].",
+      "answer": "Generally, a U.S. employer files Form I-140. [1][2] Certain individuals may self-petition, including those filing under the extraordinary-ability or national-interest-waiver categories. [4]",
       "citation_present": true,
       "citation_valid": true,
       "cited_ids": [
         1,
-        2
+        2,
+        4
       ],
       "invalid_ids": [],
       "citation_reason": "Citations are valid.",
@@ -907,35 +840,32 @@
     {
       "id": "i140_005",
       "question": "What employment-based immigrant categories are covered by Form I-140?",
-      "evidence_supported": true,
-      "status": "PASS",
-      "answer": "The employment-based immigrant categories covered by Form I-140 are EB-1, EB-2, and EB-3 [4]. \n\nNote: The categories EB-1, EB-2, and EB-3 are referenced in the regulation under 8 CFR 204.5, which specifies that petitions for classification under sections 203(b)(1), 203(b)(2), or 203(b)(3) of the Act must be filed on Form I-140 [4]. \n\nAdditionally, Form I-140 covers specific subcategories such as:\n- EB-1: For aliens of extraordinary ability (Part 2, Item 1.a.) and national interest waiver (Part 2, Item 1.h.) [1][5].\n- EB-2 and EB-3: Require a permanent job offer from a U.S. employer and a filed Form I-140, with the exception of the categories for aliens of extraordinary ability and NIW [1].\n\nTherefore, the employment-based immigrant categories covered by Form I-140 are EB-1, EB-2, and EB-3 [4].",
-      "citation_present": true,
-      "citation_valid": true,
-      "cited_ids": [
-        4,
-        4,
-        1,
-        5,
-        1,
-        4
-      ],
-      "invalid_ids": [],
-      "citation_reason": "Citations are valid.",
-      "evidence_source_ids": [
-        "uscis_i140_instructions",
-        "ecfr_8cfr_204_5",
-        "uscis_i140_instructions",
-        "ecfr_8cfr_204_5",
-        "uscis_i140"
-      ]
+      "evidence_supported": false,
+      "status": "EVIDENCE_ABSTENTION"
     },
     {
       "id": "i140_006",
       "question": "How is a priority date determined for an employment-based immigrant petition?",
       "evidence_supported": true,
-      "status": "GENERATOR_ABSTENTION",
-      "answer": "For employment-based immigrant petitions, the priority date is determined as follows:\n\nIf the preference category requires a labor certification from the Department of Labor (DOL), the priority date is the date the petitioner files Form I-140 with USCIS within 180 days of the DOL’s approval of the labor certification, otherwise the labor certification is no longer valid [1].\n\nIf the preference category does not require a DOL labor certification, the priority date is the date USCIS accepts the Form I-140 for processing [1].\n\nA petition filed under section 203(b) of the Act accompanied by an application for Schedule A designation has a priority date equal to the date the completed, signed petition (including all initial evidence and the correct fee) is properly filed with USCIS [3].\n\nA priority date is not transferable to another alien [2].\n\nI do not have enough official evidence to answer this question."
+      "status": "PASS",
+      "answer": "For an employment-based immigrant petition:\n\n- If the preference category requires a Department of Labor (DOL) labor certification, the priority date is the date DOL accepts the labor certification application for processing. The petitioner must file Form I-140 with USCIS within 180 days of DOL’s approval date to preserve that priority date. [1]\n- If the preference category does not require DOL labor certification, the priority date is the date USCIS accepts Form I-140 for processing. [1]\n- For a petition accompanied by a Schedule A designation application, the priority date is the date USCIS properly receives the completed, signed petition with the required initial evidence and correct fee. [3]\n\nA denied petition does not establish a priority date. [2] An approved employment-based petition may allow the beneficiary to retain its priority date for a subsequently filed qualifying employment-based petition, and multiple approved petitions provide the earliest priority date. [3]",
+      "citation_present": true,
+      "citation_valid": true,
+      "cited_ids": [
+        1,
+        1,
+        3,
+        2,
+        3
+      ],
+      "invalid_ids": [],
+      "citation_reason": "Citations are valid.",
+      "evidence_source_ids": [
+        "uscis_priority_dates",
+        "ecfr_8cfr_204_5",
+        "ecfr_8cfr_204_5",
+        "uscis_priority_dates"
+      ]
     }
   ]
 }

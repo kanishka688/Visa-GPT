@@ -1,20 +1,18 @@
-import json
 import re
 
-import requests
+from src.core.llm_client import (
+    call_llm,
+    call_llm_json,
+)
+
+from src.core.settings import (
+    MAX_EVIDENCE_SOURCES,
+)
 
 
 # ==================================================
 # CONFIG
 # ==================================================
-
-from src.core.settings import (
-    LLM_MODEL,
-    OLLAMA_URL,
-    MAX_EVIDENCE_SOURCES,
-)
-
-MAX_EVIDENCE_SOURCES = 5
 
 ABSTAIN_MESSAGE = (
     "I do not have enough official evidence "
@@ -45,7 +43,6 @@ def build_evidence(
         results[:max_sources],
         start=1,
     ):
-
         chunk = result.get(
             "chunk",
             {},
@@ -128,45 +125,6 @@ Evidence:
 
 
 # ==================================================
-# OLLAMA HELPER
-# ==================================================
-
-
-def call_ollama(
-    messages,
-    json_mode=False,
-    temperature=0.0,
-):
-    payload = {
-        "model": LLM_MODEL,
-        "messages": messages,
-        "stream": False,
-        "options": {
-            "temperature": temperature,
-        },
-    }
-
-    if json_mode:
-        payload[
-            "format"
-        ] = "json"
-
-    response = requests.post(
-        OLLAMA_URL,
-        json=payload,
-        timeout=120,
-    )
-
-    response.raise_for_status()
-
-    return response.json()[
-        "message"
-    ][
-        "content"
-    ]
-
-
-# ==================================================
 # EVIDENCE SUFFICIENCY GATE
 # ==================================================
 
@@ -179,12 +137,10 @@ def assess_evidence(
     Decide whether retrieved official evidence
     actually supports answering the question.
 
-    This is different from query policy:
-
-    query policy:
+    Query policy:
         Should this TYPE of question go to RAG?
 
-    evidence gate:
+    Evidence gate:
         Did retrieval actually find enough evidence?
     """
 
@@ -207,7 +163,7 @@ def assess_evidence(
 
     system_prompt = """
 You are the evidence-sufficiency checker for
-KK-Gpt, a U.S. immigration RAG system.
+KK-GPT, a U.S. immigration RAG system.
 
 Your ONLY task is to determine whether the
 provided official evidence is sufficient to answer
@@ -259,12 +215,8 @@ supported=true
 If a material part of the question cannot be
 answered from the evidence, use supported=false.
 
-Return JSON only:
-
-{
-  "supported": true,
-  "reason": "brief debugging explanation"
-}
+Return only the structured result required by
+the provided schema.
 """
 
     user_prompt = f"""
@@ -272,41 +224,46 @@ QUESTION:
 
 {question}
 
-
 OFFICIAL EVIDENCE:
 
 {evidence_text}
 """
 
-    raw = call_ollama(
-        messages=[
-            {
-                "role": "system",
-                "content": system_prompt,
+    evidence_schema = {
+        "type": "object",
+        "properties": {
+            "supported": {
+                "type": "boolean",
             },
-            {
-                "role": "user",
-                "content": user_prompt,
+            "reason": {
+                "type": "string",
             },
+        },
+        "required": [
+            "supported",
+            "reason",
         ],
-        json_mode=True,
-        temperature=0.0,
-    )
+        "additionalProperties": False,
+    }
 
     try:
 
-        parsed = json.loads(
-            raw
+        parsed = call_llm_json(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            schema_name="evidence_sufficiency",
+            schema=evidence_schema,
+            temperature=0.0,
+            max_output_tokens=500,
         )
 
-    except json.JSONDecodeError:
+    except Exception as exc:
 
-        # Fail closed.
         return {
             "supported": False,
             "reason": (
-                "Evidence checker returned "
-                "invalid JSON."
+                "Evidence checker provider failure: "
+                f"{type(exc).__name__}"
             ),
         }
 
@@ -358,11 +315,12 @@ def validate_citations(
     evidence_items,
 ):
     """
-    Basic deterministic citation validation.
+    Deterministic citation-ID validation.
 
     Requirements:
+
     - at least one citation exists
-    - every cited number maps to retrieved evidence
+    - every citation maps to supplied evidence
     """
 
     valid_ids = {
@@ -426,58 +384,141 @@ def generate_answer_text(
     question,
     evidence_items,
 ):
+    """
+    Generate an answer using only supplied
+    official evidence.
+    """
+
     evidence_text = evidence_to_text(
         evidence_items
     )
 
     system_prompt = f"""
-You are KK-Gpt, a U.S. immigration information
+You are KK-GPT, a U.S. immigration information
 assistant.
 
-Answer ONLY from the official evidence supplied
-below.
+Your job is to answer using ONLY the official
+evidence supplied in the prompt.
 
-Rules:
+GROUNDING RULES
 
 1. Answer the user's exact question directly.
 
-2. Do not use outside knowledge.
+2. Do NOT use outside knowledge, even when you
+   already know the answer.
 
-3. Do not invent immigration rules.
+3. Do NOT add background facts, definitions,
+   organizational descriptions, procedural details,
+   legal mechanisms, examples, or exceptions unless
+   they are explicitly supported by the supplied
+   evidence.
 
-4. Every material factual claim must include an
-   inline citation such as [1] or [2].
+4. Every material factual statement MUST have an
+   inline citation immediately after the statement.
 
-5. A citation number may ONLY refer to the numbered
-   official evidence provided to you.
+5. The opening sentence or direct conclusion is also
+   a material factual statement and MUST be cited.
 
-6. Put the citation immediately after the claim it
-   supports.
+Example:
 
-7. If multiple sources support a claim, you may use:
-   [1][2]
+BAD:
+"Yes, CPT may be available immediately in some
+graduate programs."
 
-8. Do not cite a source unless its evidence actually
-   supports the claim.
+GOOD:
+"Yes, CPT may be available immediately in some
+graduate programs. [2]"
 
-9. Do not create fake citation numbers.
+6. Do NOT make an uncited introductory conclusion
+   and then cite supporting details later.
 
-10. Prefer concise answers for simple questions.
+7. A citation may ONLY refer to one of the numbered
+   evidence blocks supplied below.
 
-11. Mention exceptions only when they materially
-    affect the answer.
+8. Use a citation only when that specific evidence
+   block supports the entire claim immediately before
+   the citation.
 
-12. Do not predict USCIS, DOL, or Department of
+9. If one sentence contains multiple factual claims,
+   ensure the cited source supports ALL of them.
+
+   If not, split the sentence into separate claims
+   with separate citations.
+
+10. Do NOT attach extra citations merely because the
+    sources discuss the same topic.
+
+11. Prefer the narrowest statement directly supported
+    by the evidence.
+
+12. Do NOT strengthen evidence.
+
+For example:
+
+If evidence says:
+"Students file Form I-765 with USCIS."
+
+Do NOT expand this into:
+"USCIS authorizes employment by approving Form I-765
+and issuing the EAD"
+
+unless the supplied evidence explicitly supports
+those additional facts.
+
+13. Do NOT infer organizational relationships.
+
+For example, do not say an office is a division of
+another agency unless the evidence explicitly says
+so.
+
+14. Do NOT convert partial evidence into a broader
+    categorical statement.
+
+15. Reasonable paraphrasing is allowed, but the
+    factual meaning must remain within what the
+    evidence directly supports.
+
+16. If multiple sources genuinely support the same
+    claim, citations may appear as:
+
+[1][2]
+
+17. Do NOT create citation numbers that were not
+    supplied.
+
+18. Prefer concise answers. Fewer fully supported
+    claims are better than a detailed answer containing
+    unsupported additions.
+
+19. Mention exceptions only when they materially
+    affect the answer AND the exception is supported
+    by the evidence.
+
+20. Do NOT predict USCIS, DOL, or Department of
     State decisions.
 
-13. If the evidence is insufficient, respond exactly:
+21. If the supplied evidence is insufficient to
+    answer the question safely, respond exactly:
 
 "{ABSTAIN_MESSAGE}"
 
-14. Do not include a separate Sources section.
-    KK-Gpt will generate that separately.
+22. Do NOT include a separate Sources section.
+    KK-GPT generates sources separately.
 
-15. This is informational guidance, not legal advice.
+23. This is informational guidance, not legal advice.
+
+FINAL SELF-CHECK BEFORE RESPONDING
+
+For every factual sentence ask:
+
+- Is this exact claim supported by supplied evidence?
+- Is a citation immediately attached?
+- Does that cited source support the entire claim?
+- Did I add any detail not present in the evidence?
+
+If any answer is no, remove or rewrite that claim.
+
+Return only the final user-facing answer.
 """
 
     user_prompt = f"""
@@ -485,24 +526,16 @@ QUESTION:
 
 {question}
 
-
 OFFICIAL EVIDENCE:
 
 {evidence_text}
 """
 
-    return call_ollama(
-        messages=[
-            {
-                "role": "system",
-                "content": system_prompt,
-            },
-            {
-                "role": "user",
-                "content": user_prompt,
-            },
-        ],
-        temperature=0.1,
+    return call_llm(
+        system_prompt=system_prompt,
+        user_prompt=user_prompt,
+        temperature=0.0,
+        max_output_tokens=700,
     ).strip()
 
 
@@ -516,7 +549,7 @@ def generate_grounded_answer(
     results,
 ):
     """
-    Full RAG V1 generation pipeline:
+    Full RAG generation pipeline:
 
         ranked evidence
              ↓
@@ -560,13 +593,36 @@ def generate_grounded_answer(
     # STEP 2 — GENERATION
     # ----------------------------------------------
 
-    answer = generate_answer_text(
-        question,
-        evidence_items,
-    )
+    try:
 
-    # Model can still independently decide
-    # evidence is insufficient.
+        answer = generate_answer_text(
+            question,
+            evidence_items,
+        )
+
+    except Exception as exc:
+
+        return {
+            "answer": ABSTAIN_MESSAGE,
+            "abstained": True,
+            "evidence_check": (
+                evidence_check
+            ),
+            "citation_check": {
+                "valid": False,
+                "reason": (
+                    "Generation provider failure: "
+                    f"{type(exc).__name__}"
+                ),
+                "cited_ids": [],
+                "invalid_ids": [],
+            },
+            "sources": evidence_items,
+        }
+
+    # Model can independently decide that the
+    # supplied evidence is insufficient.
+
     if (
         ABSTAIN_MESSAGE.lower()
         in answer.lower()
@@ -595,8 +651,6 @@ def generate_grounded_answer(
         "valid"
     ]:
 
-        # Fail closed for V1 rather than returning
-        # an uncited or incorrectly cited answer.
         return {
             "answer": ABSTAIN_MESSAGE,
             "abstained": True,

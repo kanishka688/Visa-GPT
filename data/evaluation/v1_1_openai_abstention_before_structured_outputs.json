@@ -12,25 +12,55 @@
     "max_chunks_per_source": 2
   },
   "metrics": {
-    "abstention_accuracy": 0.8666666666666667,
-    "supported_question_recall": 0.8222222222222222,
+    "abstention_accuracy": 0.8,
+    "supported_question_recall": 0.7333333333333333,
     "unsupported_question_specificity": 1.0,
     "precision_when_supported": 1.0,
     "false_answer_rate": 0.0,
-    "false_abstention_rate": 0.17777777777777778,
-    "true_positive": 37,
+    "false_abstention_rate": 0.26666666666666666,
+    "true_positive": 33,
     "false_positive": 0,
-    "false_negative": 8,
+    "false_negative": 12,
     "true_negative": 15
   },
   "failures": [
+    {
+      "id": "f1_002",
+      "question": "What is Day 1 CPT?",
+      "expected_supported": true,
+      "predicted_supported": false,
+      "correct": false,
+      "reason": "Evidence checker returned invalid JSON.",
+      "topic_filter": "CPT",
+      "retrieval_query": "curricular practical training graduate student immediate participation internship required by curriculum one academic year eligibility CPT authorization",
+      "expected_source_ids": [
+        "sevp_cpt_immediate_graduate_guidance",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_cpt_immediate_graduate_guidance",
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview"
+      ],
+      "first_gold_source_rank": 1,
+      "evidence_source_ids": [
+        "ecfr_8cfr_214_2",
+        "sevp_cpt_immediate_graduate_guidance",
+        "sevp_cpt_immediate_graduate_guidance",
+        "ecfr_8cfr_214_2",
+        "sevp_practical_training_overview"
+      ],
+      "failure_type": "GOLD_SOURCE_IN_BUDGET_BUT_GATE_REJECTED"
+    },
     {
       "id": "f1_005",
       "question": "Who authorizes CPT?",
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence discusses CPT eligibility and employment arrangements but does not state who authorizes CPT, such as the designated school official (DSO).",
+      "reason": "The evidence describes CPT timing, duration, and employment conditions but does not state who authorizes CPT.",
       "topic_filter": "CPT",
       "retrieval_query": "Who authorizes CPT?",
       "expected_source_ids": [
@@ -60,7 +90,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence addresses some consequences of involuntary job loss—departure, transportation costs, and possible later employment/readmission—but it does not directly explain the full consequences of losing H-1B employment, such as the applicable grace period or status implications. Therefore, it is insufficient to answer the question completely.",
+      "reason": "The evidence only addresses departure after involuntary job loss, transportation costs, and possible future employment/readmission. It does not directly explain the applicable grace period, status consequences, or other options after losing H-1B employment.",
       "topic_filter": "H-1B",
       "retrieval_query": "What happens if I lose my job while on H-1B?",
       "expected_source_ids": [
@@ -84,12 +114,42 @@
       "failure_type": "GOLD_SOURCE_IN_BUDGET_BUT_GATE_REJECTED"
     },
     {
+      "id": "i140_003",
+      "question": "Does Form I-140 include EB-2 and EB-3 petitions?",
+      "expected_supported": true,
+      "predicted_supported": false,
+      "correct": false,
+      "reason": "Evidence checker returned invalid JSON.",
+      "topic_filter": "I-140",
+      "retrieval_query": "Does Form I-140 include EB-2 and EB-3 petitions?",
+      "expected_source_ids": [
+        "uscis_i140",
+        "ecfr_8cfr_204_5"
+      ],
+      "retrieved_source_ids": [
+        "uscis_i140_instructions",
+        "uscis_i140",
+        "uscis_i140",
+        "ecfr_8cfr_204_5",
+        "ecfr_8cfr_204_5"
+      ],
+      "first_gold_source_rank": 2,
+      "evidence_source_ids": [
+        "uscis_i140_instructions",
+        "uscis_i140",
+        "uscis_i140",
+        "ecfr_8cfr_204_5",
+        "ecfr_8cfr_204_5"
+      ],
+      "failure_type": "GOLD_SOURCE_IN_BUDGET_BUT_GATE_REJECTED"
+    },
+    {
       "id": "f1_008",
       "question": "Does part-time CPT count toward the 12-month full-time CPT limit that affects OPT?",
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence states that one year or more of full-time CPT impacts OPT eligibility, but it does not directly explain whether part-time CPT counts toward that 12-month full-time CPT limit.",
+      "reason": "The evidence states that one year or more of full-time CPT impacts OPT eligibility, but does not address whether part-time CPT counts toward that 12-month limit.",
       "topic_filter": "CPT",
       "retrieval_query": "Does part-time CPT count toward the 12-month full-time CPT limit that affects OPT?",
       "expected_source_ids": [
@@ -119,7 +179,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence discusses CPT generally but does not directly state who authorizes or signs off on CPT for an F-1 student. The DSO authorization described in the evidence applies to OPT, not CPT.",
+      "reason": "The evidence describes CPT but does not state who authorizes or signs off on it. The DSO signing information applies to OPT, not CPT.",
       "topic_filter": "CPT",
       "retrieval_query": "Who signs off on CPT for an F-1 student?",
       "expected_source_ids": [
@@ -149,7 +209,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence describes CPT generally but does not directly state whether a student may begin working before the DSO authorizes CPT in SEVIS.",
+      "reason": "The evidence describes CPT generally but does not state whether employment may begin before the DSO authorizes CPT in SEVIS.",
       "topic_filter": "CPT",
       "retrieval_query": "Can I begin working on CPT before my DSO authorizes it in SEVIS?",
       "expected_source_ids": [
@@ -175,12 +235,42 @@
       "failure_type": "GOLD_SOURCE_IN_BUDGET_BUT_GATE_REJECTED"
     },
     {
+      "id": "opt_004",
+      "question": "Who authorizes OPT employment for an F-1 student?",
+      "expected_supported": true,
+      "predicted_supported": false,
+      "correct": false,
+      "reason": "Evidence checker returned invalid JSON.",
+      "topic_filter": "OPT",
+      "retrieval_query": "Who authorizes OPT employment for an F-1 student?",
+      "expected_source_ids": [
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2"
+      ],
+      "retrieved_source_ids": [
+        "uscis_i765_instructions",
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_214_2"
+      ],
+      "first_gold_source_rank": 2,
+      "evidence_source_ids": [
+        "uscis_i765_instructions",
+        "uscis_opt_f1_students",
+        "ecfr_8cfr_214_2",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_214_2"
+      ],
+      "failure_type": "GOLD_SOURCE_IN_BUDGET_BUT_GATE_REJECTED"
+    },
+    {
       "id": "h1b_006",
       "question": "What does H-1B portability mean?",
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence mentions the H-1B portability provision and a consequence of denial of a successive portability petition, but it does not directly explain what H-1B portability means or describe its core operation.",
+      "reason": "The evidence mentions H-1B portability and successive portability petitions but does not explain what H-1B portability means or describe its core legal effect.",
       "topic_filter": "H-1B",
       "retrieval_query": "What does H-1B portability mean?",
       "expected_source_ids": [
@@ -209,7 +299,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence directly supports a discretionary 60-day H-1B grace period and contains limited portability language for a subsequent H-1B position, but it does not provide a sufficiently complete or direct account of the official immigration options that may exist after termination, such as other status or departure-related options.",
+      "reason": "Evidence checker returned invalid JSON.",
       "topic_filter": "H-1B",
       "retrieval_query": "I was laid off on H-1B. What official immigration options may exist after termination of employment?",
       "expected_source_ids": [
@@ -234,12 +324,40 @@
       "failure_type": "GOLD_SOURCE_IN_BUDGET_BUT_GATE_REJECTED"
     },
     {
+      "id": "h4_002",
+      "question": "Are all H-4 spouses automatically authorized to work?",
+      "expected_supported": true,
+      "predicted_supported": false,
+      "correct": false,
+      "reason": "Evidence checker returned invalid JSON.",
+      "topic_filter": "H-4",
+      "retrieval_query": "Are all H-4 spouses automatically authorized to work?",
+      "expected_source_ids": [
+        "uscis_h4_employment_authorization",
+        "ecfr_8cfr_274a_12"
+      ],
+      "retrieved_source_ids": [
+        "uscis_h4_employment_authorization",
+        "uscis_h4_employment_authorization",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_274a_12"
+      ],
+      "first_gold_source_rank": 1,
+      "evidence_source_ids": [
+        "uscis_h4_employment_authorization",
+        "uscis_h4_employment_authorization",
+        "ecfr_8cfr_274a_12",
+        "ecfr_8cfr_274a_12"
+      ],
+      "failure_type": "GOLD_SOURCE_IN_BUDGET_BUT_GATE_REJECTED"
+    },
+    {
       "id": "i140_005",
       "question": "What employment-based immigrant categories are covered by Form I-140?",
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence establishes that Form I-140 covers employment-based classifications under sections 203(b)(1), (2), and (3), and mentions some examples such as extraordinary ability, outstanding professors or researchers, multinational executives or managers, and national interest waiver cases. However, it does not provide the complete set of categories or sufficiently identify all subcategories needed to answer the question fully.",
+      "reason": "Evidence checker returned invalid JSON.",
       "topic_filter": "I-140",
       "retrieval_query": "What employment-based immigrant categories are covered by Form I-140?",
       "expected_source_ids": [
@@ -271,7 +389,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "Source [1] directly defines CPT as curricular practical training for F-1 students, including alternative work/study, internships, cooperative education, or required practicums offered through agreements between a sponsoring employer and the student’s school.",
+      "reason": "Official DHS-SEVP guidance directly defines CPT as curricular practical training: alternative work/study, internships, cooperative education, or another required practicum offered by a sponsoring employer through an agreement with the student's school.",
       "topic_filter": "CPT",
       "retrieval_query": "What is CPT?",
       "expected_source_ids": [
@@ -299,9 +417,9 @@
       "id": "f1_002",
       "question": "What is Day 1 CPT?",
       "expected_supported": true,
-      "predicted_supported": true,
-      "correct": true,
-      "reason": "The evidence directly explains that graduate students may begin curricular practical training immediately when enrolled in a program requiring immediate internship participation, and describes the authorization requirements for CPT. This supports the core meaning of “Day 1 CPT.”",
+      "predicted_supported": false,
+      "correct": false,
+      "reason": "Evidence checker returned invalid JSON.",
       "topic_filter": "CPT",
       "retrieval_query": "curricular practical training graduate student immediate participation internship required by curriculum one academic year eligibility CPT authorization",
       "expected_source_ids": [
@@ -323,7 +441,7 @@
         "ecfr_8cfr_214_2",
         "sevp_practical_training_overview"
       ],
-      "failure_type": null
+      "failure_type": "GOLD_SOURCE_IN_BUDGET_BUT_GATE_REJECTED"
     },
     {
       "id": "f1_003",
@@ -331,7 +449,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly addresses immediate CPT eligibility: it states that most F-1 students must complete one full year of academic study, but provides an exception for graduate students whose programs require immediate CPT. It also states that CPT may begin only after the student receives a Form I-20 with the DSO endorsement.",
+      "reason": "The regulation directly states that the one-academic-year requirement has an exception for graduate programs requiring immediate CPT, while also requiring DSO authorization and an endorsed Form I-20 before beginning.",
       "topic_filter": "CPT",
       "retrieval_query": "Can a graduate student begin CPT immediately?",
       "expected_source_ids": [
@@ -361,7 +479,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The official DHS-SEVP guidance directly states that one year or more of full-time CPT impacts eligibility for OPT, which addresses the core question.",
+      "reason": "Official DHS-SEVP guidance directly states that one year or more of full-time CPT impacts eligibility for OPT, which includes 12 months.",
       "topic_filter": "CPT",
       "retrieval_query": "Does 12 months of full-time CPT affect OPT eligibility?",
       "expected_source_ids": [
@@ -391,7 +509,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence discusses CPT eligibility and employment arrangements but does not state who authorizes CPT, such as the designated school official (DSO).",
+      "reason": "The evidence describes CPT timing, duration, and employment conditions but does not state who authorizes CPT.",
       "topic_filter": "CPT",
       "retrieval_query": "Who authorizes CPT?",
       "expected_source_ids": [
@@ -421,7 +539,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly defines OPT as temporary employment for F-1 students that is directly related to their major area of study, and explains that it may occur before and/or after completing academic studies.",
+      "reason": "Official USCIS guidance defines OPT as temporary employment directly related to an F-1 student’s major area of study and describes pre- and post-completion OPT.",
       "topic_filter": "OPT",
       "retrieval_query": "What is OPT?",
       "expected_source_ids": [
@@ -451,7 +569,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly defines pre-completion OPT as temporary employment for an F-1 student that is directly related to the student's major and occurs before completion of the academic program. It also states that eligibility generally requires one full academic year of lawful full-time enrollment and that it may be authorized for up to 12 months.",
+      "reason": "The evidence directly defines pre-completion OPT as temporary employment related to an F-1 student’s major area of study that occurs before completing academic studies, generally after one full academic year of full-time enrollment.",
       "topic_filter": "OPT",
       "retrieval_query": "What is pre-completion OPT?",
       "expected_source_ids": [
@@ -481,7 +599,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly defines post-completion OPT as temporary employment for an F-1 student that occurs after the program end date or completion of academic requirements, is directly related to the student's major, and is generally available for up to 12 months, subject to deduction of pre-completion OPT.",
+      "reason": "The evidence directly defines post-completion OPT as temporary employment for F-1 students after completing academic studies or after the program end date, directly related to the student's major, generally available for up to 12 months.",
       "topic_filter": "OPT",
       "retrieval_query": "What is post-completion OPT?",
       "expected_source_ids": [
@@ -511,7 +629,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly identifies STEM OPT as a 24-month extension of post-completion OPT for qualifying students with STEM degrees, occurring after regular post-completion OPT, and provides key eligibility and employer requirements.",
+      "reason": "The evidence directly identifies STEM OPT as a 24-month extension occurring after regular post-completion OPT for qualifying STEM degree students, with key eligibility and employer requirements.",
       "topic_filter": "STEM OPT",
       "retrieval_query": "What is STEM OPT?",
       "expected_source_ids": [
@@ -541,7 +659,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that a STEM OPT employer must be enrolled in E-Verify and remain in good standing, and the Form I-765 instructions require the employer's E-Verify identification information.",
+      "reason": "The evidence directly states that a STEM OPT employer must be enrolled in E-Verify and remain a participant in good standing, and requires the employer's E-Verify identification number.",
       "topic_filter": "STEM OPT",
       "retrieval_query": "Does a STEM OPT employer need to participate in E-Verify?",
       "expected_source_ids": [
@@ -571,7 +689,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly identifies the LCA as a completed Labor Condition Application that an employer seeking an H-1B worker must submit on Form ETA 9035E or ETA 9035, and states that filing it is required for H-1B classification.",
+      "reason": "The evidence identifies the LCA as a completed Form ETA 9035E or ETA 9035 that an employer seeking an H-1B worker must submit, and ties it to the employer’s labor-condition obligations and H-1B eligibility.",
       "topic_filter": "H-1B",
       "retrieval_query": "What is an H-1B Labor Condition Application?",
       "expected_source_ids": [
@@ -601,7 +719,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence addresses some consequences of involuntary job loss—departure, transportation costs, and possible later employment/readmission—but it does not directly explain the full consequences of losing H-1B employment, such as the applicable grace period or status implications. Therefore, it is insufficient to answer the question completely.",
+      "reason": "The evidence only addresses departure after involuntary job loss, transportation costs, and possible future employment/readmission. It does not directly explain the applicable grace period, status consequences, or other options after losing H-1B employment.",
       "topic_filter": "H-1B",
       "retrieval_query": "What happens if I lose my job while on H-1B?",
       "expected_source_ids": [
@@ -630,7 +748,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "USCIS evidence directly states that H-1B workers may be considered to have maintained status for up to 60 consecutive calendar days after employment ends, or until the end of the authorized validity period, whichever is shorter.",
+      "reason": "USCIS expressly states that H-1B workers may receive a discretionary grace period of up to 60 consecutive calendar days after employment cessation, or until the end of the authorized validity period, whichever is shorter.",
       "topic_filter": "H-1B",
       "retrieval_query": "Is there a grace period after H-1B employment ends?",
       "expected_source_ids": [
@@ -660,7 +778,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly describes cap-gap as an extension potentially available to an F-1 student with a timely filed H-1B petition and change-of-status request when F-1 status and employment authorization expire before the H-1B change of status occurs. It also states that the extension automatically extends status and qualifying employment authorization, subject to specified conditions.",
+      "reason": "The evidence directly explains that cap-gap is an extension for eligible F-1 students with a timely filed H-1B petition and change-of-status request, extending F-1 status and employment authorization until the H-1B change of status occurs or the applicable earlier date.",
       "topic_filter": "F-1",
       "retrieval_query": "F-1 student beneficiary H-1B cap subject petition requesting change of status extension of duration of status grant of employment authorization automatically extended until April 1 fiscal year timely filed nonfrivolous petition",
       "expected_source_ids": [
@@ -689,7 +807,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that an H-4 nonimmigrant spouse of an eligible H-1B nonimmigrant is a class authorized to accept employment, and the USCIS guidance discusses employment authorization for certain H-4 dependent spouses. It supports a qualified yes, subject to the stated eligibility requirements.",
+      "reason": "The evidence directly states that an H-4 nonimmigrant spouse of an eligible H-1B nonimmigrant is authorized for employment under 8 CFR 274a.12, and USCIS discusses employment authorization for certain H-4 dependent spouses.",
       "topic_filter": "H-4",
       "retrieval_query": "Can an H-4 spouse work in the United States?",
       "expected_source_ids": [
@@ -717,7 +835,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly defines the prevailing wage rate as the average wage paid to similarly employed workers in a specific occupation and area of intended employment.",
+      "reason": "The evidence directly explains that a prevailing wage determination is an NPWC/NPC-determined appropriate prevailing wage rate for a specific occupation and area of intended employment, based on applicable wage data.",
       "topic_filter": "Prevailing Wage",
       "retrieval_query": "What is a prevailing wage determination?",
       "expected_source_ids": [
@@ -747,7 +865,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly defines PERM as permanent labor certification issued by the DOL that allows an employer to hire a foreign worker permanently in the United States, and explains its role before an immigration petition and the required labor-market certification findings.",
+      "reason": "The evidence directly defines PERM as a permanent labor certification issued by DOL that allows an employer to hire a foreign worker permanently, generally after DOL certifies that qualified, available U.S. workers are not sufficient and U.S. workers' wages and conditions will not be adversely affected.",
       "topic_filter": "PERM",
       "retrieval_query": "What is PERM labor certification?",
       "expected_source_ids": [
@@ -777,7 +895,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly identifies Form ETA-9089 as the Department of Labor's Application for Permanent Employment Certification form, filed by an employer seeking labor certification for a foreign worker under the PERM process.",
+      "reason": "The evidence directly identifies ETA Form 9089 as the Department of Labor Application for Permanent Employment Certification form used to file a labor certification application.",
       "topic_filter": "PERM",
       "retrieval_query": "ETA Form 9089 Application for Permanent Employment Certification PERM labor certification Department of Labor employer application",
       "expected_source_ids": [
@@ -806,7 +924,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly identifies Form I-140 as the Petition for Alien Workers, filed with USCIS for an employment-based immigrant visa or to petition for an alien worker to become a lawful permanent resident in the United States.",
+      "reason": "USCIS directly identifies Form I-140 as the Petition for Alien Workers, used to petition for an employment-based immigrant visa or for an alien worker to become a lawful permanent resident.",
       "topic_filter": "I-140",
       "retrieval_query": "What is Form I-140?",
       "expected_source_ids": [
@@ -836,7 +954,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly explains what a priority date is for family-sponsored and employment-based immigrant cases, including how it is established and used to determine visa availability.",
+      "reason": "The evidence directly defines priority dates for family-sponsored and employment-based immigrants, including the relevant petition filing or labor-certification acceptance dates, and explains their role in visa availability.",
       "topic_filter": "Priority Date",
       "retrieval_query": "What is a priority date?",
       "expected_source_ids": [
@@ -862,9 +980,9 @@
       "id": "i140_003",
       "question": "Does Form I-140 include EB-2 and EB-3 petitions?",
       "expected_supported": true,
-      "predicted_supported": true,
-      "correct": true,
-      "reason": "The evidence directly states that petitions to classify an alien under sections 203(b)(2) and 203(b)(3)—the statutory categories corresponding to EB-2 and EB-3—must be filed on Form I-140.",
+      "predicted_supported": false,
+      "correct": false,
+      "reason": "Evidence checker returned invalid JSON.",
       "topic_filter": "I-140",
       "retrieval_query": "Does Form I-140 include EB-2 and EB-3 petitions?",
       "expected_source_ids": [
@@ -886,7 +1004,7 @@
         "ecfr_8cfr_204_5",
         "ecfr_8cfr_204_5"
       ],
-      "failure_type": null
+      "failure_type": "GOLD_SOURCE_IN_BUDGET_BUT_GATE_REJECTED"
     },
     {
       "id": "cpt_006",
@@ -894,7 +1012,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that students must receive CPT authorization from their DSO in SEVIS before starting employment, and the regulation requires the DSO to provide the approved Form I-20 prior to commencement.",
+      "reason": "The evidence directly states that CPT authorization from the DSO in SEVIS and a signed Form I-20 must be provided before the student starts employment.",
       "topic_filter": "CPT",
       "retrieval_query": "Can I start CPT employment before receiving authorization from my DSO?",
       "expected_source_ids": [
@@ -924,7 +1042,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that most F-1 students are eligible for curricular practical training after completing one full year of academic study, and SEVP guidance states that practical-training eligibility generally depends on completing at least one academic year.",
+      "reason": "Official SEVP guidance states that most F-1 students are eligible for CPT after completing one full year of academic study, directly supporting that this is the normal requirement.",
       "topic_filter": "CPT",
       "retrieval_query": "Do F-1 students normally need to complete one academic year before becoming eligible for CPT?",
       "expected_source_ids": [
@@ -954,7 +1072,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence states that one year or more of full-time CPT impacts OPT eligibility, but it does not directly explain whether part-time CPT counts toward that 12-month full-time CPT limit.",
+      "reason": "The evidence states that one year or more of full-time CPT impacts OPT eligibility, but does not address whether part-time CPT counts toward that 12-month limit.",
       "topic_filter": "CPT",
       "retrieval_query": "Does part-time CPT count toward the 12-month full-time CPT limit that affects OPT?",
       "expected_source_ids": [
@@ -984,7 +1102,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence discusses CPT generally but does not directly state who authorizes or signs off on CPT for an F-1 student. The DSO authorization described in the evidence applies to OPT, not CPT.",
+      "reason": "The evidence describes CPT but does not state who authorizes or signs off on it. The DSO signing information applies to OPT, not CPT.",
       "topic_filter": "CPT",
       "retrieval_query": "Who signs off on CPT for an F-1 student?",
       "expected_source_ids": [
@@ -1014,7 +1132,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence describes CPT generally but does not directly state whether a student may begin working before the DSO authorizes CPT in SEVIS.",
+      "reason": "The evidence describes CPT generally but does not state whether employment may begin before the DSO authorizes CPT in SEVIS.",
       "topic_filter": "CPT",
       "retrieval_query": "Can I begin working on CPT before my DSO authorizes it in SEVIS?",
       "expected_source_ids": [
@@ -1043,9 +1161,9 @@
       "id": "opt_004",
       "question": "Who authorizes OPT employment for an F-1 student?",
       "expected_supported": true,
-      "predicted_supported": true,
-      "correct": true,
-      "reason": "The evidence states that the DSO recommends OPT and issues the endorsed Form I-20, while the student files Form I-765 with USCIS for employment authorization. It therefore directly supports that USCIS authorizes OPT employment, with the DSO providing the recommendation.",
+      "predicted_supported": false,
+      "correct": false,
+      "reason": "Evidence checker returned invalid JSON.",
       "topic_filter": "OPT",
       "retrieval_query": "Who authorizes OPT employment for an F-1 student?",
       "expected_source_ids": [
@@ -1067,7 +1185,7 @@
         "ecfr_8cfr_274a_12",
         "ecfr_8cfr_214_2"
       ],
-      "failure_type": null
+      "failure_type": "GOLD_SOURCE_IN_BUDGET_BUT_GATE_REJECTED"
     },
     {
       "id": "opt_005",
@@ -1075,7 +1193,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that all periods of pre-completion OPT are deducted from the available post-completion OPT, including the specific example that one year of part-time pre-completion OPT reduces remaining full-time post-completion OPT to six months.",
+      "reason": "Official USCIS and DHS-SEVP guidance directly states that all pre-completion OPT periods are deducted from the available 12-month post-completion OPT allotment.",
       "topic_filter": "OPT",
       "retrieval_query": "Does using pre-completion OPT reduce the amount of post-completion OPT available?",
       "expected_source_ids": [
@@ -1105,7 +1223,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The official evidence directly states that all OPT employment must be directly related to the F-1 student’s major area of study.",
+      "reason": "USCIS states that all OPT employment must be directly related to the F-1 student's major area of study, and SEVP guidance confirms the same requirement.",
       "topic_filter": "OPT",
       "retrieval_query": "Does OPT employment need to be related to the student's field of study?",
       "expected_source_ids": [
@@ -1135,7 +1253,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that the STEM OPT extension is 24 months, including the USCIS Form I-765 Instructions, SEVP overview, and 8 CFR provision.",
+      "reason": "The official evidence directly states that the STEM OPT extension is 24 months.",
       "topic_filter": "STEM OPT",
       "retrieval_query": "How long is the STEM OPT extension?",
       "expected_source_ids": [
@@ -1165,7 +1283,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that an employer participating in STEM OPT must be enrolled in E-Verify, maintain good standing, and provide its E-Verify identification number. Therefore, E-Verify enrollment is mandatory for the employer.",
+      "reason": "The evidence directly states that an employer hiring a student for STEM OPT must be enrolled in E-Verify, including having a valid E-Verify identification number and remaining in good standing.",
       "topic_filter": "STEM OPT",
       "retrieval_query": "Is E-Verify mandatory for an employer hiring a student on STEM OPT?",
       "expected_source_ids": [
@@ -1195,7 +1313,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly explains that Form I-983 is the STEM OPT training plan and is used to document the training goals, skills and techniques to be developed, how the work-based learning will achieve them, performance evaluation, supervision and oversight, and the relationship to the student's qualifying STEM degree. It also states that the employer signs it to attest to appropriate training resources and that it must be submitted to the DSO, including when changing employers.",
+      "reason": "The evidence directly states that Form I-983 contains the STEM training plan, including training goals, evaluation, supervision, and relation to the student's STEM degree, and that the employer signs it to attest to required training conditions and submits it to the DSO.",
       "topic_filter": "STEM OPT",
       "retrieval_query": "What is Form I-983 used for in the STEM OPT process?",
       "expected_source_ids": [
@@ -1224,7 +1342,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "USCIS explicitly states that the discretionary grace period after cessation of H-1B employment is up to 60 consecutive calendar days, or until the end of the authorized validity period, whichever is shorter.",
+      "reason": "USCIS explicitly states that the discretionary grace period after H-1B employment ends is up to 60 consecutive calendar days, or until the authorized validity period ends, whichever is shorter.",
       "topic_filter": "H-1B",
       "retrieval_query": "What is the maximum discretionary grace period after H-1B employment ends?",
       "expected_source_ids": [
@@ -1254,7 +1372,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence mentions the H-1B portability provision and a consequence of denial of a successive portability petition, but it does not directly explain what H-1B portability means or describe its core operation.",
+      "reason": "The evidence mentions H-1B portability and successive portability petitions but does not explain what H-1B portability means or describe its core legal effect.",
       "topic_filter": "H-1B",
       "retrieval_query": "What does H-1B portability mean?",
       "expected_source_ids": [
@@ -1283,7 +1401,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "USCIS states that portability permits an H-1B worker currently in H-1B status to begin working for a new employer as soon as the employer properly files a new H-1B petition with USCIS, without waiting for approval.",
+      "reason": "USCIS guidance directly states that an H-1B worker may begin working for a new employer as soon as the employer properly files a new H-1B petition, without waiting for approval.",
       "topic_filter": "H-1B",
       "retrieval_query": "When can an eligible H-1B worker start working for a new employer under portability?",
       "expected_source_ids": [
@@ -1312,7 +1430,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that an employer seeking an H-1B nonimmigrant must submit a completed Labor Condition Application, and that H-1B classification generally requires the prospective employer to have filed one.",
+      "reason": "The evidence directly states that an employer seeking an H-1B nonimmigrant in a specialty occupation or as a qualifying fashion model must submit a Labor Condition Application, and that H-1B classification generally requires the prospective employer to have filed one.",
       "topic_filter": "H-1B",
       "retrieval_query": "Does an H-1B employer need a Labor Condition Application?",
       "expected_source_ids": [
@@ -1342,7 +1460,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence directly supports a discretionary 60-day H-1B grace period and contains limited portability language for a subsequent H-1B position, but it does not provide a sufficiently complete or direct account of the official immigration options that may exist after termination, such as other status or departure-related options.",
+      "reason": "Evidence checker returned invalid JSON.",
       "topic_filter": "H-1B",
       "retrieval_query": "I was laid off on H-1B. What official immigration options may exist after termination of employment?",
       "expected_source_ids": [
@@ -1372,7 +1490,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that the F-1 cap-gap provision automatically extends the student's duration of status and employment authorization, subject to the stated H-1B conditions.",
+      "reason": "The regulation directly states that the F-1 cap-gap provision automatically extends the student's duration of status and employment authorization until the specified earlier date.",
       "topic_filter": "F-1",
       "retrieval_query": "F-1 student beneficiary H-1B cap subject petition requesting change of status extension of duration of status grant of employment authorization automatically extended until April 1 fiscal year timely filed nonfrivolous petition",
       "expected_source_ids": [
@@ -1399,9 +1517,9 @@
       "id": "h4_002",
       "question": "Are all H-4 spouses automatically authorized to work?",
       "expected_supported": true,
-      "predicted_supported": true,
-      "correct": true,
-      "reason": "The evidence directly indicates that H-4 employment authorization applies only to an H-4 spouse of an H-1B nonimmigrant who meets the eligibility requirements in 8 CFR 214.2(h)(9)(iv), rather than automatically to all H-4 spouses.",
+      "predicted_supported": false,
+      "correct": false,
+      "reason": "Evidence checker returned invalid JSON.",
       "topic_filter": "H-4",
       "retrieval_query": "Are all H-4 spouses automatically authorized to work?",
       "expected_source_ids": [
@@ -1421,7 +1539,7 @@
         "ecfr_8cfr_274a_12",
         "ecfr_8cfr_274a_12"
       ],
-      "failure_type": null
+      "failure_type": "GOLD_SOURCE_IN_BUDGET_BUT_GATE_REJECTED"
     },
     {
       "id": "perm_004",
@@ -1429,7 +1547,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that for the Permanent Labor Certification (PERM) application, a valid prevailing wage determination is issued by the National Prevailing Wage Center (NPWC).",
+      "reason": "The evidence directly states that the National Prevailing Wage Center (NPWC) issues the valid prevailing wage determination required for a Permanent Labor Certification (PERM) application.",
       "topic_filter": "Prevailing Wage",
       "retrieval_query": "Who issues the prevailing wage determination used in the PERM process?",
       "expected_source_ids": [
@@ -1459,7 +1577,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that the National Processing Center issues the prevailing wage determination for the job, that the employer uses it in filing the Application for Permanent Employment Certification and maintains it in its records, and that the offered wage must meet the prevailing wage requirement to avoid adversely affecting U.S. workers.",
+      "reason": "The evidence directly states that DOL's National Processing Center issues the appropriate prevailing wage, which the employer uses for labor certification purposes, retains with the PERM application, and submits if requested. It also explains that the offered wage must meet the prevailing wage requirement to protect similarly employed U.S. workers.",
       "topic_filter": "Prevailing Wage",
       "retrieval_query": "What role does the prevailing wage determination play in PERM?",
       "expected_source_ids": [
@@ -1489,7 +1607,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly identifies ETA Form 9089 as the Department of Labor Application for Permanent Employment Certification and states that an employer files it to apply for labor certification on behalf of a foreign worker. It also explains that PERM certification allows an employer to hire a foreign worker permanently in the United States.",
+      "reason": "The evidence directly states that an employer seeking labor certification for an alien must file Form ETA-9089, the Department of Labor Application for Permanent Employment Certification, as part of the permanent labor certification process.",
       "topic_filter": "PERM",
       "retrieval_query": "ETA Form 9089 Application for Permanent Employment Certification PERM labor certification Department of Labor employer application",
       "expected_source_ids": [
@@ -1518,7 +1636,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly states that a U.S. employer may file Form I-140 and also identifies self-petitioners for certain classifications, supporting who generally files it.",
+      "reason": "The evidence directly states that a U.S. employer may file Form I-140, and also notes that certain beneficiaries may self-petition.",
       "topic_filter": "I-140",
       "retrieval_query": "Who generally files Form I-140?",
       "expected_source_ids": [
@@ -1548,7 +1666,7 @@
       "expected_supported": true,
       "predicted_supported": false,
       "correct": false,
-      "reason": "The evidence establishes that Form I-140 covers employment-based classifications under sections 203(b)(1), (2), and (3), and mentions some examples such as extraordinary ability, outstanding professors or researchers, multinational executives or managers, and national interest waiver cases. However, it does not provide the complete set of categories or sufficiently identify all subcategories needed to answer the question fully.",
+      "reason": "Evidence checker returned invalid JSON.",
       "topic_filter": "I-140",
       "retrieval_query": "What employment-based immigrant categories are covered by Form I-140?",
       "expected_source_ids": [
@@ -1578,7 +1696,7 @@
       "expected_supported": true,
       "predicted_supported": true,
       "correct": true,
-      "reason": "The evidence directly explains that an employment-based priority date is the DOL acceptance date for categories requiring labor certification, and the USCIS acceptance date of the Form I-140 for categories not requiring labor certification. It also covers Schedule A filings and retention of an approved priority date.",
+      "reason": "USCIS guidance directly explains that the employment-based priority date is the DOL acceptance date for categories requiring labor certification, and the USCIS Form I-140 acceptance date for categories that do not.",
       "topic_filter": "Priority Date",
       "retrieval_query": "How is a priority date determined for an employment-based immigrant petition?",
       "expected_source_ids": [
@@ -1606,7 +1724,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The provided evidence concerns nonimmigrant admission and status requirements and Form I-140 employment-based petitions. It does not state the basic eligibility requirements for U.S. naturalization.",
+      "reason": "The evidence concerns nonimmigrant admission/status and Form I-140 employment-based petitions, not the basic eligibility requirements for U.S. naturalization.",
       "topic_filter": null,
       "retrieval_query": "What are the basic eligibility requirements for U.S. naturalization?",
       "expected_source_ids": [],
@@ -1633,7 +1751,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The evidence discusses Forms I-140, ETA-9089, and I-765, but does not state what Form N-400 is used for.",
+      "reason": "The evidence discusses Forms I-140 and I-765 and does not state what Form N-400 is used for.",
       "topic_filter": null,
       "retrieval_query": "What is Form N-400 used for?",
       "expected_source_ids": [],
@@ -1660,7 +1778,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The provided evidence discusses Forms I-765, ETA-9089, I-140, and I-485, but does not state what Form N-600 is used for.",
+      "reason": "The evidence discusses Forms I-765, I-140, I-485, and ETA-9089, but provides no information about Form N-600 or its purpose.",
       "topic_filter": null,
       "retrieval_query": "What is Form N-600 used for?",
       "expected_source_ids": [],
@@ -1687,7 +1805,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The provided evidence discusses Forms I-765, I-140, and labor certification, but does not state what Form N-600K is used for.",
+      "reason": "The evidence concerns Forms I-765, I-140, and labor certification, and does not state what Form N-600K is used for.",
       "topic_filter": null,
       "retrieval_query": "What is Form N-600K used for?",
       "expected_source_ids": [],
@@ -1714,7 +1832,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The evidence discusses Forms I-140 and I-765 but does not state what Form I-130 is used for.",
+      "reason": "The evidence discusses Forms I-140 and I-765, but does not state what Form I-130 is used for.",
       "topic_filter": null,
       "retrieval_query": "What is Form I-130 used for?",
       "expected_source_ids": [],
@@ -1768,7 +1886,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The evidence discusses Forms I-765, I-94, and I-983, but does not state what Form I-864 is used for.",
+      "reason": "The evidence discusses Forms I-765 and I-983, but does not identify Form I-864 or explain what it is used for.",
       "topic_filter": null,
       "retrieval_query": "What is Form I-864 used for?",
       "expected_source_ids": [],
@@ -1849,7 +1967,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The provided evidence concerns employment-based petitions, work authorization, and nonimmigrant classifications; it does not describe the naturalization civics test.",
+      "reason": "The evidence concerns employment-based petitions, employment authorization, and nonimmigrant regulations; it does not explain the naturalization civics test.",
       "topic_filter": null,
       "retrieval_query": "What is the naturalization civics test?",
       "expected_source_ids": [],
@@ -1876,7 +1994,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The evidence does not address the English language requirements for naturalization applicants. It concerns nonimmigrant classifications, PERM foreign-language job requirements, and Form I-765 translation or interpreter instructions.",
+      "reason": "The evidence does not address English language requirements for naturalization applicants; it only discusses other immigration categories and translation requirements for Form I-765 documents.",
       "topic_filter": null,
       "retrieval_query": "What English language requirements apply to naturalization applicants?",
       "expected_source_ids": [],
@@ -1903,7 +2021,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The provided evidence concerns nonimmigrant classifications, employment authorization, and employment-based immigrant petitions. It does not explain what good moral character means or how it relates to naturalization eligibility.",
+      "reason": "The evidence concerns nonimmigrant classifications, employment authorization, and religious worker petitions; it does not define good moral character or explain its role in naturalization eligibility.",
       "topic_filter": null,
       "retrieval_query": "What does good moral character mean for naturalization eligibility?",
       "expected_source_ids": [],
@@ -1930,7 +2048,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The evidence discusses nonimmigrant classifications, dependent-child definitions, and employment authorization, but does not state the requirements or circumstances under which a child automatically acquires U.S. citizenship through a parent.",
+      "reason": "The evidence discusses nonimmigrant and employment-related status, dependent children, and employment authorization, but does not state when a child automatically acquires U.S. citizenship through a parent.",
       "topic_filter": null,
       "retrieval_query": "When can a child automatically acquire U.S. citizenship through a parent?",
       "expected_source_ids": [],
@@ -1957,7 +2075,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The evidence discusses certificates as forms of academic credentials, professional certifications, or CNMI investment documents, but it does not define or explain a Certificate of Citizenship.",
+      "reason": "The evidence discusses certificates as academic or professional credentials and CNMI investment documents, but does not define or explain a Certificate of Citizenship.",
       "topic_filter": null,
       "retrieval_query": "What is a Certificate of Citizenship?",
       "expected_source_ids": [],
@@ -1984,7 +2102,7 @@
       "expected_supported": false,
       "predicted_supported": false,
       "correct": true,
-      "reason": "The provided evidence concerns Form I-765, Form I-140, and unrelated immigration regulations. It does not identify the documents required when filing Form I-751 to remove conditions on permanent residence.",
+      "reason": "The evidence concerns Forms I-765, I-140, and related regulations, and does not state which documents are required when filing Form I-751.",
       "topic_filter": null,
       "retrieval_query": "What documents are required when filing Form I-751 to remove conditions on permanent residence?",
       "expected_source_ids": [],

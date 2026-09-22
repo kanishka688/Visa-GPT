@@ -13,7 +13,10 @@ from src.retrieval.search_with_reranker import (
 from src.generation.generate_answer import (
     build_evidence,
     evidence_to_text,
-    call_ollama,
+)
+
+from src.core.llm_client import (
+    call_llm_json,
 )
 
 
@@ -91,7 +94,7 @@ def load_generated_answers():
 
     rows = report.get(
         "results",
-        []
+        [],
     )
 
     # Only evaluate answers that actually made it
@@ -126,7 +129,7 @@ def judge_grounding(
     )
 
     system_prompt = """
-You are the grounding evaluator for KK-Gpt,
+You are the grounding evaluator for KK-GPT,
 a U.S. immigration RAG system.
 
 Your task is ONLY to evaluate whether a generated
@@ -220,14 +223,6 @@ no_unsupported_material_claims=true
 only if every material factual claim is supported
 by the supplied evidence.
 
-fully_grounded=true
-ONLY when all of these are true:
-
-- answers_question
-- all_material_claims_cited
-- all_citations_support_claims
-- no_unsupported_material_claims
-
 Count:
 
 material_claims
@@ -235,24 +230,17 @@ supported_material_claims
 cited_material_claims
 correctly_supported_citation_claims
 
-Return JSON only.
+For unsupported_claims:
+return a list containing each unsupported material
+claim. Return an empty list when none exist.
 
-Required format:
+For citation_mismatches:
+return a list describing each citation that does
+not support its associated claim. Return an empty
+list when none exist.
 
-{
-  "answers_question": true,
-  "all_material_claims_cited": true,
-  "all_citations_support_claims": true,
-  "no_unsupported_material_claims": true,
-  "fully_grounded": true,
-  "material_claims": 2,
-  "supported_material_claims": 2,
-  "cited_material_claims": 2,
-  "correctly_supported_citation_claims": 2,
-  "unsupported_claims": [],
-  "citation_mismatches": [],
-  "reason": "brief explanation"
-}
+Return only the structured result required by
+the provided schema.
 """
 
     user_prompt = f"""
@@ -271,28 +259,81 @@ OFFICIAL EVIDENCE:
 {evidence_text}
 """
 
-    raw = call_ollama(
-        messages=[
-            {
-                "role": "system",
-                "content": system_prompt,
+    grounding_schema = {
+        "type": "object",
+        "properties": {
+            "answers_question": {
+                "type": "boolean",
             },
-            {
-                "role": "user",
-                "content": user_prompt,
+            "all_material_claims_cited": {
+                "type": "boolean",
             },
+            "all_citations_support_claims": {
+                "type": "boolean",
+            },
+            "no_unsupported_material_claims": {
+                "type": "boolean",
+            },
+            "material_claims": {
+                "type": "integer",
+                "minimum": 0,
+            },
+            "supported_material_claims": {
+                "type": "integer",
+                "minimum": 0,
+            },
+            "cited_material_claims": {
+                "type": "integer",
+                "minimum": 0,
+            },
+            "correctly_supported_citation_claims": {
+                "type": "integer",
+                "minimum": 0,
+            },
+            "unsupported_claims": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                },
+            },
+            "citation_mismatches": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                },
+            },
+            "reason": {
+                "type": "string",
+            },
+        },
+        "required": [
+            "answers_question",
+            "all_material_claims_cited",
+            "all_citations_support_claims",
+            "no_unsupported_material_claims",
+            "material_claims",
+            "supported_material_claims",
+            "cited_material_claims",
+            "correctly_supported_citation_claims",
+            "unsupported_claims",
+            "citation_mismatches",
+            "reason",
         ],
-        json_mode=True,
-        temperature=0.0,
-    )
+        "additionalProperties": False,
+    }
 
     try:
 
-        parsed = json.loads(
-            raw
+        parsed = call_llm_json(
+            system_prompt=system_prompt,
+            user_prompt=user_prompt,
+            schema_name="grounding_evaluation",
+            schema=grounding_schema,
+            temperature=0.0,
+            max_output_tokens=2000,
         )
 
-    except json.JSONDecodeError:
+    except Exception as exc:
 
         return {
             "judge_valid": False,
@@ -320,7 +361,8 @@ OFFICIAL EVIDENCE:
             "citation_mismatches": [],
 
             "reason": (
-                "Grounding judge returned invalid JSON."
+                "Grounding judge provider failure: "
+                f"{type(exc).__name__}"
             ),
         }
 
@@ -352,8 +394,8 @@ OFFICIAL EVIDENCE:
         is True
     )
 
-    # We derive fully_grounded ourselves rather than
-    # trusting the model's aggregate field.
+    # Derive the aggregate ourselves instead of
+    # trusting a model-produced fully_grounded field.
     fully_grounded = (
         answers_question
         and all_material_claims_cited
@@ -392,6 +434,16 @@ OFFICIAL EVIDENCE:
                 "correctly_supported_citation_claims"
             )
         ),
+    )
+
+    unsupported_claims = parsed.get(
+        "unsupported_claims",
+        [],
+    )
+
+    citation_mismatches = parsed.get(
+        "citation_mismatches",
+        [],
     )
 
     return {
@@ -434,17 +486,11 @@ OFFICIAL EVIDENCE:
         ),
 
         "unsupported_claims": (
-            parsed.get(
-                "unsupported_claims",
-                [],
-            )
+            unsupported_claims
         ),
 
         "citation_mismatches": (
-            parsed.get(
-                "citation_mismatches",
-                [],
-            )
+            citation_mismatches
         ),
 
         "reason": (
@@ -950,6 +996,11 @@ def evaluate():
 
             print(
                 f"\n- {item['id']}"
+            )
+
+            print(
+                "  Judge valid: "
+                f"{item['judge_valid']}"
             )
 
             print(

@@ -11,3 +11,5 @@ streamlit==1.63.0
 
 pymupdf==1.28.2
 trafilatura==2.2.0
+
+openai==3.13.0
